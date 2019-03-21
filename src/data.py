@@ -29,7 +29,6 @@ class Dictionary(object):
 
 class Corpus(object):
     def __init__(self, path):
-        #Get or create phoneme dictionary if you recreate dictionary, you must recreate phonemes
         lyric_path = os.path.join(path, 'lyrics.txt')
         phoneme_path = os.path.join(path, 'phonemes.txt')
         dict_path = os.path.join(path, 'dict.pickle')
@@ -37,7 +36,7 @@ class Corpus(object):
         if os.path.exists(dict_path):
             self.dictionary = Dictionary(dict_path)
             lyrics_list = self.process_lyrics(lyric_path)
-            self.lyrics = self.tokenize(lyrics_list)
+            self.lyrics = self.tokenize_text(lyrics_list)
             self.phonemes = self.tokenize_phonemes(phoneme_path)            
         else:
             self.dictionary = Dictionary()
@@ -47,7 +46,7 @@ class Corpus(object):
         lyrics_list = self.process_lyrics(lyric_path)
         self.dictionary.idx2word = list(set(lyrics_list))
         self.dictionary.word2idx = {word:idx for idx,word in enumerate(self.dictionary.idx2word)}
-        self.lyrics = self.tokenize(lyrics_list)
+        self.lyrics = self.tokenize_text(lyrics_list)
         self.create_pdicts()
         self.phonemes = self.create_phonemes(phoneme_path)
         pickle.dump((self.dictionary.word2phonemes, self.dictionary.idx2phoneme), open(dict_path, 'wb'))
@@ -59,7 +58,7 @@ class Corpus(object):
         lyrics_list = lyrics_list.split(' ')
         return lyrics_list
 
-    def tokenize(self, lyrics_list):
+    def tokenize_text(self, lyrics_list):
         """Tokenizes a text file."""
         tokens = np.array([self.dictionary.word2idx[word] for word in lyrics_list])     
         return tokens
@@ -112,7 +111,7 @@ class Corpus(object):
         self.dictionary.word2phonemes_idx = w2p_i
         
     def create_phonemes(self, phoneme_path):
-        phonemes=[]
+        phonemes=[]      
         output = ''
         for lidx, l in enumerate(self.lyrics): 
             phonemes.append(self.dictionary.word2phonemes_idx[l]) 
@@ -125,3 +124,14 @@ class Corpus(object):
         output_file.write(output)
 
         return phonemes
+
+    def test_idx_bug(self, word):
+        # TODO deleteme
+        d = self.dictionary
+        #print(d.phoneme2idx[d.idx2phoneme[26]])
+        #print(d.word2phonemes)
+
+        # This is inconsistent
+        phon_idxs = d.word2phonemes[d.word2idx[word]]
+        print([d.idx2phoneme[idx] for idx in phon_idxs])
+
