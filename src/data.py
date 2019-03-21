@@ -132,6 +132,6 @@ class Corpus(object):
         #print(d.word2phonemes)
 
         # This is inconsistent
-        phon_idxs = d.word2phonemes[d.word2idx[word]]
+        phon_idxs = d.word2phonemes_idx[d.word2idx[word]]
         print([d.idx2phoneme[idx] for idx in phon_idxs])
 
