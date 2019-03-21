@@ -11,19 +11,19 @@ class Dictionary(object):
             self.word2idx = {word:idx for idx,word in enumerate(self.idx2word)}
             self.phoneme2idx = {phoneme:idx for idx,phoneme in enumerate(self.idx2phoneme)}
 
-            #Convert dictionary to token form 
+            #Convert dictionary to token form
             self.word2phonemes_idx = [[] for word in self.idx2word]
             for word in self.word2phonemes:
                 self.word2phonemes_idx.append([])
                 for phoneme in self.word2phonemes[word]:
                     self.word2phonemes_idx[self.word2idx[word]].append(self.phoneme2idx[phoneme])
-                    
+
 
         else:
             self.word2phonemes = {}
             self.word2phonemes_idx = []
-            self.word2idx = {}     
-            self.idx2word = []  
+            self.word2idx = {}
+            self.idx2word = []
             self.phoneme2idx = {}
             self.idx2phoneme = []
 
@@ -37,7 +37,7 @@ class Corpus(object):
             self.dictionary = Dictionary(dict_path)
             lyrics_list = self.process_lyrics(lyric_path)
             self.lyrics = self.tokenize_text(lyrics_list)
-            self.phonemes = self.tokenize_phonemes(phoneme_path)            
+            self.phonemes = self.tokenize_phonemes(phoneme_path)
         else:
             self.dictionary = Dictionary()
             self.create_dictionaries(lyric_path, phoneme_path, dict_path)
@@ -60,9 +60,9 @@ class Corpus(object):
 
     def tokenize_text(self, lyrics_list):
         """Tokenizes a text file."""
-        tokens = np.array([self.dictionary.word2idx[word] for word in lyrics_list])     
+        tokens = np.array([self.dictionary.word2idx[word] for word in lyrics_list])
         return tokens
-    
+
     def tokenize_phonemes(self, phoneme_path):
         assert os.path.exists(phoneme_path)
         phonemes = []
@@ -74,21 +74,21 @@ class Corpus(object):
             for p in ps:
                 pword.append(self.dictionary.phoneme2idx[p])
             phonemes.append(pword)
-        return phonemes 
-        
+        return phonemes
+
 
     def create_pdicts(self):
         lyrics = ('<break>').join(self.dictionary.idx2word).lower()
         num_chunks = int(math.ceil(len(lyrics) / 100000.0))
         num_words = len(self.dictionary.idx2word)
-        
+
         output = ''
         for i in range(num_chunks):
             start_idx = i*num_words//num_chunks
             stop_idx = min((i+1)*num_words//num_chunks, num_words)
             words = self.dictionary.idx2word[start_idx:stop_idx]
             output += e2p(('<break>').join(words))
-        
+
         #Remove espeak extra symbols
         output = re.sub("[',%=_|;~]",'',output)
         output = re.sub("_:", '', output)
@@ -103,18 +103,18 @@ class Corpus(object):
 
         w2p = {word:phonemes.split('-') for [word,phonemes] in zip(self.dictionary.idx2word, output)}
         w2p_i = [word.split('-') for word in output]
-        for widx, w in enumerate(w2p_i): 
-            for pidx, p in enumerate(w): 
+        for widx, w in enumerate(w2p_i):
+            for pidx, p in enumerate(w):
                 w2p_i[widx][pidx] = self.dictionary.phoneme2idx[p]
-        
+
         self.dictionary.word2phonemes = w2p
         self.dictionary.word2phonemes_idx = w2p_i
-        
+
     def create_phonemes(self, phoneme_path):
-        phonemes=[]      
+        phonemes=[]
         output = ''
-        for lidx, l in enumerate(self.lyrics): 
-            phonemes.append(self.dictionary.word2phonemes_idx[l]) 
+        for lidx, l in enumerate(self.lyrics):
+            phonemes.append(self.dictionary.word2phonemes_idx[l])
             if lidx != 0:
                 output += ' '
             output+= ('-').join(self.dictionary.word2phonemes[self.dictionary.idx2word[l]])
@@ -125,13 +125,20 @@ class Corpus(object):
 
         return phonemes
 
-    def test_idx_bug(self, word):
-        # TODO deleteme
+    def build_vocab_to_corpus_idx_translate(self, vocab):
         d = self.dictionary
-        #print(d.phoneme2idx[d.idx2phoneme[26]])
-        #print(d.word2phonemes)
+        self.idx_translate = {vidx:d.word2idx[word]
+                              for word, vidx in vocab.stoi.items()
+                              if word not in ('<unk>', '<pad>')}
 
-        # This is inconsistent
-        phon_idxs = d.word2phonemes_idx[d.word2idx[word]]
-        print([d.idx2phoneme[idx] for idx in phon_idxs])
 
+    def vocab_word_to_phoneme_idx(self, vidx):
+        """
+        Translate a vocab word index into a the corresponding phoneme indices
+        according to idx_translate. idx_translate maps vocab word indices to
+        corpus word indices (because vocabs are built separately).
+        """
+        assert self.idx_translate is not None, "Must build translation dict first"
+        translate = self.idx_translate
+        d = self.dictionary
+        return [d.idx2phoneme[pidx] for pidx in d.word2phonemes_idx[translate[vidx]]]

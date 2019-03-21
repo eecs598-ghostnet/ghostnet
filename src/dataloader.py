@@ -88,14 +88,18 @@ def get_lyrics_iterator(path):
     return TEXT.vocab, train_it
 
 
-
 if __name__ == '__main__':
-    vocab, train_it = get_lyrics_iterator('../data/lyrics_headers/Drake')
+    lyrics_dir = '../data/lyrics_headers/KendrickLamar'
 
-    c = data.Corpus('../data/lyrics_headers/Drake')
+    vocab, train_it = get_lyrics_iterator(lyrics_dir)
+    c = data.Corpus(lyrics_dir)
+    d = c.dictionary
 
-    print(len(vocab.itos))      # These are off by 2 bc <pad> and <unk>
-    print(len(c.dictionary))
+    c.build_vocab_to_corpus_idx_translate(vocab)
+
+    #print(len(vocab.itos))      # These are off by 2 bc <pad> and <unk>
+    vidx = vocab.stoi['the']
+    print(c.vocab_word_to_phoneme_idx(vidx))
 
     for i, batch in enumerate(train_it):
         stanzas = batch.text.transpose(0,1)
