@@ -7,7 +7,7 @@ class Dictionary(object):
     def __init__(self):
         self.word2idx = {}
         self.idx2word = []
-        self.word2phonemes = {}
+        self.word2phonemes = []
         self.phoneme2idx = {}
         self.idx2phoneme = []
 
@@ -18,9 +18,9 @@ class Corpus(object):
     def __init__(self, path):
         self.dictionary = Dictionary()
 
-        # Tokenize lyrics 
+        # Tokenize lyrics
         lyric_path = os.path.join(path, 'lyrics.txt')
-        self.lyrics = self.tokenize(lyric_path)
+        self.lyrics = self.tokenize_text(lyric_path)
 
         #Get or create phoneme dictionary if you recreate dictionary, you must recreate phonemes
         dict_path = os.path.join(path, 'w2p.pickle')
@@ -33,9 +33,20 @@ class Corpus(object):
                 self.phonemes = self.create_phonemes(phoneme_path)
         else:
             self.create_pdicts(dict_path)
-            self.phonemes = self.create_phonemes(phoneme_path)       
-            
-    def tokenize(self, lyric_path, is_phonemes=False):
+            self.phonemes = self.create_phonemes(phoneme_path)
+
+    def test_idx_bug(self, word):
+        # TODO deleteme
+        d = self.dictionary
+        #print(d.phoneme2idx[d.idx2phoneme[26]])
+        #print(d.word2phonemes)
+
+        # This is inconsistent
+        phon_idxs = d.word2phonemes[d.word2idx[word]]
+        print([d.idx2phoneme[idx] for idx in phon_idxs])
+
+
+    def tokenize_text(self, lyric_path, is_phonemes=False):
         """Tokenizes a text file."""
         assert os.path.exists(lyric_path)
 
@@ -46,7 +57,7 @@ class Corpus(object):
         tokens = np.array([self.dictionary.word2idx[word] for word in f_lyric])
 
         return tokens
-    
+
     def tokenize_phonemes(self, phoneme_path):
         assert os.path.exists(phoneme_path)
         phonemes = []
@@ -58,18 +69,18 @@ class Corpus(object):
             for p in ps:
                 pword.append(self.dictionary.phoneme2idx[p])
             phonemes.append(pword)
-        return phonemes 
-        
+        return phonemes
+
 
     def create_pdicts(self, dict_path):
         lyrics = ('<break>').join(self.dictionary.idx2word).lower()
         num_chunks = math.ceil(len(lyrics) / 100000)
         num_words = len(self.dictionary.idx2word)
-        
+
         output = ''
         for i in range(num_chunks):
             output += e2p(('<break>').join(self.dictionary.idx2word[i*num_words//num_chunks:min((i+1)*num_words//num_chunks, num_words)]).lower())
-        
+
         #Remove espeak extra symbols
         output = re.sub("[',%=_|;~]",'',output)
         output = re.sub("_:", '', output)
@@ -82,22 +93,22 @@ class Corpus(object):
         self.dictionary.phoneme2idx = {phoneme:idx for idx,phoneme in enumerate(self.dictionary.idx2phoneme)}
 
         w2p = [word.split('-') for word in output]
-        for widx, w in enumerate(w2p): 
-            for pidx, p in enumerate(w): 
+        for widx, w in enumerate(w2p):
+            for pidx, p in enumerate(w):
                 w2p[widx][pidx] = self.dictionary.phoneme2idx[p]
-        
+
         self.dictionary.word2phonemes = w2p
 
         pickle.dump((self.dictionary.idx2phoneme, self.dictionary.phoneme2idx, self.dictionary.word2phonemes), open(dict_path,'wb'))
 
-        
+
     def create_phonemes(self, phoneme_path):
         phonemes=[]
 
-        for l in self.lyrics: 
-            phonemes.append(self.dictionary.word2phonemes[l]) 
-            
-        
+        for l in self.lyrics:
+            phonemes.append(self.dictionary.word2phonemes[l])
+
+
         output = ''
         for widx, w in enumerate(phonemes):
             if widx != 0:
@@ -106,7 +117,7 @@ class Corpus(object):
                 if idx != 0:
                     output+= '-'
                 output+=self.dictionary.idx2phoneme[p]
-            
+
         #Write to file
         output_file = open(phoneme_path, 'w+', encoding='utf8')
         output_file.write(output)

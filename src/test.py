@@ -3,4 +3,5 @@ import IPython
 
 #Create Corpus
 c = data.Corpus('../data/lyrics_headers/Drake/')
-IPython.embed()
+c.test_idx_bug('the')
+#IPython.embed()
