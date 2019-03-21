@@ -33,7 +33,7 @@ class Corpus(object):
         phoneme_path = os.path.join(path, 'phonemes.txt')
         dict_path = os.path.join(path, 'dict.pickle')
 
-        if os.path.exists(dict_path):
+        if os.path.exists(dict_path) and os.path.exists(phoneme_path):
             self.dictionary = Dictionary(dict_path)
             lyrics_list = self.process_lyrics(lyric_path)
             self.lyrics = self.tokenize_text(lyrics_list)
