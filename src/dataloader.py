@@ -60,8 +60,8 @@ def stanza_reader(f):
             stanza += line
 
 
-def get_lyrics_iterator(path):
-    lyrics_path = os.path.join(path, 'lyrics.txt')
+def get_lyrics_iterator(lyrics_dir):
+    lyrics_path = os.path.join(lyrics_dir, 'lyrics.txt')
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
     tokenize = lambda x: re.findall(r'\S+|\n',x)
@@ -75,31 +75,28 @@ def get_lyrics_iterator(path):
 
     train_it = BucketIterator(
         train_ds,
-        batch_size=5,
+        batch_size=1,
         device=device,
         sort_key=lambda x: len(x.text),
         sort_within_batch=False,
         repeat=False,
     )
 
+    corpus = data.Corpus(lyrics_dir)
+    corpus.build_vocab_to_corpus_idx_translate(TEXT.vocab)
 
     # TODO train/val/test splits
-    # TODO build corpus with phonemes from TEXT.vocab
-    return TEXT.vocab, train_it
+    return corpus, TEXT.vocab, train_it
 
 
 if __name__ == '__main__':
     lyrics_dir = '../data/lyrics_headers/KendrickLamar'
 
-    vocab, train_it = get_lyrics_iterator(lyrics_dir)
-    c = data.Corpus(lyrics_dir)
+    c, vocab, train_it = get_lyrics_iterator(lyrics_dir)
     d = c.dictionary
 
-    c.build_vocab_to_corpus_idx_translate(vocab)
-
-    #print(len(vocab.itos))      # These are off by 2 bc <pad> and <unk>
-    vidx = vocab.stoi['the']
-    print(c.vocab_word_to_phoneme_idx(vidx))
+    #vidx = vocab.stoi['the']
+    #print(c.vocab_word_to_phoneme_idxs(vidx))
 
     for i, batch in enumerate(train_it):
         stanzas = batch.text.transpose(0,1)
@@ -108,6 +105,9 @@ if __name__ == '__main__':
 
         words = ' '.join([vocab.itos[idx] for idx in stanza])
         print(words)
+
+        phonemes = [c.vocab_word_to_phoneme_idxs(idx.item()) for idx in stanza]
+        print(phonemes)
 
         print()
 

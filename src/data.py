@@ -131,14 +131,25 @@ class Corpus(object):
                               for word, vidx in vocab.stoi.items()
                               if word not in ('<unk>', '<pad>')}
 
+        self.pad_token_vidx = vocab.stoi['<pad>']
 
-    def vocab_word_to_phoneme_idx(self, vidx):
+        # TODO does it matter that can't index this to an actual phoneme?
+        #self.pad_token_cidx = len(d.idx2word)   # set pad token value
+        self.pad_token_cidx = -1                 # set pad token value
+
+
+    def vocab_word_to_phoneme_idxs(self, vidx):
         """
         Translate a vocab word index into a the corresponding phoneme indices
         according to idx_translate. idx_translate maps vocab word indices to
         corpus word indices (because vocabs are built separately).
         """
-        assert self.idx_translate is not None, "Must build translation dict first"
+        assert self.idx_translate is not None, "Must build translation first"
         translate = self.idx_translate
+
+        if vidx == self.pad_token_vidx:
+            return [self.pad_token_cidx]
+
         d = self.dictionary
-        return [d.idx2phoneme[pidx] for pidx in d.word2phonemes_idx[translate[vidx]]]
+        return d.word2phonemes_idx[translate[vidx]]
+        #return [d.idx2phoneme[pidx] for pidx in pidxs]
