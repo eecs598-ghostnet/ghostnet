@@ -60,8 +60,8 @@ def stanza_reader(f):
             stanza += line
 
 
-def get_lyrics_iterator(lyrics_dir):
-    lyrics_path = os.path.join(lyrics_dir, 'lyrics.txt')
+def get_lyrics_iterator(artist_dir):
+    lyrics_path = os.path.join(artist_dir, 'lyrics.txt')
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
     tokenize = lambda x: re.findall(r'\S+|\n',x)
@@ -82,7 +82,7 @@ def get_lyrics_iterator(lyrics_dir):
         repeat=False,
     )
 
-    corpus = data.Corpus(lyrics_dir)
+    corpus = data.Corpus(artist_dir)
     corpus.build_vocab_to_corpus_idx_translate(TEXT.vocab)
 
     # TODO train/val/test splits
@@ -90,9 +90,9 @@ def get_lyrics_iterator(lyrics_dir):
 
 
 if __name__ == '__main__':
-    lyrics_dir = '../data/lyrics_headers/KendrickLamar'
+    artist_dir = '../data/lyrics_headers/KendrickLamar'
 
-    c, vocab, train_it = get_lyrics_iterator(lyrics_dir)
+    c, vocab, train_it = get_lyrics_iterator(artist_dir)
     d = c.dictionary
 
     #vidx = vocab.stoi['the']
