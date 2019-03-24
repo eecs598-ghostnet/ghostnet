@@ -1,0 +1,8 @@
+git clone https://github.com/espeak-ng/espeak-ng
+
+cd espeak-ng 
+./autogen.sh 
+./configure --prefix=/usr 
+make 
+ESPEAK_DATA_PATH=/root/home/espeak-ng/espeak-ng-data LD_LIBRARY_PATH=src:${LD_LIBRARY_PATH} src/espeak-ng ... 
+sudo make LIBDIR=/usr/lib/x86_64-linux-gnu install

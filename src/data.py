@@ -132,10 +132,13 @@ class Corpus(object):
                               if word not in ('<unk>', '<pad>')}
 
         self.pad_token_vidx = vocab.stoi['<pad>']
+        self.unk_token_vidx = vocab.stoi['<unk>']
 
         # TODO does it matter that can't index this to an actual phoneme?
+        # TODO do the negative values work/matter for embedding/prediction?
         #self.pad_token_cidx = len(d.idx2word)   # set pad token value
         self.pad_token_cidx = -1                 # set pad token value
+        self.unk_token_cidx = -2                 # do these values work/matter?
 
 
     def vocab_word_to_phoneme_idxs(self, vidx):
@@ -149,6 +152,8 @@ class Corpus(object):
 
         if vidx == self.pad_token_vidx:
             return [self.pad_token_cidx]
+        if vidx == self.unk_token_vidx:
+            return [self.unk_token_cidx]
 
         d = self.dictionary
         return d.word2phonemes_idx[translate[vidx]]

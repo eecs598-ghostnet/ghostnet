@@ -31,7 +31,7 @@ class TextGenerationModel(nn.Module):
         return (phoneme_hidden, phoneme_cell), (hidden, cell)
 
     def forward(self, x, x_phonemes, lengths, phoneme_lengths):
-        """ 
+        """
         Forward function for the text generation model.
 
         Inputs:
@@ -134,7 +134,7 @@ def main():
     phoneme_vocab_size = 60
     phoneme_embed_size = 30
     phoneme_hidden_size = 40
-    
+
     model = TextGenerationModel(vocab_size, embed_size, hidden_size, phoneme_vocab_size, phoneme_embed_size, phoneme_hidden_size)
 
     batch_size = 2
