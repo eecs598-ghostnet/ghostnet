@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
+from torch.optim import lr_scheduler
 
 from text_generation_model import TextGenerationModel
 
@@ -23,10 +24,12 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
 
 
             # Iterate over data.
-            for inputs, lengths, labels in dataloaders[phase]:
+            for inputs, lengths, phoneme_inputs, phoneme_lengths, labels in dataloaders[phase]:
                 inputs = inputs.to(device)
+                phoneme_inputs.to(device)
                 labels = labels.to(device)
                 labels = labels.to(float)
+                
 
                 # zero the parameter gradients
                 optimizer.zero_grad()
@@ -34,7 +37,7 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
                 # forward
                 # track history if only in train
                 with torch.set_grad_enabled(phase == 'train'):
-                    outputs = model(inputs, lengths)
+                    outputs = model(inputs, phoneme_inputs, lengths, phoneme_lengths)
                     outputs = outptus.reshape(labels.shape[0] * labels.shape[1], -1)
                     
 
@@ -43,8 +46,10 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
                 for n in range(mask.shape[0]):
                     length = lengths[n]
                     mask[n, :length] = 1.0
+                outputs = outputs[mask.expand_as(outputs).byte()]
+                labels = labels[mask.byte()]
                 
-                import pdb; pdb.set_trace()
+                
                 # backward + optimize only if in training phase
                 if phase == 'train':
                     loss = criterion(outputs, labels)
@@ -86,7 +91,7 @@ def main():
     model = TextGenerationModel(vocab_size, embed_size, hidden_size, phoneme_vocab_size, phoneme_embed_size, phoneme_hidden_size)
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.Adam(model.parameters, lr=0.001)
+    optimizer = optim.Adam(model.parameters(), lr=0.001)
     exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=7, gamma=0.1)    
 
 if __name__ == '__main__':
