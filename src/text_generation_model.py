@@ -53,31 +53,30 @@ class TextGenerationModel(nn.Module):
         #TODO : Need to use pack padded here.
         #outputs = []
         #TODO: Use pack padded for phoneme sequence so we don't include hiddens after padding.
-        import pdb; pdb.set_trace()
         phoneme_lengths = phoneme_lengths.view(-1)
         phoneme_embeddings = phoneme_embeddings.view(B * T, T_phoneme, -1)
         sorted_phoneme_lengths, argsort_phoneme_lengths = phoneme_lengths.sort(descending=True)
         sorted_phoneme_embeddings = phoneme_embeddings[argsort_phoneme_lengths]
         sorted_phoneme_embeddings = sorted_phoneme_embeddings
         packed_phoneme_embeddings = pack_padded_sequence(sorted_phoneme_embeddings, sorted_phoneme_lengths, batch_first=True)
-        import pdb; pdb.set_trace()
         packed_phoneme_outputs, phoneme_hiddens = self.phoneme_lstm(packed_phoneme_embeddings)
 
         sorted_phoneme_outputs, _ = pad_packed_sequence(packed_phoneme_outputs, batch_first=True)
         _, unargsort_phoneme_lengths = argsort_phoneme_lengths.sort()
-        out = sorted_out[unargsort_lengths]
-        idx = (torch.LongTensor(lengths) - 1).view(-1, 1).expand(len(lengths), out.size(2))
+        phoneme_outputs = sorted_phoneme_outputs[unargsort_phoneme_lengths]
+        idx = (torch.LongTensor(phoneme_lengths) - 1).view(-1, 1).expand(len(phoneme_lengths), phoneme_outputs.size(2))
         time_dimension = 1
         idx = idx.unsqueeze(time_dimension)
-        last_out = out.gather(time_dimension, idx).squeeze(time_dimension)
-        
+        last_phoneme_outputs = phoneme_outputs.gather(time_dimension, idx).squeeze(time_dimension)
+        last_phoneme_outputs = last_phoneme_outputs.view(B, T, -1)
 
+        
         ############
-        _, phoneme_hiddens = self.phoneme_lstm(packed_phoneme_embeddings.view(B * T, T_phoneme, -1))
-        phoneme_hiddens = phoneme_hiddens[0].view(B, T, -1)
+        #_, phoneme_hiddens = self.phoneme_lstm(packed_phoneme_embeddings.view(B * T, T_phoneme, -1))
+        #phoneme_hiddens = phoneme_hiddens[0].view(B, T, -1)
         # We now have embeddings (B, T, self.embed_size) and phoneme_hiddens (B, T, self.phoneme_hidden_size)
         # which we  will concatenate into the text generation LSTM for input.
-        inputs = torch.cat([embeddings, phoneme_hiddens], dim=2)
+        inputs = torch.cat([embeddings, last_phoneme_outputs], dim=2)
         #TODO : Need to use pack padded here.
         outputs, hiddens = self.lstm(inputs)
         
@@ -160,6 +159,7 @@ def main():
             dummy_x_phonemes[b, t, word_phoneme_length:] = 0.0
     
     dummy_outputs = model(dummy_x, dummy_x_phonemes, dummy_lengths, dummy_phoneme_lengths)
+    import pdb; pdb.set_trace()
 
 if __name__ == '__main__':
     main()
