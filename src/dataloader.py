@@ -96,17 +96,23 @@ def split_songs(artist_dir, train_pct=80, val_pct=15, test_pct=5):
          open(test_path, 'w') as ftest:
 
         reader = song_reader(flyrics)
-        for _ in range(train_ct):
-            song = next(reader)
-            ftrain.write(song + '\n')
 
-        for _ in range(val_ct):
-            song = next(reader)
-            fval.write(song + '\n')
+        try:
+            while True:
+                for _ in range(train_ct):
+                    song = next(reader)
+                    ftrain.write(song + '\n')
 
-        for _ in range(test_ct):
-            song = next(reader)
-            ftest.write(song + '\n')
+                for _ in range(val_ct):
+                    song = next(reader)
+                    fval.write(song + '\n')
+
+                for _ in range(test_ct):
+                    song = next(reader)
+                    ftest.write(song + '\n')
+
+        except StopIteration:
+            return
 
 
 def get_lyrics_iterator(artist_dir, batch_sizes=(5, 5, 5)):
@@ -141,7 +147,7 @@ def get_lyrics_iterator(artist_dir, batch_sizes=(5, 5, 5)):
 
 
 if __name__ == '__main__':
-    artist_dir = '../data/lyrics/LilWayne'
+    artist_dir = '../data/lyrics/combined'
 
     split_songs(artist_dir)
 
