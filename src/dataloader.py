@@ -1,6 +1,7 @@
 import csv
 import os
 import re
+from math import gcd
 from torchtext.data import *
 from torchtext.data.dataset import *
 
@@ -60,8 +61,56 @@ def stanza_reader(f):
             stanza += line
 
 
-def get_lyrics_iterator(artist_dir):
+def song_reader(f):
+    song = ''
+    prev_line = None
+    for line in f:
+        if line == '\n' and prev_line == '\n':
+            if song:
+                yield song.strip() + '\n'
+                song = ''
+        else:
+            song += line
+            prev_line = line
+
+
+def split_songs(artist_dir, train_pct=80, val_pct=15, test_pct=5):
+    split_gcd = gcd(gcd(train_pct, val_pct), gcd(val_pct, test_pct))
+    train_ct, val_ct, test_ct = train_pct//split_gcd, val_pct//split_gcd, test_pct//split_gcd
+
     lyrics_path = os.path.join(artist_dir, 'lyrics.txt')
+    splits_dir = os.path.join(artist_dir, 'splits')
+
+    try:
+        os.makedirs(splits_dir)
+    except FileExistsError:
+        return
+
+    train_path = os.path.join(splits_dir, 'train.txt')
+    val_path = os.path.join(splits_dir, 'val.txt')
+    test_path = os.path.join(splits_dir, 'test.txt')
+
+    with open(lyrics_path, 'r') as flyrics,     \
+         open(train_path, 'w') as ftrain,       \
+         open(val_path, 'w') as fval,           \
+         open(test_path, 'w') as ftest:
+
+        reader = song_reader(flyrics)
+        for _ in range(train_ct):
+            song = next(reader)
+            ftrain.write(song + '\n')
+
+        for _ in range(val_ct):
+            song = next(reader)
+            fval.write(song + '\n')
+
+        for _ in range(test_ct):
+            song = next(reader)
+            ftest.write(song + '\n')
+
+
+def get_lyrics_iterator(artist_dir, batch_sizes=(5, 5, 5)):
+    splits_dir = os.path.join(artist_dir, 'splits')
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
     tokenize = lambda x: re.findall(r'\S+|\n',x)
@@ -69,13 +118,15 @@ def get_lyrics_iterator(artist_dir):
     TEXT = Field(sequential=True, tokenize=tokenize, lower=True)
     fields = [('text', TEXT)]
 
-    train_ds = StanzaDataset(path=lyrics_path, format='tsv', fields=fields)
+    train_ds, val_ds, test_ds = StanzaDataset.splits(
+            path=splits_dir, train='train.txt', validation='val.txt', test='test.txt',
+            format='tsv', fields=fields)
 
     TEXT.build_vocab(train_ds)
 
-    train_it = BucketIterator(
-        train_ds,
-        batch_size=1,
+    train_it, val_it, test_it = BucketIterator.splits(
+        (train_ds, val_ds, test_ds),
+        batch_sizes=batch_sizes,
         device=device,
         sort_key=lambda x: len(x.text),
         sort_within_batch=False,
@@ -86,13 +137,15 @@ def get_lyrics_iterator(artist_dir):
     corpus.build_vocab_to_corpus_idx_translate(TEXT.vocab)
 
     # TODO train/val/test splits
-    return corpus, TEXT.vocab, train_it
+    return corpus, TEXT.vocab, train_it, val_it, test_it
 
 
 if __name__ == '__main__':
-    artist_dir = '../data/lyrics_headers/KendrickLamar'
+    artist_dir = '../data/lyrics/LilWayne'
 
-    c, vocab, train_it = get_lyrics_iterator(artist_dir)
+    split_songs(artist_dir)
+
+    c, vocab, train_it, val_it, test_it = get_lyrics_iterator(artist_dir)
     d = c.dictionary
 
     #vidx = vocab.stoi['the']
@@ -107,8 +160,7 @@ if __name__ == '__main__':
         print(words)
 
         phonemes = [c.vocab_word_to_phoneme_idxs(idx.item()) for idx in stanza]
-        print(phonemes)
+        #print(phonemes)
 
-        print()
-
+        #print()
         exit()
