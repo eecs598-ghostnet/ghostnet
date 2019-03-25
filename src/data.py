@@ -125,6 +125,7 @@ class Corpus(object):
 
         return phonemes
 
+    # TODO can delete? no longer want to rely on corpus tokens
     def build_vocab_to_corpus_idx_translate(self, vocab):
         d = self.dictionary
         self.idx_translate = {vidx:d.word2idx[word]
@@ -141,6 +142,7 @@ class Corpus(object):
         self.unk_token_cidx = -2                 # do these values work/matter?
 
 
+    # TODO can delete? no longer want to rely on corpus tokens
     def vocab_word_to_phoneme_idxs(self, vidx):
         """
         Translate a vocab word index into a the corresponding phoneme indices

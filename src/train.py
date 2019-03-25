@@ -8,7 +8,7 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
     since = time.time()
     best_model_wts = copy.deepcopy(model.state_dict())
     best_acc = 0.0
-    
+
     for epoch in range(num_epochs):
         print('Epoch {}/{}'.format(epoch, num_epochs - 1))
         print('-' * 10)
@@ -36,14 +36,14 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
                 with torch.set_grad_enabled(phase == 'train'):
                     outputs = model(inputs, lengths)
                     outputs = outptus.reshape(labels.shape[0] * labels.shape[1], -1)
-                    
+
 
                 # gather only outputs for non padded sections.
                 mask = torch.zeros(labels.shape)
                 for n in range(mask.shape[0]):
                     length = lengths[n]
                     mask[n, :length] = 1.0
-                
+
                 import pdb; pdb.set_trace()
                 # backward + optimize only if in training phase
                 if phase == 'train':
@@ -82,12 +82,15 @@ def main():
     phoneme_vocab_size = 60
     phoneme_embed_size = 30
     phoneme_hidden_size = 40
-    
+
     model = TextGenerationModel(vocab_size, embed_size, hidden_size, phoneme_vocab_size, phoneme_embed_size, phoneme_hidden_size)
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters, lr=0.001)
-    exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=7, gamma=0.1)    
+    exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=7, gamma=0.1)
+
+#def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, scheduler, num_epochs=25):
+
 
 if __name__ == '__main__':
     main()
