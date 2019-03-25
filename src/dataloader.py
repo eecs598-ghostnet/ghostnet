@@ -178,6 +178,14 @@ def get_lyrics_iterators(artist_dir, batch_sizes=(5, 5, 5)):
     return corpus, TEXT.vocab, PHONEMES.vocab, train_it, val_it, test_it
 
 
+def get_dataloader(artist_dir, batch_sizes=(5, 5, 5)):
+    corpus, txt_vocab, phoneme_vocab, train_it, val_it, test_it = get_lyrics_iterators(artist_dir, batch_sizes)
+
+    dataloader = {'train': train_it, 'val': val_it, 'test': test_it}
+    return dataloader, txt_vocab, phoneme_vocab
+
+
+
 if __name__ == '__main__':
     artist_dir = '../data/lyrics/KendrickLamar'
 
@@ -203,8 +211,11 @@ if __name__ == '__main__':
         print(words)
         print()
 
-        #print(text.size())
-        #print(phonemes.size())
+        print(text.size())
+        print(phonemes.size())
+        print(phoneme_lengths.size())
+
+        exit()
 
         #print()
         print(text_lengths)

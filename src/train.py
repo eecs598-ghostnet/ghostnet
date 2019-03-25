@@ -3,6 +3,7 @@ import torch.nn as nn
 import torch.optim as optim
 
 from text_generation_model import TextGenerationModel
+from dataloader import get_dataloader
 
 def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, scheduler, num_epochs=25):
     since = time.time()
@@ -23,10 +24,22 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
 
 
             # Iterate over data.
-            for inputs, lengths, labels in dataloaders[phase]:
-                inputs = inputs.to(device)
-                labels = labels.to(device)
-                labels = labels.to(float)
+            for batch in dataloaders[phase]:
+                # text is size (batch_size, max_stanza_length)
+                # text_lengths is size (batch_size,); contains lengths of each stanza in batch
+                text, text_lengths = batch.text
+
+                # phonemes is size (batch_size, max_stanza_length, max_word_length)
+                # 2nd arg should be same as text_lengths
+                # phoneme_lengths is (batch_size, max_stanza_length); x[i][j] contains word length of word j in the ith stanza
+                phonemes, _, phoneme_lengths = batch.phonemes
+
+                # TODO probably need to trim text and phonemes into `input` and `labels`
+                # Should already be on device but worth checking
+
+                #inputs = inputs.to(device)
+                #labels = labels.to(device)
+                #labels = labels.to(float)
 
                 # zero the parameter gradients
                 optimizer.zero_grad()
@@ -82,6 +95,9 @@ def main():
     phoneme_vocab_size = 60
     phoneme_embed_size = 30
     phoneme_hidden_size = 40
+
+    artist_dir = '../data/lyrics/Drake'
+    dataloader, txt_vocab, phoneme_vocab = get_dataloader(artist_dir)
 
     model = TextGenerationModel(vocab_size, embed_size, hidden_size, phoneme_vocab_size, phoneme_embed_size, phoneme_hidden_size)
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
