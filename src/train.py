@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
+from torch.optim import lr_scheduler
 
 from text_generation_model import TextGenerationModel
 from dataloader import get_dataloader
@@ -47,7 +48,7 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
                 # forward
                 # track history if only in train
                 with torch.set_grad_enabled(phase == 'train'):
-                    outputs = model(inputs, lengths)
+                    outputs = model(inputs, phoneme_inputs, lengths, phoneme_lengths)
                     outputs = outptus.reshape(labels.shape[0] * labels.shape[1], -1)
 
 
@@ -58,6 +59,10 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
                     mask[n, :length] = 1.0
 
                 import pdb; pdb.set_trace()
+                outputs = outputs[mask.expand_as(outputs).byte()]
+                labels = labels[mask.byte()]
+
+
                 # backward + optimize only if in training phase
                 if phase == 'train':
                     loss = criterion(outputs, labels)
