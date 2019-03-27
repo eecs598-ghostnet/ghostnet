@@ -133,6 +133,7 @@ def split_songs(artist_dir, train_pct=80, val_pct=15, test_pct=5):
 
 
 def get_lyrics_iterators(artist_dir, batch_sizes=(5, 5, 5)):
+    split_songs(artist_dir)
     corpus = data.Corpus(artist_dir)
 
     #print(corpus.dictionary.word2phonemes['raptorspaymybills'])
