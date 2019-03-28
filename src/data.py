@@ -28,16 +28,17 @@ class Dictionary(object):
             self.idx2phoneme = []
 
 class Corpus(object):
-    def __init__(self, path):
+    def __init__(self, path, gen_tokens=True):
         lyric_path = os.path.join(path, 'lyrics.txt')
         phoneme_path = os.path.join(path, 'phonemes.txt')
         dict_path = os.path.join(path, 'dict.pickle')
 
         if os.path.exists(dict_path) and os.path.exists(phoneme_path):
             self.dictionary = Dictionary(dict_path)
-            #lyrics_list = self.process_lyrics(lyric_path)
-            #self.lyrics = self.tokenize_text(lyrics_list)
-            #self.phonemes = self.tokenize_phonemes(phoneme_path)
+            if gen_tokens:
+                lyrics_list = self.process_lyrics(lyric_path)
+                self.lyrics = self.tokenize_text(lyrics_list)
+                self.phonemes = self.tokenize_phonemes(phoneme_path)
         else:
             self.dictionary = Dictionary()
             self.create_dictionaries(lyric_path, phoneme_path, dict_path)

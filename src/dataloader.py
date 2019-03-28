@@ -135,7 +135,7 @@ def split_songs(artist_dir, train_pct=80, val_pct=15, test_pct=5):
 def get_lyrics_iterators(artist_dir, batch_sizes=(5, 5, 5)):
     split_songs(artist_dir)
     print('Building corpus...')
-    corpus = data.Corpus(artist_dir)
+    corpus = data.Corpus(artist_dir, gen_tokens=False)
 
     #print(corpus.dictionary.word2phonemes['raptorspaymybills'])
     #exit()
@@ -191,7 +191,10 @@ def get_dataloader(artist_dir, batch_sizes=(5, 5, 5)):
 
 
 def check_words_and_phonemes():
-    artist_dir = '../data/combined'
+    """
+    Test that iterated phonemes and words match correctly.
+    """
+    artist_dir = '../data/lyrics/combined'
 
     split_songs(artist_dir)
 
