@@ -1,3 +1,3 @@
-curl --header 'Host: uc171ab2e99cacc32c1090349e1e.dl.dropboxusercontent.com' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:66.0) Gecko/20100101 Firefox/66.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' --header 'Accept-Language: en-US,en;q=0.5' --referer 'https://www.dropbox.com/' --cookie 'uc_session=quv2ODOfwxlcThbQAsDzmcuPKryYyZ0b1568rZTfoufPC7m42mfo8Dm8PiTaVHqw' --header 'Upgrade-Insecure-Requests: 1' 'https://uc171ab2e99cacc32c1090349e1e.dl.dropboxusercontent.com/zip_by_token_key?_download_id=38504408674263990023391470218904272364117243907936656899328920597&_notify_domain=www.dropbox.com&dl=1&key=Ad9zTrwbVM0kiWmX9PprwqdrBJDRZ5dTlcVSzlMxUW_hfG_ManJS32Xo2RbQY1nAb-mkrhYD0ywa_j0lzSdxNdpkizIj7RTm0YrqWAlXUDv34ElTNiT-IwTyvwlID4B-xRWlqEhbC5uy4z1P-B0L9m__SO6r7z0LlKpwlmyMiEsBnGSxXcj0cK-_WWm2rFjfOzcgbqQpPqC65RUYm0Chf_1xsEhebAjcRWAUCC_umxEG2A' --output 'lyrics.zip'
-unzip lyrics.zip -d ../data/
-rm lyrics.zip 
+wget wget https://www.dropbox.com/sh/zikiei7xfs583rj/AADuzKcFPptRTKpKJwz9d02-a?dl=0
+mv AADuzKcFPptRTKpKJwz9d02-a\?dl\=0 GhostNet.zip
+unzip GhostNet.zip -d ../data/
