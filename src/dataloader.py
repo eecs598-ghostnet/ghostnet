@@ -170,7 +170,6 @@ def get_lyrics_iterators(artist_dir, batch_sizes=(5, 5, 5)):
     train_it, val_it, test_it = BucketIterator.splits(
         (train_ds, val_ds, test_ds),
         batch_sizes=batch_sizes,
-        device=device,
         sort_key=lambda x: len(x.text),
         sort_within_batch=False,
         repeat=False,
@@ -186,8 +185,7 @@ def get_dataloader(artist_dir, batch_sizes=(5, 5, 5)):
     return dataloader, txt_vocab, phoneme_vocab
 
 
-
-if __name__ == '__main__':
+def check_words_and_phonemes():
     artist_dir = '../data/lyrics/KendrickLamar'
 
     split_songs(artist_dir)
@@ -231,3 +229,15 @@ if __name__ == '__main__':
 
         #print()
         exit()
+
+if __name__ == '__main__':
+    #check_words_and_phonemes()
+    path = '../data/combined/splits/train.txt'
+
+    with io.open(os.path.expanduser(path), encoding="utf8") as f:
+        #def stanza_phoneme_reader(f, corpus):
+        reader = stanza_reader(f)
+        for stanza in reader:
+            print(stanza[0])
+            input()
+
