@@ -141,7 +141,6 @@ def get_lyrics_iterators(artist_dir, batch_sizes=(5, 5, 5)):
     #exit()
 
     splits_dir = os.path.join(artist_dir, 'splits')
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
     # Create fields
     text_tokenize = lambda x: re.findall(r'\S+|\n',x)
