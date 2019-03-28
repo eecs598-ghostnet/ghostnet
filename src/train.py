@@ -8,12 +8,15 @@ from torch.optim import lr_scheduler
 
 from text_generation_model import TextGenerationModel
 from dataloader import get_dataloader
+import utils
+
 
 def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, scheduler, num_epochs=25):
     since = time.time()
     best_model_wts = copy.deepcopy(model.state_dict())
     best_acc = 0.0
 
+    loss_history = []
     for epoch in range(num_epochs):
         print('Epoch {}/{}'.format(epoch, num_epochs - 1))
         print('-' * 10)
@@ -79,6 +82,7 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
                     loss = criterion(outputs, labels)
                     loss.backward()
                     optimizer.step()
+                    loss_history.append(loss.item())
   
                 print('loss: ', loss.item())
 
@@ -101,6 +105,7 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
         time_elapsed // 60, time_elapsed % 60))
     print('Best val Acc: {:.4f}'.format(best_acc))
 
+    utils.show_plot(range(len(loss_history)), loss_history)
     # load best model weights
     if num_epochs > 0:
         model.load_state_dict(best_model_wts)
@@ -116,7 +121,7 @@ def main():
 
 
     artist_dir = '../data/lyrics/Drake'
-    dataloaders, txt_vocab, phoneme_vocab = get_dataloader(artist_dir, batch_sizes=(16, 16, 16))
+    dataloaders, txt_vocab, phoneme_vocab = get_dataloader(artist_dir, batch_sizes=(16, 5, 5))
     dataset_sizes = {x: len(dataloaders[x].dataset) for x in ['train', 'val', 'test']}
     vocab_size = len(txt_vocab)
     embed_size = 50
@@ -128,10 +133,10 @@ def main():
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     model = model.to(device)
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.Adam(model.parameters(), lr=0.001)
+    optimizer = optim.Adam(model.parameters(), lr=0.002)
     exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=7, gamma=0.1)
 
-    model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=25)
+    model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=50)
     torch.save(model.state_dict(), '../model/text_generation_model.pt')
 
 
