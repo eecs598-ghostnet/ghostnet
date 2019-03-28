@@ -114,8 +114,9 @@ def main():
 #    phoneme_embed_size = 30
 #    phoneme_hidden_size = 40
 
+
     artist_dir = '../data/lyrics/Drake'
-    dataloaders, txt_vocab, phoneme_vocab = get_dataloader(artist_dir)
+    dataloaders, txt_vocab, phoneme_vocab = get_dataloader(artist_dir, batch_sizes=(16, 16, 16))
     dataset_sizes = {x: len(dataloaders[x].dataset) for x in ['train', 'val', 'test']}
     vocab_size = len(txt_vocab)
     embed_size = 50
@@ -125,6 +126,7 @@ def main():
     phoneme_hidden_size = 40
     model = TextGenerationModel(vocab_size, embed_size, hidden_size, phoneme_vocab_size, phoneme_embed_size, phoneme_hidden_size)
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    model = model.to(device)
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=0.001)
     exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=7, gamma=0.1)

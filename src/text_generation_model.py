@@ -59,12 +59,16 @@ class TextGenerationModel(nn.Module):
         sorted_phoneme_embeddings = phoneme_embeddings[argsort_phoneme_lengths]
         sorted_phoneme_embeddings = sorted_phoneme_embeddings
         if min(sorted_phoneme_lengths).item() == 0:
-            phoneme_pad_start = torch.argmin(sorted_phoneme_lengths)
+            #phoneme_pad_start = torch.argmin(sorted_phoneme_lengths)
+            phoneme_pad_start = np.argmin(sorted_phoneme_lengths.cpu().numpy())
         else:
             phoneme_pad_start = len(sorted_phoneme_lengths)
         sorted_phoneme_embeddings_data = sorted_phoneme_embeddings[:phoneme_pad_start,:,:]
         sorted_phoneme_embeddings_pad = sorted_phoneme_embeddings[phoneme_pad_start:,:,:]
-        packed_phoneme_embeddings = pack_padded_sequence(sorted_phoneme_embeddings_data, sorted_phoneme_lengths[:phoneme_pad_start], batch_first=True)
+        try:
+            packed_phoneme_embeddings = pack_padded_sequence(sorted_phoneme_embeddings_data, sorted_phoneme_lengths[:phoneme_pad_start], batch_first=True)
+        except:
+            import pdb; pdb.set_trace()
         packed_phoneme_outputs, phoneme_hiddens = self.phoneme_lstm(packed_phoneme_embeddings)
         sorted_phoneme_pad_outputs, _ = self.phoneme_lstm(sorted_phoneme_embeddings_pad)
         sorted_phoneme_pad_outputs = sorted_phoneme_pad_outputs[:, :phoneme_lengths.max(), :]
@@ -78,7 +82,8 @@ class TextGenerationModel(nn.Module):
             import pdb; pdb.set_trace()
         _, unargsort_phoneme_lengths = argsort_phoneme_lengths.sort()
         phoneme_outputs = sorted_phoneme_outputs[unargsort_phoneme_lengths]
-        idx = (torch.LongTensor(phoneme_lengths) - 1).clamp(min=0).view(-1, 1).expand(len(phoneme_lengths), phoneme_outputs.size(2))
+#        idx = (torch.LongTensor(phoneme_lengths) - 1).clamp(min=0).view(-1, 1).expand(len(phoneme_lengths), phoneme_outputs.size(2))
+        idx = (phoneme_lengths.long() - 1).clamp(min=0).view(-1, 1).expand(len(phoneme_lengths), phoneme_outputs.size(2))
         time_dimension = 1
         idx = idx.unsqueeze(time_dimension)
         last_phoneme_outputs = phoneme_outputs.gather(time_dimension, idx).squeeze(time_dimension)
@@ -104,7 +109,7 @@ class TextGenerationModel(nn.Module):
 #            outputs.append(outputs_t)
 #        outputs = torch.concatenate(outputs, dim=1)
         outputs = self.fc(outputs.contiguous().view(B * T, -1))
-        outputs = self.softmax(outputs)
+#        outputs = self.softmax(outputs)
         outputs = outputs.view(B, T, self.vocab_size)
         return outputs
 
