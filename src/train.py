@@ -131,7 +131,8 @@ def main():
     optimizer = optim.Adam(model.parameters(), lr=0.001)
     exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=7, gamma=0.1)
 
-    train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=25)
+    model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=25)
+    torch.save(model.state_dict(), '../model/text_generation_model.pt')
 
 
 if __name__ == '__main__':
