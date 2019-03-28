@@ -31,7 +31,7 @@ class Corpus(object):
     def __init__(self, path):
         lyric_path = os.path.join(path, 'lyrics.txt')
         phoneme_path = os.path.join(path, 'phonemes.txt')
-        dict_path = os.path.join(path, 'dict.pickle')
+        dict_path = os.path.join(path, 'w2p.pickle')
 
         if os.path.exists(dict_path) and os.path.exists(phoneme_path):
             self.dictionary = Dictionary(dict_path)
