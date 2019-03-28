@@ -120,7 +120,7 @@ def main():
 #    phoneme_hidden_size = 40
 
 
-    artist_dir = '../data/combined'
+    artist_dir = '../data/lyrics/combined'
     dataloaders, txt_vocab, phoneme_vocab = get_dataloader(artist_dir, batch_sizes=(16, 5, 5))
     dataset_sizes = {x: len(dataloaders[x].dataset) for x in ['train', 'val', 'test']}
     vocab_size = len(txt_vocab)
