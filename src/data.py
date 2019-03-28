@@ -35,9 +35,9 @@ class Corpus(object):
 
         if os.path.exists(dict_path) and os.path.exists(phoneme_path):
             self.dictionary = Dictionary(dict_path)
-            lyrics_list = self.process_lyrics(lyric_path)
-            self.lyrics = self.tokenize_text(lyrics_list)
-            self.phonemes = self.tokenize_phonemes(phoneme_path)
+            #lyrics_list = self.process_lyrics(lyric_path)
+            #self.lyrics = self.tokenize_text(lyrics_list)
+            #self.phonemes = self.tokenize_phonemes(phoneme_path)
         else:
             self.dictionary = Dictionary()
             self.create_dictionaries(lyric_path, phoneme_path, dict_path)

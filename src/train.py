@@ -37,11 +37,15 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
                 # text is size (batch_size, max_stanza_length)
                 # text_lengths is size (batch_size,); contains lengths of each stanza in batch
                 text, text_lengths = batch.text
+                text = text.to(device)
+                text_lengths = text_lengths.to(device)
 
                 # phonemes is size (batch_size, max_stanza_length, max_word_length)
                 # 2nd arg should be same as text_lengths
                 # phoneme_lengths is (batch_size, max_stanza_length); x[i][j] contains word length of word j in the ith stanza
                 phonemes, _, phoneme_lengths = batch.phonemes
+                phonemes = phonemes.to(device)
+                phoneme_lengths = phoneme_lengths.to(device)
 
                 # TODO probably need to trim text and phonemes into `input` and `labels`
                 # Should already be on device but worth checking
@@ -83,7 +87,7 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
                     loss.backward()
                     optimizer.step()
                     loss_history.append(loss.item())
-  
+
                 print('loss: ', loss.item())
 
                 # statistics

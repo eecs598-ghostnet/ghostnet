@@ -134,6 +134,7 @@ def split_songs(artist_dir, train_pct=80, val_pct=15, test_pct=5):
 
 def get_lyrics_iterators(artist_dir, batch_sizes=(5, 5, 5)):
     split_songs(artist_dir)
+    print('Building corpus...')
     corpus = data.Corpus(artist_dir)
 
     #print(corpus.dictionary.word2phonemes['raptorspaymybills'])
@@ -153,19 +154,23 @@ def get_lyrics_iterators(artist_dir, batch_sizes=(5, 5, 5)):
 
     fields = [('text', TEXT), ('phonemes', PHONEMES)]
 
+    print('Building dataset...')
     train_ds, val_ds, test_ds = StanzaDataset.splits(
             path=splits_dir, train='train.txt', validation='val.txt', test='test.txt',
             format='tsv', fields=fields, corpus=corpus)
 
+    print('Building text vocab...')
     TEXT.build_vocab(train_ds)
+    print('Building phoneme vocab...')
     PHONEMES.build_vocab(train_ds)
 
     #print(PHONEMES.vocab.stoi)
     #exit()
 
     # TODO not needed anymore?
-    corpus.build_vocab_to_corpus_idx_translate(TEXT.vocab)
+    #corpus.build_vocab_to_corpus_idx_translate(TEXT.vocab)
 
+    print('Creating iterators...')
     # Create dataloaders
     train_it, val_it, test_it = BucketIterator.splits(
         (train_ds, val_ds, test_ds),
@@ -174,6 +179,7 @@ def get_lyrics_iterators(artist_dir, batch_sizes=(5, 5, 5)):
         sort_within_batch=False,
         repeat=False,
     )
+    print('Done')
 
     return corpus, TEXT.vocab, PHONEMES.vocab, train_it, val_it, test_it
 
@@ -186,7 +192,7 @@ def get_dataloader(artist_dir, batch_sizes=(5, 5, 5)):
 
 
 def check_words_and_phonemes():
-    artist_dir = '../data/lyrics/KendrickLamar'
+    artist_dir = '../data/combined'
 
     split_songs(artist_dir)
 
@@ -196,7 +202,7 @@ def check_words_and_phonemes():
     #vidx = vocab.stoi['the']
     #print(c.vocab_word_to_phoneme_idxs(vidx))
 
-    for i, batch in enumerate(val_it):
+    for i, batch in enumerate(train_it):
         text, text_lengths = batch.text
         phonemes, phonemes_chunk_lengths, phoneme_lengths = batch.phonemes
 
@@ -210,15 +216,14 @@ def check_words_and_phonemes():
         print(words)
         print()
 
-        print(text.size())
-        print(phonemes.size())
-        print(phoneme_lengths.size())
+        #print(text.size())
+        #print(phonemes.size())
+        #print(phoneme_lengths.size())
 
-        exit()
 
         #print()
-        print(text_lengths)
-        print(phonemes_chunk_lengths)
+        #print(text_lengths)
+        #print(phonemes_chunk_lengths)
 
         print([' '.join([p_vocab.itos[idx] for i, idx in enumerate(pword) if i < pword_len])
             for pword, pword_len
@@ -231,7 +236,10 @@ def check_words_and_phonemes():
         exit()
 
 if __name__ == '__main__':
-    #check_words_and_phonemes()
+    check_words_and_phonemes()
+    exit()
+
+
     path = '../data/combined/splits/train.txt'
 
     with io.open(os.path.expanduser(path), encoding="utf8") as f:
