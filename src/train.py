@@ -1,3 +1,6 @@
+import copy
+import time
+
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -23,6 +26,8 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
             else:
                 model.eval()
 
+            running_loss = 0.0
+            running_corrects = 0
 
             # Iterate over data.
             for batch in dataloaders[phase]:
@@ -37,30 +42,36 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
 
                 # TODO probably need to trim text and phonemes into `input` and `labels`
                 # Should already be on device but worth checking
+                text_inputs = text[:, :-1] # Offset stanzas by one word.
+                labels = text[:, 1:]
+                text_lengths = text_lengths - 1
+                text_inputs = text_inputs.to(device)
+                labels = labels.to(device)
+#                labels = labels.to(float)
 
-                #inputs = inputs.to(device)
-                #labels = labels.to(device)
-                #labels = labels.to(float)
-
+                phoneme_inputs = phonemes[:, :-1, :] # Get rid of last timestep to match text inputs
+                phoneme_lengths = phoneme_lengths[:, :-1]
+                phoneme_inputs = phoneme_inputs.to(device)
                 # zero the parameter gradients
                 optimizer.zero_grad()
 
                 # forward
                 # track history if only in train
                 with torch.set_grad_enabled(phase == 'train'):
-                    outputs = model(inputs, phoneme_inputs, lengths, phoneme_lengths)
-                    outputs = outptus.reshape(labels.shape[0] * labels.shape[1], -1)
+                    outputs = model(text_inputs, phoneme_inputs, text_lengths, phoneme_lengths)
+                #    outputs = outputs.reshape(labels.shape[0] * labels.shape[1], -1)
 
+                _, preds = torch.max(outputs, 2)
 
                 # gather only outputs for non padded sections.
                 mask = torch.zeros(labels.shape)
                 for n in range(mask.shape[0]):
-                    length = lengths[n]
+                    length = text_lengths[n]
                     mask[n, :length] = 1.0
 
-                import pdb; pdb.set_trace()
-                outputs = outputs[mask.expand_as(outputs).byte()]
+                outputs = outputs[mask.unsqueeze(2).expand_as(outputs).byte()].view(mask.sum().long(), -1)
                 labels = labels[mask.byte()]
+                preds = preds[mask.byte()]
 
 
                 # backward + optimize only if in training phase
@@ -68,9 +79,11 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
                     loss = criterion(outputs, labels)
                     loss.backward()
                     optimizer.step()
+  
+                print('loss: ', loss.item())
 
                 # statistics
-                running_loss += loss.item() * inputs.size(0)
+                running_loss += loss.item() * text_inputs.size(0)
                 running_corrects += torch.sum(preds == labels)
 
             epoch_loss = running_loss / dataset_sizes[phase]
@@ -94,23 +107,29 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
     return model
 
 def main():
-    vocab_size = 1000
-    embed_size = 50
-    hidden_size = 100
-    phoneme_vocab_size = 60
-    phoneme_embed_size = 30
-    phoneme_hidden_size = 40
+#    vocab_size = 1000
+#    embed_size = 50
+#    hidden_size = 100
+#    phoneme_vocab_size = 60
+#    phoneme_embed_size = 30
+#    phoneme_hidden_size = 40
 
     artist_dir = '../data/lyrics/Drake'
-    dataloader, txt_vocab, phoneme_vocab = get_dataloader(artist_dir)
-
+    dataloaders, txt_vocab, phoneme_vocab = get_dataloader(artist_dir)
+    dataset_sizes = {x: len(dataloaders[x].dataset) for x in ['train', 'val', 'test']}
+    vocab_size = len(txt_vocab)
+    embed_size = 50
+    hidden_size = 100
+    phoneme_vocab_size = len(phoneme_vocab)
+    phoneme_embed_size = 30
+    phoneme_hidden_size = 40
     model = TextGenerationModel(vocab_size, embed_size, hidden_size, phoneme_vocab_size, phoneme_embed_size, phoneme_hidden_size)
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.Adam(model.parameters, lr=0.001)
+    optimizer = optim.Adam(model.parameters(), lr=0.001)
     exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=7, gamma=0.1)
 
-#def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, scheduler, num_epochs=25):
+    train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=25)
 
 
 if __name__ == '__main__':
