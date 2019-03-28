@@ -31,7 +31,7 @@ class Corpus(object):
     def __init__(self, path):
         lyric_path = os.path.join(path, 'lyrics.txt')
         phoneme_path = os.path.join(path, 'phonemes.txt')
-        dict_path = os.path.join(path, 'w2p.pickle')
+        dict_path = os.path.join(path, 'dict.pickle')
 
         if os.path.exists(dict_path) and os.path.exists(phoneme_path):
             self.dictionary = Dictionary(dict_path)
@@ -94,7 +94,7 @@ class Corpus(object):
         output = re.sub("_:", '', output)
 
         # A quirk of the way we are using espeak is that the phoneme for the word \n is '', so we sub it with '\n'
-        output = re.sub(' ', '-', output).strip('\n').split('\n')
+        output = re.sub(' +', '-', output).strip('\n').split('\n')
         output[output.index('')] = '\n'
 
         word_list =  (('-').join(output)).split('-')
