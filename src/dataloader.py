@@ -187,7 +187,7 @@ def get_dataloader(artist_dir, batch_sizes=(5, 5, 5)):
     corpus, txt_vocab, phoneme_vocab, train_it, val_it, test_it = get_lyrics_iterators(artist_dir, batch_sizes)
 
     dataloader = {'train': train_it, 'val': val_it, 'test': test_it}
-    return dataloader, txt_vocab, phoneme_vocab
+    return dataloader, txt_vocab, phoneme_vocab, corpus
 
 
 def check_words_and_phonemes():

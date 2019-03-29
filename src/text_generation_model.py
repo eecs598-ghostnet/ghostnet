@@ -89,7 +89,7 @@ class TextGenerationModel(nn.Module):
         last_phoneme_outputs = phoneme_outputs.gather(time_dimension, idx).squeeze(time_dimension)
         last_phoneme_outputs = last_phoneme_outputs.view(B, T, -1)
 
-        
+
         ############
         #_, phoneme_hiddens = self.phoneme_lstm(packed_phoneme_embeddings.view(B * T, T_phoneme, -1))
         #phoneme_hiddens = phoneme_hiddens[0].view(B, T, -1)
@@ -98,7 +98,7 @@ class TextGenerationModel(nn.Module):
         inputs = torch.cat([embeddings, last_phoneme_outputs], dim=2)
         #TODO : Need to use pack padded here.
         outputs, hiddens = self.lstm(inputs)
-        
+
 #        for t in range(T):
 #            embeddings_t = embeddings[:, t]
 #            phoneme_embeddings_t = phoneme_embeddings[:, t, :, :]
@@ -112,6 +112,36 @@ class TextGenerationModel(nn.Module):
 #        outputs = self.softmax(outputs)
         outputs = outputs.view(B, T, self.vocab_size)
         return outputs
+
+    def gen_word(self, txt, phonemes, hidden=None):
+        """
+        Predict the next word. Similar to forward but runs on single inputs
+        rather than batches and has word sequence length 1.
+
+        Inputs:
+        - txt, Pytorch Tensor with size (1)
+        - phonemes, Pytorch Tensor with size (1, 1, T_phoneme)
+        """
+        T_phoneme = phonemes.size(2)
+
+        txt_embedding = self.embedding(txt)
+        phoneme_embeddings = self.phoneme_embedding(phonemes.view(1,-1)).view(1, T_phoneme, -1)
+
+        # Phoneme summarization
+        phoneme_summ, _ = self.phoneme_lstm(phoneme_embeddings)
+        phoneme_summ = phoneme_summ.view(1, 1, T_phoneme, -1)[:,:,-1,:]   # unnecessary but consistent
+
+        txt_gen_inputs = torch.cat((txt_embedding, phoneme_summ), dim=2)
+
+        if hidden is None:
+            outputs, hidden = self.lstm(txt_gen_inputs)
+        else:
+            outputs, hidden = self.lstm(txt_gen_inputs, hidden)
+
+        outputs = self.fc(outputs.contiguous().view(1, -1))
+        outputs = outputs.view(self.vocab_size)     # only predicting one word
+        return outputs, hidden
+
 
 class EncoderRNN(nn.Module):
     def __init__(self, input_size, hidden_size):
@@ -176,7 +206,7 @@ def main():
         for t in range(T):
             word_phoneme_length = dummy_phoneme_lengths[b, t]
             dummy_x_phonemes[b, t, word_phoneme_length:] = 0.0
-    
+
     dummy_outputs = model(dummy_x, dummy_x_phonemes, dummy_lengths, dummy_phoneme_lengths)
     import pdb; pdb.set_trace()
 

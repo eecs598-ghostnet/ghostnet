@@ -124,8 +124,8 @@ def main():
 #    phoneme_hidden_size = 40
 
 
-    artist_dir = '../data/lyrics/combined'
-    dataloaders, txt_vocab, phoneme_vocab = get_dataloader(artist_dir, batch_sizes=(16, 5, 5))
+    artist_dir = '../data/lyrics/combined_trunc'
+    dataloaders, txt_vocab, phoneme_vocab, _ = get_dataloader(artist_dir, batch_sizes=(16, 5, 5))
     dataset_sizes = {x: len(dataloaders[x].dataset) for x in ['train', 'val', 'test']}
     vocab_size = len(txt_vocab)
     embed_size = 50
