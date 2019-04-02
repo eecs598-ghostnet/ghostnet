@@ -237,8 +237,21 @@ def check_words_and_phonemes():
         #print()
         exit()
 
+def vocab_count(artist_dir='../data/lyrics/combined_trunc'):
+    _, txt_vocab, _, _ = get_dataloader(artist_dir)
+    one_counts = [key for key, val in txt_vocab.freqs.items() if val <= 2]
+    print(f'total vocab count: {len(txt_vocab.itos)}')
+    print(f'one counts: {len(one_counts)}')
+
+    top = [(key, val) for key, val in txt_vocab.freqs.items() if val > 100]
+    top.sort(key=lambda x:x[1])
+    print(top)
+
 if __name__ == '__main__':
-    check_words_and_phonemes()
+    #check_words_and_phonemes()
+    #exit()
+
+    vocab_count()
     exit()
 
 
