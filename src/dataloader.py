@@ -132,7 +132,7 @@ def split_songs(artist_dir, train_pct=80, val_pct=15, test_pct=5):
             return
 
 
-def get_lyrics_iterators(artist_dir, batch_sizes=(5, 5, 5)):
+def get_lyrics_iterators(artist_dir, batch_sizes=(5, 5, 5), min_vocab_freq=1):
     split_songs(artist_dir)
     print('Building corpus...')
     corpus = data.Corpus(artist_dir, gen_tokens=False)
@@ -159,7 +159,7 @@ def get_lyrics_iterators(artist_dir, batch_sizes=(5, 5, 5)):
             format='tsv', fields=fields, corpus=corpus)
 
     print('Building text vocab...')
-    TEXT.build_vocab(train_ds)
+    TEXT.build_vocab(train_ds, min_freq=min_vocab_freq)
     print('Building phoneme vocab...')
     PHONEMES.build_vocab(train_ds)
 
@@ -183,8 +183,8 @@ def get_lyrics_iterators(artist_dir, batch_sizes=(5, 5, 5)):
     return corpus, TEXT.vocab, PHONEMES.vocab, train_it, val_it, test_it
 
 
-def get_dataloader(artist_dir, batch_sizes=(5, 5, 5)):
-    corpus, txt_vocab, phoneme_vocab, train_it, val_it, test_it = get_lyrics_iterators(artist_dir, batch_sizes)
+def get_dataloader(artist_dir, **kwargs):
+    corpus, txt_vocab, phoneme_vocab, train_it, val_it, test_it = get_lyrics_iterators(artist_dir, **kwargs)
 
     dataloader = {'train': train_it, 'val': val_it, 'test': test_it}
     return dataloader, txt_vocab, phoneme_vocab, corpus
@@ -238,7 +238,7 @@ def check_words_and_phonemes():
         exit()
 
 def vocab_count(artist_dir='../data/lyrics/combined_trunc'):
-    _, txt_vocab, _, _ = get_dataloader(artist_dir)
+    _, txt_vocab, _, _ = get_dataloader(artist_dir, min_vocab_freq=2)
     one_counts = [key for key, val in txt_vocab.freqs.items() if val <= 2]
     print(f'total vocab count: {len(txt_vocab.itos)}')
     print(f'one counts: {len(one_counts)}')
