@@ -9,6 +9,7 @@ from torch.optim import lr_scheduler
 from text_generation_model import TextGenerationModel
 from dataloader import get_dataloader
 import utils
+import config
 
 
 def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, scheduler, num_epochs=25):
@@ -132,17 +133,22 @@ def main():
 
 
     artist_dir = '../data/lyrics/combined_trunc'
-    dataloaders, txt_vocab, phoneme_vocab, _ = get_dataloader(artist_dir, batch_sizes=(16, 5, 5), min_vocab_freq=3)
+
+    dataloaders, txt_vocab, phoneme_vocab, _ = get_dataloader(
+        artist_dir, batch_sizes=(16, 5, 5), min_vocab_freq=3
+    )
     dataset_sizes = {x: len(dataloaders[x].dataset) for x in ['train', 'val', 'test']}
-    vocab_size = len(txt_vocab)
-    embed_size = 50
-    hidden_size = 100
-    phoneme_vocab_size = len(phoneme_vocab)
-    phoneme_embed_size = 30
-    phoneme_hidden_size = 40
-    model = TextGenerationModel(vocab_size, embed_size, hidden_size, phoneme_vocab_size, phoneme_embed_size, phoneme_hidden_size)
+
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+
+    # Model
+    model_params = config.model_params
+    model_params['vocab_size'] = len(txt_vocab)
+    model_params['phoneme_vocab_size'] = len(phoneme_vocab)
+
+    model = TextGenerationModel(**model_params)
     model = model.to(device)
+
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=0.002)
     exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=7, gamma=0.1)

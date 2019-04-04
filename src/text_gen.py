@@ -6,6 +6,7 @@ from torch.optim import lr_scheduler
 from text_generation_model import TextGenerationModel
 from dataloader import get_dataloader
 import utils
+import config
 
 def gen_text(model, txt_vocab, phoneme_vocab, corpus, device, seed_word='\n', max_length=50):
     # TODO seed with gaussian distr of LSTM hidden state vector
@@ -63,14 +64,9 @@ if __name__ == '__main__':
     _, txt_vocab, phoneme_vocab, corpus = get_dataloader(artist_dir, min_vocab_freq=3)
 
     # TODO shared config for these
-    model_params = {
-        'vocab_size': len(txt_vocab),
-        'embed_size': 50,
-        'hidden_size': 100,
-        'phoneme_vocab_size': len(phoneme_vocab),
-        'phoneme_embed_size': 30,
-        'phoneme_hidden_size': 40,
-    }
+    model_params = config.model_params
+    model_params['vocab_size'] = len(txt_vocab)
+    model_params['phoneme_vocab_size'] = len(phoneme_vocab)
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     model = load_model('../model/2unk_no_chorus_trunc.pt', device, **model_params)
