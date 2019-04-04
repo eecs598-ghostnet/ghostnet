@@ -84,6 +84,13 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
                 # backward + optimize only if in training phase
                 if phase == 'train':
                     loss = criterion(outputs, labels)
+
+                    try:
+                        # Free cached gpu mem
+                        torch.cuda.empty_cache()
+                    except:
+                        pass
+
                     loss.backward()
                     optimizer.step()
                     loss_history.append(loss.item())
@@ -125,7 +132,7 @@ def main():
 
 
     artist_dir = '../data/lyrics/combined_trunc'
-    dataloaders, txt_vocab, phoneme_vocab, _ = get_dataloader(artist_dir, batch_sizes=(16, 5, 5))
+    dataloaders, txt_vocab, phoneme_vocab, _ = get_dataloader(artist_dir, batch_sizes=(16, 5, 5), min_vocab_freq=3)
     dataset_sizes = {x: len(dataloaders[x].dataset) for x in ['train', 'val', 'test']}
     vocab_size = len(txt_vocab)
     embed_size = 50
@@ -140,7 +147,7 @@ def main():
     optimizer = optim.Adam(model.parameters(), lr=0.002)
     exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=7, gamma=0.1)
 
-    model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=50)
+    model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=5)
     torch.save(model.state_dict(), '../model/text_generation_model.pt')
 
 

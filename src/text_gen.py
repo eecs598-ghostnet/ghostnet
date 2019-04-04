@@ -24,7 +24,15 @@ def gen_text(model, txt_vocab, phoneme_vocab, corpus, device, seed_word='\n', ma
 
         #outputs = model(txt_input, phonemes_input, txt_lengths, phoneme_lengths)
         outputs, hidden = model.gen_word(txt_input, phonemes_input, hidden=hidden)
-        score, token = outputs.max(0)
+
+        top_outs = torch.topk(outputs, k=2)
+
+        # Get top non-unk word
+        score, token = None, None
+        if top_outs[1][0] != phoneme_vocab.stoi['<unk>']:
+            score, token = top_outs[0][0], top_outs[1][0]
+        else:
+            score, token = top_outs[0][1], top_outs[1][1]
 
         #print(score, token)
         word = txt_vocab.itos[token]
@@ -52,7 +60,7 @@ def load_model(state_dict_path, device, **kwargs):
 if __name__ == '__main__':
     # vocab must be shared with trained model
     artist_dir = '../data/lyrics/combined_trunc'
-    _, txt_vocab, phoneme_vocab, corpus = get_dataloader(artist_dir)
+    _, txt_vocab, phoneme_vocab, corpus = get_dataloader(artist_dir, min_vocab_freq=3)
 
     # TODO shared config for these
     model_params = {
@@ -65,6 +73,6 @@ if __name__ == '__main__':
     }
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    model = load_model('../model/partially_trained.pt', device, **model_params)
+    model = load_model('../model/2unk_no_chorus_trunc.pt', device, **model_params)
 
     gen_text(model, txt_vocab, phoneme_vocab, corpus, device, seed_word='you')
