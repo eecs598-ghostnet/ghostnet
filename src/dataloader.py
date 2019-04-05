@@ -24,7 +24,7 @@ class StanzaDataset(Dataset):
             'tsv': Example.fromCSV, 'csv': Example.fromCSV}[format]
 
         with io.open(os.path.expanduser(path), encoding="utf8") as f:
-            reader = stanza_phoneme_reader(f, corpus)
+            reader = line_phoneme_reader(f, corpus)
 
             if format in ['csv', 'tsv'] and isinstance(fields, dict):
                 if skip_header:
@@ -38,7 +38,7 @@ class StanzaDataset(Dataset):
             if skip_header:
                 next(reader)
 
-            examples = [make_example(line, fields) for line in reader]
+            examples = [make_example(line, fields) for line in reader if len(line[1]) > 1]
 
         if isinstance(fields, dict):
             fields, field_dict = [], fields
@@ -76,6 +76,17 @@ def stanza_phoneme_reader(f, corpus):
                 stanza = ''
         else:
             stanza += line
+
+
+
+def line_phoneme_reader(f, corpus):
+    d = corpus.dictionary
+
+    for line in f:
+        if not line.strip():
+            continue
+        phonemes = [' '.join(d.word2phonemes[word]) for word in re.findall(r'\S+|\n', line)[:-1]]
+        yield [line, phonemes]
 
 
 def song_reader(f):

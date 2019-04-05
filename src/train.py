@@ -134,6 +134,7 @@ def main():
 
     artist_dir = '../data/lyrics/combined_trunc'
 
+    # Get dataloaders
     dataloaders, txt_vocab, phoneme_vocab, _ = get_dataloader(
         artist_dir, batch_sizes=(16, 5, 5), min_vocab_freq=3
     )
@@ -147,13 +148,18 @@ def main():
     model_params['phoneme_vocab_size'] = len(phoneme_vocab)
 
     model = TextGenerationModel(**model_params)
+
+    # Load pretrained embeddings for text vocab
+    txt_vocab.load_vectors('glove.6B.100d')
+    model.embedding.weight.data.copy_(txt_vocab.vectors)
+
     model = model.to(device)
 
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=0.002)
     exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=7, gamma=0.1)
 
-    model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=5)
+    model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=1)
     torch.save(model.state_dict(), '../model/text_generation_model.pt')
 
 

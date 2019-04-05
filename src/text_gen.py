@@ -69,6 +69,6 @@ if __name__ == '__main__':
     model_params['phoneme_vocab_size'] = len(phoneme_vocab)
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    model = load_model('../model/2unk_no_chorus_trunc.pt', device, **model_params)
+    model = load_model('../model/glove6B100_no_chorus_trunc.pt', device, **model_params)
 
-    gen_text(model, txt_vocab, phoneme_vocab, corpus, device, seed_word='you')
+    gen_text(model, txt_vocab, phoneme_vocab, corpus, device, seed_word='test')
