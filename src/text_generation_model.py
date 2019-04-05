@@ -45,43 +45,66 @@ class TextGenerationModel(nn.Module):
         - outputs, Pytorch variable of size (batch_size, T, vocab_size) containing distribution over
           possible next words for each time step in each sequence.
         """
+        device = x.device
         B, T = x.shape
         _, _, T_phoneme = x_phonemes.shape
+
+        # Get word embeddings -> (B, T, word_embed_size)
         embeddings = self.embedding(x)
+
+        # Get phoneme embeddings -> (B, T, T_phoneme, phoneme_embed_size)
         phoneme_embeddings = self.phoneme_embedding(x_phonemes.view(B, -1)).view(B, T, T_phoneme, -1)
-        #phoneme_hiddens, hiddens = self._initialize_hidden(B)
-        #TODO : Need to use pack padded here.
-        #outputs = []
-        #TODO: Use pack padded for phoneme sequence so we don't include hiddens after padding.
+
+        print(embeddings.size())
+        print(phoneme_embeddings.size())
+
+        # Summarize phoneme embeddings
+
+
+        # Unravel to sequence of pwords=(T_phoneme, phoneme_embed_size)
         phoneme_lengths = phoneme_lengths.contiguous().view(-1)
         phoneme_embeddings = phoneme_embeddings.view(B * T, T_phoneme, -1)
+
+        # Sort phonemes sequence by word-length-in-phonemes
         sorted_phoneme_lengths, argsort_phoneme_lengths = phoneme_lengths.sort(descending=True)
         sorted_phoneme_embeddings = phoneme_embeddings[argsort_phoneme_lengths]
-        sorted_phoneme_embeddings = sorted_phoneme_embeddings
+        print(f'sorted_phoneme_lengths:\n{sorted_phoneme_lengths}')
+
+        # Split phonemes into actual words and pads
         if min(sorted_phoneme_lengths).item() == 0:
             #phoneme_pad_start = torch.argmin(sorted_phoneme_lengths)
             phoneme_pad_start = np.argmin(sorted_phoneme_lengths.cpu().numpy())
         else:
             phoneme_pad_start = len(sorted_phoneme_lengths)
+
         sorted_phoneme_embeddings_data = sorted_phoneme_embeddings[:phoneme_pad_start,:,:]
         sorted_phoneme_embeddings_pad = sorted_phoneme_embeddings[phoneme_pad_start:,:,:]
-        try:
-            packed_phoneme_embeddings = pack_padded_sequence(sorted_phoneme_embeddings_data, sorted_phoneme_lengths[:phoneme_pad_start], batch_first=True)
-        except:
-            import pdb; pdb.set_trace()
-        packed_phoneme_outputs, phoneme_hiddens = self.phoneme_lstm(packed_phoneme_embeddings)
-        sorted_phoneme_pad_outputs, _ = self.phoneme_lstm(sorted_phoneme_embeddings_pad)
-        sorted_phoneme_pad_outputs = sorted_phoneme_pad_outputs[:, :phoneme_lengths.max(), :]
 
+        # Summarize words -> (B*T, phoneme_hidden)
+        packed_phoneme_embeddings = pack_padded_sequence(sorted_phoneme_embeddings_data, sorted_phoneme_lengths[:phoneme_pad_start], batch_first=True)
+        packed_phoneme_outputs, _ = self.phoneme_lstm(packed_phoneme_embeddings)
         sorted_phoneme_outputs, _ = pad_packed_sequence(packed_phoneme_outputs, batch_first=True)
-        if sorted_phoneme_outputs.shape[1] != sorted_phoneme_pad_outputs.shape[1]:
-            import pdb; pdb.set_trace()
-        try:
+        #print(sorted_phoneme_outputs.size())
+
+        # If pads, run through lstm and cat with data outputs
+        if phoneme_pad_start != len(sorted_phoneme_lengths):
+            # Does this matter at all? Running LSTM on sequences of length 0
+            sorted_phoneme_pad_outputs, _ = self.phoneme_lstm(sorted_phoneme_embeddings_pad)
+            sorted_phoneme_pad_outputs = sorted_phoneme_pad_outputs[:, :phoneme_lengths.max(), :]
+            #print('sorted pad output size:', end='')
+            #print(sorted_phoneme_pad_outputs.size())
+
             sorted_phoneme_outputs = torch.cat([sorted_phoneme_outputs, sorted_phoneme_pad_outputs], dim=0)
-        except:
-            import pdb; pdb.set_trace()
+
+        print(f'sorted_phoneme_output size: {sorted_phoneme_outputs.size()}')
+        print(f'phoneme_idxs size: {argsort_phoneme_lengths.size()}')
+
+        # Unsort phoneme summaries
         _, unargsort_phoneme_lengths = argsort_phoneme_lengths.sort()
         phoneme_outputs = sorted_phoneme_outputs[unargsort_phoneme_lengths]
+        print(f'phoneme_outputs size: {phoneme_outputs.size()}')
+
+
 #        idx = (torch.LongTensor(phoneme_lengths) - 1).clamp(min=0).view(-1, 1).expand(len(phoneme_lengths), phoneme_outputs.size(2))
         idx = (phoneme_lengths.long() - 1).clamp(min=0).view(-1, 1).expand(len(phoneme_lengths), phoneme_outputs.size(2))
         time_dimension = 1
@@ -89,27 +112,20 @@ class TextGenerationModel(nn.Module):
         last_phoneme_outputs = phoneme_outputs.gather(time_dimension, idx).squeeze(time_dimension)
         last_phoneme_outputs = last_phoneme_outputs.view(B, T, -1)
 
+        print(f'last_phoneme_outputs size: {last_phoneme_outputs.size()}')
+        exit()
 
-        ############
-        #_, phoneme_hiddens = self.phoneme_lstm(packed_phoneme_embeddings.view(B * T, T_phoneme, -1))
-        #phoneme_hiddens = phoneme_hiddens[0].view(B, T, -1)
+
         # We now have embeddings (B, T, self.embed_size) and phoneme_hiddens (B, T, self.phoneme_hidden_size)
         # which we  will concatenate into the text generation LSTM for input.
         inputs = torch.cat([embeddings, last_phoneme_outputs], dim=2)
+
         #TODO : Need to use pack padded here.
+        # lengths are already sorted here
         outputs, hiddens = self.lstm(inputs)
 
-#        for t in range(T):
-#            embeddings_t = embeddings[:, t]
-#            phoneme_embeddings_t = phoneme_embeddings[:, t, :, :]
-#            #TODO: Use pack padded for phoneme sequence.
-#            phoneme_outputs_t, _ = self.phoneme_lstm(phoneme_embeddings_t)
-#            inputs_t  = torch.concat([embeddings_t, phoneme_outputs_t], dim=1)
-#            outputs_t, hiddens = self.lstm(x_t, hiddens)
-#            outputs.append(outputs_t)
-#        outputs = torch.concatenate(outputs, dim=1)
+        exit()
         outputs = self.fc(outputs.contiguous().view(B * T, -1))
-#        outputs = self.softmax(outputs)
         outputs = outputs.view(B, T, self.vocab_size)
         return outputs
 
@@ -141,38 +157,6 @@ class TextGenerationModel(nn.Module):
         outputs = self.fc(outputs.contiguous().view(1, -1))
         outputs = outputs.view(self.vocab_size)     # only predicting one word
         return outputs, hidden
-
-
-class EncoderRNN(nn.Module):
-    def __init__(self, input_size, hidden_size):
-        super(EncoderRNN, self).__init__()
-        self.hidden_size = hidden_size
-
-        self.embedding_layer = nn.Embedding(input_size, hidden_size)
-        self.lstm = nn.LSTM(hidden_size, hidden_size)
-
-    def forward(self, inputs, hidden):
-        embeddings = self.embedding_layer(inputs)
-        output, hidden = self.lstm(embeddings)
-
-        return output
-
-class DecoderRNN(nn.Module):
-    def __init__(self, hidden_size, output_size):
-        super(DecoderRNN, self).__init__()
-        self.hidden_size = hidden_size
-
-        self.embedding = nn.Embedding(output_size, hidden_size)
-        self.lstm = nn.LSTM(hidden_size, hidden_size, batch_first=True)
-        self.out = nn.Linear(hidden_size, output_size)
-        self.softmax = nn.LogSoftmax(dim=1)
-
-    def forward(self, inputs, hidden):
-        embeddings = self.embedding(inputs)
-        outputs, hiddens = self.lstm(embeddings)
-        outputs = self.out(outputs)
-        outputs = self.softmax(outputs)
-        return outputs
 
 
 def main():
