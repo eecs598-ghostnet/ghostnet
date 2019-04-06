@@ -48,6 +48,7 @@ class TextGenerationModel(nn.Module):
         device = x.device
         B, T = x.shape
         _, _, T_phoneme = x_phonemes.shape
+        #print(f'B: {B}, T: {T}, T_phoneme: {T_phoneme}')
 
         # Get word embeddings -> (B, T, word_embed_size)
         embeddings = self.embedding(x)
@@ -55,8 +56,8 @@ class TextGenerationModel(nn.Module):
         # Get phoneme embeddings -> (B, T, T_phoneme, phoneme_embed_size)
         phoneme_embeddings = self.phoneme_embedding(x_phonemes.view(B, -1)).view(B, T, T_phoneme, -1)
 
-        print(embeddings.size())
-        print(phoneme_embeddings.size())
+        #print(embeddings.size())
+        #print(phoneme_embeddings.size())
 
         # Summarize phoneme embeddings
 
@@ -68,7 +69,7 @@ class TextGenerationModel(nn.Module):
         # Sort phonemes sequence by word-length-in-phonemes
         sorted_phoneme_lengths, argsort_phoneme_lengths = phoneme_lengths.sort(descending=True)
         sorted_phoneme_embeddings = phoneme_embeddings[argsort_phoneme_lengths]
-        print(f'sorted_phoneme_lengths:\n{sorted_phoneme_lengths}')
+        #print(f'sorted_phoneme_lengths:\n{sorted_phoneme_lengths}')
 
         # Split phonemes into actual words and pads
         if min(sorted_phoneme_lengths).item() == 0:
@@ -96,15 +97,15 @@ class TextGenerationModel(nn.Module):
 
             sorted_phoneme_outputs = torch.cat([sorted_phoneme_outputs, sorted_phoneme_pad_outputs], dim=0)
 
-        print(f'sorted_phoneme_output size: {sorted_phoneme_outputs.size()}')
-        print(f'phoneme_idxs size: {argsort_phoneme_lengths.size()}')
+        #print(f'sorted_phoneme_output size: {sorted_phoneme_outputs.size()}')
+        #print(f'phoneme_idxs size: {argsort_phoneme_lengths.size()}')
 
         # Unsort phoneme summaries
         _, unargsort_phoneme_lengths = argsort_phoneme_lengths.sort()
         phoneme_outputs = sorted_phoneme_outputs[unargsort_phoneme_lengths]
-        print(f'phoneme_outputs size: {phoneme_outputs.size()}')
+        #print(f'phoneme_outputs size: {phoneme_outputs.size()}')
 
-
+        # Get the last non-pad hidden state of each phoneme sequence
 #        idx = (torch.LongTensor(phoneme_lengths) - 1).clamp(min=0).view(-1, 1).expand(len(phoneme_lengths), phoneme_outputs.size(2))
         idx = (phoneme_lengths.long() - 1).clamp(min=0).view(-1, 1).expand(len(phoneme_lengths), phoneme_outputs.size(2))
         time_dimension = 1
@@ -112,8 +113,7 @@ class TextGenerationModel(nn.Module):
         last_phoneme_outputs = phoneme_outputs.gather(time_dimension, idx).squeeze(time_dimension)
         last_phoneme_outputs = last_phoneme_outputs.view(B, T, -1)
 
-        print(f'last_phoneme_outputs size: {last_phoneme_outputs.size()}')
-        exit()
+        #print(f'last_phoneme_outputs size: {last_phoneme_outputs.size()}')
 
 
         # We now have embeddings (B, T, self.embed_size) and phoneme_hiddens (B, T, self.phoneme_hidden_size)
@@ -121,10 +121,14 @@ class TextGenerationModel(nn.Module):
         inputs = torch.cat([embeddings, last_phoneme_outputs], dim=2)
 
         #TODO : Need to use pack padded here.
-        # lengths are already sorted here
-        outputs, hiddens = self.lstm(inputs)
+        # Pack combined inputs. Lengths are already sorted here
+        packed_inputs = pack_padded_sequence(inputs, lengths, batch_first=True)
 
-        exit()
+        packed_outputs, hiddens = self.lstm(packed_inputs)
+        outputs, _ = pad_packed_sequence(packed_outputs, batch_first=True)
+
+        #print(hn.size())
+
         outputs = self.fc(outputs.contiguous().view(B * T, -1))
         outputs = outputs.view(B, T, self.vocab_size)
         return outputs

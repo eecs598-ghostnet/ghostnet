@@ -33,16 +33,19 @@ def gen_text(model, txt_vocab, phoneme_vocab, corpus, device, seed_word='\n', ma
         if top_outs[1][0] != phoneme_vocab.stoi['<unk>']:
             score, token = top_outs[0][0], top_outs[1][0]
         else:
+            print('skipping unk')
             score, token = top_outs[0][1], top_outs[1][1]
 
         #print(score, token)
         word = txt_vocab.itos[token]
 
-        if word == '<pad>':
+        if word == '<eos>':
+            print('<eos> found')
             break
 
         words.append(word)
 
+    print()
     print(' '.join(words))
 
 
@@ -69,6 +72,6 @@ if __name__ == '__main__':
     model_params['phoneme_vocab_size'] = len(phoneme_vocab)
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    model = load_model('../model/glove6B100_no_chorus_trunc.pt', device, **model_params)
+    model = load_model('../model/higher_hidden_dims.pt', device, **model_params)
 
-    gen_text(model, txt_vocab, phoneme_vocab, corpus, device, seed_word='test')
+    gen_text(model, txt_vocab, phoneme_vocab, corpus, device, seed_word='hmm', max_length=20)

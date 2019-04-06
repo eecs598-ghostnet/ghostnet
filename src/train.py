@@ -88,8 +88,9 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
 
                     try:
                         # Free cached gpu mem
+                        del outputs
                         torch.cuda.empty_cache()
-                    except:
+                    except RuntimeError:
                         pass
 
                     loss.backward()
@@ -159,8 +160,8 @@ def main():
     optimizer = optim.Adam(model.parameters(), lr=0.002)
     exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=7, gamma=0.1)
 
-    model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=1)
-    torch.save(model.state_dict(), '../model/text_generation_model.pt')
+    model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=5)
+    torch.save(model.state_dict(), '../model/packed_pad_used.pt')
 
 
 if __name__ == '__main__':
