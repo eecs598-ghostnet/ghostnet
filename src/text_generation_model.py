@@ -19,7 +19,7 @@ class TextGenerationModel(nn.Module):
         self.phoneme_embedding = nn.Embedding(phoneme_vocab_size, phoneme_embed_size)
         self.phoneme_lstm = nn.LSTM(self.phoneme_embed_size, self.phoneme_hidden_size, batch_first=True)
         self.embedding = nn.Embedding(vocab_size, embed_size)
-        self.lstm = nn.LSTM(embed_size + phoneme_hidden_size, hidden_size, batch_first=True)
+        self.lstm = nn.LSTM(embed_size + phoneme_hidden_size, hidden_size, num_layers=2, batch_first=True)
         self.fc = nn.Linear(hidden_size, vocab_size)
         self.softmax = nn.Softmax(dim=1)
 
