@@ -3,12 +3,14 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.optim import lr_scheduler
 
+import sys
+
 from text_generation_model import TextGenerationModel
 from dataloader import get_dataloader
 import utils
 import config
 
-def gen_text(model, txt_vocab, phoneme_vocab, corpus, device, seed_word='\n', max_length=50):
+def gen_text(model, txt_vocab, phoneme_vocab, corpus, device, seed_word='\n', max_length=50, prevent_double_newlines=True):
     # TODO seed with gaussian distr of LSTM hidden state vector
     d = corpus.dictionary
 
@@ -26,18 +28,26 @@ def gen_text(model, txt_vocab, phoneme_vocab, corpus, device, seed_word='\n', ma
         #outputs = model(txt_input, phonemes_input, txt_lengths, phoneme_lengths)
         outputs, hidden = model.gen_word(txt_input, phonemes_input, hidden=hidden)
 
-        top_outs = torch.topk(outputs, k=2)
+        top_outs = torch.topk(outputs, k=3)
 
         # Get top non-unk word
         score, token = None, None
-        if top_outs[1][0] != phoneme_vocab.stoi['<unk>']:
-            score, token = top_outs[0][0], top_outs[1][0]
-        else:
-            print('skipping unk')
-            score, token = top_outs[0][1], top_outs[1][1]
+        for i in range(top_outs[1].size(0)):
+            score, token = top_outs[0][i], top_outs[1][i]
+            if token == txt_vocab.stoi['<unk>']:
+                print('skipping unk')
+                continue
+            if prevent_double_newlines and word == '\n' and token == txt_vocab.stoi['\n']:
+                print('skipping double newline')
+                continue
+
+            assert token != txt_vocab.stoi['<unk>']
+            assert txt_vocab.itos[token] != '<unk>'
+            break
 
         #print(score, token)
         word = txt_vocab.itos[token]
+        assert word != '<unk>', "how is this happening"
 
         if word == '<eos>':
             print('<eos> found')
@@ -62,7 +72,10 @@ def load_model(state_dict_path, device, **kwargs):
 
 
 if __name__ == '__main__':
-    # vocab must be shared with trained model
+    seed_word = '\n'
+    if len(sys.argv) > 1:
+        seed_word = sys.argv[1]
+    # vocab must be shared with trained modeljkk
     artist_dir = '../data/lyrics/combined_trunc'
     _, txt_vocab, phoneme_vocab, corpus = get_dataloader(artist_dir, min_vocab_freq=3)
 
@@ -72,6 +85,6 @@ if __name__ == '__main__':
     model_params['phoneme_vocab_size'] = len(phoneme_vocab)
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    model = load_model('../model/higher_hidden_dims.pt', device, **model_params)
+    model = load_model('../model/stacked_lstm_20.pt', device, **model_params)
 
-    gen_text(model, txt_vocab, phoneme_vocab, corpus, device, seed_word='hmm', max_length=20)
+    gen_text(model, txt_vocab, phoneme_vocab, corpus, device, seed_word=seed_word, max_length=50)
