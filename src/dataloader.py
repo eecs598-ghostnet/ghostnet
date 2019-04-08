@@ -24,7 +24,7 @@ class StanzaDataset(Dataset):
             'tsv': Example.fromCSV, 'csv': Example.fromCSV}[format]
 
         with io.open(os.path.expanduser(path), encoding="utf8") as f:
-            reader = line_phoneme_reader(f, corpus)
+            reader = stanza_phoneme_reader(f, corpus, **csv_reader_params)
 
             if format in ['csv', 'tsv'] and isinstance(fields, dict):
                 if skip_header:
@@ -62,7 +62,7 @@ def stanza_reader(f):
             stanza += line
 
 
-def stanza_phoneme_reader(f, corpus):
+def stanza_phoneme_reader(f, corpus, skip_onelines=False):
     d = corpus.dictionary
 
     stanza = ''
@@ -72,7 +72,8 @@ def stanza_phoneme_reader(f, corpus):
                 # TODO do we want these newline tokens to have a phoneme mapping?
                 # TODO why is there an extra newline? does this match anything in the words?
                 phonemes = [' '.join(d.word2phonemes[word]) for word in re.findall(r'\S+|\n', stanza)[:-1]]
-                yield [stanza, phonemes]
+                if not skip_onelines or '\n' in stanza[:-1]:
+                    yield [stanza, phonemes]
                 stanza = ''
         else:
             stanza += line
@@ -167,7 +168,11 @@ def get_lyrics_iterators(artist_dir, batch_sizes=(5, 5, 5), min_vocab_freq=1):
     print('Building dataset...')
     train_ds, val_ds, test_ds = StanzaDataset.splits(
             path=splits_dir, train='train.txt', validation='val.txt', test='test.txt',
-            format='tsv', fields=fields, corpus=corpus)
+            format='tsv', fields=fields, corpus=corpus,
+            csv_reader_params={
+                'skip_onelines': True,
+            }
+    )
 
     print('Building text vocab...')
     TEXT.build_vocab(train_ds, min_freq=min_vocab_freq)
