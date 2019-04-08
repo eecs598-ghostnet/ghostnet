@@ -3,6 +3,7 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.optim import lr_scheduler
 
+import re
 import sys
 
 from text_generation_model import TextGenerationModel
@@ -10,13 +11,27 @@ from dataloader import get_dataloader
 import utils
 import config
 
-def gen_text(model, txt_vocab, phoneme_vocab, corpus, device, seed_word='\n', max_length=50, prevent_double_newlines=True):
+def gen_text(model, txt_vocab, phoneme_vocab, corpus, device, seed_words='\n', max_length=50, prevent_double_newlines=True):
     # TODO seed with gaussian distr of LSTM hidden state vector
     d = corpus.dictionary
 
-    word, hidden = seed_word, None
+    # Seed LSTM with given phrase
+    words = re.findall(r'\S+|\n', seed_words)
+    hidden = None
+    for word in words[:-1]:
+        word_token = txt_vocab.stoi[word]
+        txt_input = torch.Tensor([word_token]).view(1,1).to(device).long()
 
-    words = [word]
+        phonemes = d.word2phonemes[word]
+        phoneme_tokens = [phoneme_vocab.stoi[phoneme] for phoneme in phonemes]
+        phonemes_input = torch.Tensor(phoneme_tokens).view(1,1,-1).to(device).long()
+
+        #outputs = model(txt_input, phonemes_input, txt_lengths, phoneme_lengths)
+        outputs, hidden = model.gen_word(txt_input, phonemes_input, hidden=hidden)
+
+
+    word = words[-1]
+
     for i in range(max_length):
         word_token = txt_vocab.stoi[word]
         txt_input = torch.Tensor([word_token]).view(1,1).to(device).long()
@@ -72,9 +87,9 @@ def load_model(state_dict_path, device, **kwargs):
 
 
 if __name__ == '__main__':
-    seed_word = '\n'
+    seed_words = '\n'
     if len(sys.argv) > 1:
-        seed_word = sys.argv[1]
+        seed_words = sys.argv[1]
     # vocab must be shared with trained modeljkk
     artist_dir = '../data/lyrics/combined_trunc'
     _, txt_vocab, phoneme_vocab, corpus = get_dataloader(artist_dir, min_vocab_freq=3)
@@ -85,6 +100,9 @@ if __name__ == '__main__':
     model_params['phoneme_vocab_size'] = len(phoneme_vocab)
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    model = load_model('../model/stacked_lstm_20.pt', device, **model_params)
 
-    gen_text(model, txt_vocab, phoneme_vocab, corpus, device, seed_word=seed_word, max_length=50)
+    print('Loading model weights...')
+    model = load_model('../model/stacked_lstm_40.pt', device, **model_params)
+    print('Done')
+
+    gen_text(model, txt_vocab, phoneme_vocab, corpus, device, seed_words=seed_words, max_length=50)
