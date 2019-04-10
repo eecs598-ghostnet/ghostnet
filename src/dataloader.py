@@ -156,11 +156,15 @@ def get_lyrics_iterators(artist_dir, batch_sizes=(5, 5, 5), min_vocab_freq=1):
 
     # Create fields
     text_tokenize = lambda x: re.findall(r'\S+|\n',x)
-    TEXT = Field(sequential=True, tokenize=text_tokenize, lower=True, include_lengths=True, batch_first=True, eos_token='<eos>')
+    TEXT = Field(sequential=True, tokenize=text_tokenize, lower=True,
+                 include_lengths=True, batch_first=True, eos_token='<eos>',
+                 init_token='<sos>')
 
     phoneme_tokenize = lambda x: x.split()
-    PHONEME = Field(sequential=True, tokenize=phoneme_tokenize, lower=False, batch_first=True)
-    PHONEMES = NestedField(PHONEME, include_lengths=True, eos_token='<eos>')
+    PHONEME = Field(sequential=True, tokenize=phoneme_tokenize, lower=False,
+                    batch_first=True, init_token='<sos>', eos_token='<eos>')
+    PHONEMES = NestedField(PHONEME, include_lengths=True, eos_token='<eos>',
+                           init_token='<sos>')
 
 
     fields = [('text', TEXT), ('phonemes', PHONEMES)]

@@ -14,6 +14,7 @@ import config
 def gen_text(model, txt_vocab, phoneme_vocab, corpus, device, seed_words='\n', max_length=50, prevent_double_newlines=True):
     # TODO seed with gaussian distr of LSTM hidden state vector
     d = corpus.dictionary
+    d.word2phonemes['<sos>'] = ['<sos>', '<eos>']
 
     # Seed LSTM with given phrase
     words = re.findall(r'\S+|\n', seed_words)
@@ -75,34 +76,29 @@ def gen_text(model, txt_vocab, phoneme_vocab, corpus, device, seed_words='\n', m
 
 
 def load_model(state_dict_path, device, **kwargs):
-    model = TextGenerationModel(**kwargs)
-
-    try:
-        state_dict = torch.load(state_dict_path)
-    except RuntimeError:
-        state_dict = torch.load(state_dict_path, map_location='cpu')
+    model = TextGenerationModel(**kwargs).to(device)
+    state_dict = torch.load(state_dict_path, map_location=device)
     model.load_state_dict(state_dict)
 
-    return model.to(device)
+    return model
 
 
 if __name__ == '__main__':
-    seed_words = '\n'
-    if len(sys.argv) > 1:
-        seed_words = sys.argv[1]
     # vocab must be shared with trained modeljkk
     artist_dir = '../data/lyrics/combined_trunc'
     _, txt_vocab, phoneme_vocab, corpus = get_dataloader(artist_dir, min_vocab_freq=3)
 
+    seed_words = '<sos>'
+    if len(sys.argv) > 1:
+        seed_words = sys.argv[1]
+
     # TODO shared config for these
-    model_params = config.model_params
-    model_params['vocab_size'] = len(txt_vocab)
-    model_params['phoneme_vocab_size'] = len(phoneme_vocab)
+    model_params = config.get_model_params(txt_vocab, phoneme_vocab)
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
     print('Loading model weights...')
-    model = load_model('../model/stacked_lstm_40.pt', device, **model_params)
+    model = load_model('../model/pretrain_ae_55.pt', device, **model_params)
     print('Done')
 
     gen_text(model, txt_vocab, phoneme_vocab, corpus, device, seed_words=seed_words, max_length=50)

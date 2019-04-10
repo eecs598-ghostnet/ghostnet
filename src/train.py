@@ -6,7 +6,7 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.optim import lr_scheduler
 
-from text_generation_model import TextGenerationModel
+from text_generation_model import *
 from dataloader import get_dataloader
 from text_gen import load_model
 import utils
@@ -138,31 +138,57 @@ def main():
 
     # Get dataloaders
     dataloaders, txt_vocab, phoneme_vocab, _ = get_dataloader(
-        artist_dir, batch_sizes=(16, 5, 5), min_vocab_freq=3
+        artist_dir, batch_sizes=(12, 5, 5), min_vocab_freq=3
     )
     dataset_sizes = {x: len(dataloaders[x].dataset) for x in ['train', 'val', 'test']}
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
     # Model
-    model_params = config.model_params
-    model_params['vocab_size'] = len(txt_vocab)
-    model_params['phoneme_vocab_size'] = len(phoneme_vocab)
+    model_params = config.get_model_params(txt_vocab, phoneme_vocab)
 
-    model = TextGenerationModel(**model_params)
+    ############### Load model from scratch
+    #model = TextGenerationModel(**model_params)
 
-    # Load pretrained embeddings for text vocab
-    txt_vocab.load_vectors('glove.6B.100d')
-    model.embedding.weight.data.copy_(txt_vocab.vectors)
+    ## Load pretrained embeddings for text vocab
+    #print('Loading vectors...')
+    #txt_vocab.load_vectors('glove.6B.100d')
+    #model.embedding.weight.data.copy_(txt_vocab.vectors)
 
-    model = model.to(device)
+
+
+    #model = model.to(device)
+    ##############
+
+
+    ############## Load saved model
+    model = load_model('../model/pretrain_ae_45.pt', device, **model_params)
+    ##############
+
+
+    ############## Load AE pretraining
+    #AE_path = '../model/autoencoder/phoneme_auto_test.pt'
+    #ae_params = config.get_ae_params(phoneme_vocab)
+    #ae = PhonemeAutoencoder(**ae_params)
+
+    #ae.load_state_dict(torch.load(AE_path, map_location=device))
+
+    ## Load into model
+    #model.phoneme_embedding.load_state_dict(ae.phoneme_embedding.state_dict())
+    #model.phoneme_encoder.load_state_dict(ae.encoder.state_dict())
+
+    # freeze weights as a test TODO
+    #for param in model.phoneme_encoder.parameters():
+    #    param.requires_grad = False
+    ##############
+
 
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.Adam(model.parameters(), lr=0.002)
-    exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=7, gamma=0.1)
+    optimizer = optim.Adam(model.parameters(), lr=0.003)
+    exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=1, gamma=0.8)
 
-    model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=5)
-    torch.save(model.state_dict(), '../model/packed_pad_used.pt')
+    model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=10)
+    torch.save(model.state_dict(), '../model/pretrain_ae_55.pt')
 
 
 if __name__ == '__main__':
