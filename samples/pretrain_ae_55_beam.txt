@@ -1,0 +1,97 @@
+Building corpus...
+Building dataset...
+Building text vocab...
+Building phoneme vocab...
+Creating iterators...
+Done
+Loading model weights...
+Done
+-------------------------
+Seed: "<sos> we got"
+Generated:
+<sos> we got somebody before you make what 
+ 
+ cause i knew what are is 
+ 
+ when im back then i call it 
+ 
+ i did what she did now 
+ 
+ she thought she did what she told you 
+
+
+-------------------------
+Seed: "<sos> test this"
+Generated:
+<sos> test this girl i did what im from 
+ 
+ 
+ i speak so though im here 
+ im here <eos>
+
+-------------------------
+Seed: "<sos> all money aint good money"
+Generated:
+<sos> all money aint good money 
+ 
+ night wonder why 
+ huh 
+ cause oh bout how im livin <eos>
+
+-------------------------
+Seed: "<sos> what is it"
+Generated:
+<sos> what is it 
+ aint got what im here <eos>
+
+-------------------------
+Seed: "<sos> ugh yea"
+Generated:
+<sos> ugh yea oh oh oh oh oh oh 
+ 
+ oh oh oh oh oh oh 
+ 
+ oh oh she got it 
+ 
+ i know what she move now 
+ 
+ now you get there if i knew 
+ 
+ 
+
+
+-------------------------
+Seed: "<sos> words embedded"
+Generated:
+<sos> words embedded is now 
+ i aint see it 
+ 
+ i knew why he knew 
+ 
+ i knew what he would 
+ 
+ 
+ i knew you when i seen him 
+ 
+ man let me think 
+ im in there
+
+-------------------------
+Seed: "<sos> i love the"
+Generated:
+<sos> i love the way i had was stupid 
+ 
+ i did what she did now <eos>
+
+-------------------------
+Seed: "<sos> yo yo"
+Generated:
+<sos> yo yo nigga real test check what im at 
+ watch 
+ 
+ chuck chuck watch him catch it 
+ 
+ 
+ peace is by 
+ yeah <eos>
+

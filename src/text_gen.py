@@ -83,9 +83,10 @@ def beam_search(model, txt_vocab, phoneme_vocab, corpus, device, k=3,
     # Start by considering top k from seed state
     top_outs = torch.topk(scores, k=k+1)
     paths = [BeamPath(words + [txt_vocab.itos[token]], hidden, score.item())
-             for score, token in zip(*top_outs) if txt_vocab.itos[token] != '<unk>']
+             for score, token in zip(*top_outs)
+             if txt_vocab.itos[token] != '<unk>' and txt_vocab.itos[token] != '<eos>']
 
-    for i in tqdm(range(max_length)):
+    for i in range(max_length):
         if not sum([not path.finished for path in paths]):
             print('All paths finished')
             break
@@ -113,10 +114,12 @@ def beam_search(model, txt_vocab, phoneme_vocab, corpus, device, k=3,
         next_paths.sort(key=lambda path:path.value())
         paths = next_paths[-k:]
 
-    print('Top k beam search paths:')
-    for i, path in enumerate(paths):
-        print('\nPATH {}'.format(i))
-        print(path)
+    #print('Top k beam search paths:')
+    #for i, path in enumerate(paths):
+    #    print('\nPATH {}'.format(k-i))
+    #    print(path)
+
+    return ' '.join(paths[-1].words)
 
 
 def greedy_search(model, txt_vocab, phoneme_vocab, corpus, device,
@@ -181,6 +184,17 @@ def load_model(state_dict_path, device, **kwargs):
     return model
 
 
+def gen_samples(seed_phrases, *args, **kwargs):
+    for seed_words in seed_phrases:
+        words = beam_search(*args, **kwargs, seed_words=seed_words)
+        print('-------------------------')
+        print('Seed: "{}"'.format(seed_words))
+        print('Generated:')
+        print(words)
+        print()
+
+
+
 if __name__ == '__main__':
     # vocab must be shared with trained modeljkk
     artist_dir = '../data/lyrics/combined_trunc'
@@ -201,4 +215,16 @@ if __name__ == '__main__':
 
     #greedy_search(model, txt_vocab, phoneme_vocab, corpus, device, seed_words=seed_words, max_length=50)
 
-    beam_search(model, txt_vocab, phoneme_vocab, corpus, device, seed_words=seed_words, max_length=50, k=5)
+    #beam_search(model, txt_vocab, phoneme_vocab, corpus, device, seed_words=seed_words, max_length=50, k=5)
+
+    seed_phrases = [
+        '<sos> we got',
+        '<sos> test this',
+        '<sos> all money aint good money',
+        '<sos> what is it',
+        '<sos> ugh yea',
+        '<sos> words embedded',
+        '<sos> i love the',
+        '<sos> yo yo',
+    ]
+    gen_samples(seed_phrases, model, txt_vocab, phoneme_vocab, corpus, device, max_length=40, k=5)
