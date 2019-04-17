@@ -259,6 +259,8 @@ def check_words_and_phonemes():
 
 def vocab_count(artist_dir='../data/lyrics/combined_trunc'):
     _, txt_vocab, _, _ = get_dataloader(artist_dir, min_vocab_freq=2)
+    #print(txt_vocab.itos[:30])
+    #exit()
     one_counts = [key for key, val in txt_vocab.freqs.items() if val == 1]
     print(f'total vocab count: {len(txt_vocab.itos)}')
     print(f'one counts: {len(one_counts)}')

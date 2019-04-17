@@ -8,7 +8,7 @@ from torch.optim import lr_scheduler
 
 from text_generation_model import PhonemeAutoencoder
 from dataloader import get_dataloader
-from text_gen import load_model
+from gen_text import load_model
 import utils
 import config
 

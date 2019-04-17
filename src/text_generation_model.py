@@ -174,8 +174,17 @@ class TextGenerationModel(nn.Module):
         self.phoneme_encoder = PhonemeEncoder(phoneme_embed_size, phoneme_hidden_size)
         self.embedding = nn.Embedding(vocab_size, embed_size)
         self.lstm = nn.LSTM(embed_size + phoneme_hidden_size, hidden_size, num_layers=2, batch_first=True)
-        self.fc = nn.Linear(hidden_size, vocab_size)
-        self.softmax = nn.Softmax(dim=1)
+
+        #self.fc = nn.Linear(hidden_size, vocab_size)
+
+        # Adaptive Softmax includes fc layers with size dependent on bucket
+        self.adaptivesoftmax = nn.AdaptiveLogSoftmaxWithLoss(
+            hidden_size, vocab_size, cutoffs=[
+                # First bucket is special tokens (unk, pad, sos, eos, \n)
+                # TODO decide cutoffs
+                5, 50, 500, 5000,
+            ], div_value=4.0,
+        )
 
     def _initialize_hidden(self, batch_size):
         phoneme_hidden = Variable(torch.zeros(batch_size, self.phoneme_hidden_size), requires_grad=False).double()
@@ -184,7 +193,7 @@ class TextGenerationModel(nn.Module):
         cell = Variable(torch.zeros(batch_size, self.hidden_size), requires_grad=False).double()
         return (phoneme_hidden, phoneme_cell), (hidden, cell)
 
-    def forward(self, x, x_phonemes, lengths, phoneme_lengths):
+    def forward(self, x, x_phonemes, lengths, phoneme_lengths, targets):
         """
         Forward function for the text generation model.
 
@@ -227,9 +236,14 @@ class TextGenerationModel(nn.Module):
 
         #print(hn.size())
 
-        outputs = self.fc(outputs.contiguous().view(B * T, -1))
-        outputs = outputs.view(B, T, self.vocab_size)
-        return outputs
+        #outputs = self.fc(outputs.contiguous().view(B * T, -1))
+        #outputs = outputs.view(B, T, self.vocab_size)
+        outputs = outputs.contiguous().view(B*T, -1)
+        targets = targets.contiguous().view(B*T).squeeze()
+        outputs, loss = self.adaptivesoftmax(outputs, targets)
+
+        outputs = outputs.view(B, T, -1)
+        return outputs, loss
 
     def gen_word(self, txt, phonemes, hidden=None):
         """
@@ -256,8 +270,13 @@ class TextGenerationModel(nn.Module):
         else:
             outputs, hidden = self.lstm(txt_gen_inputs, hidden)
 
-        outputs = self.fc(outputs.contiguous().view(1, -1))
-        outputs = outputs.view(self.vocab_size)     # only predicting one word
+        #outputs = self.fc(outputs.contiguous().view(1, -1))
+        #outputs = outputs.view(self.vocab_size)     # only predicting one word
+
+        outputs = outputs.contiguous().view(1, -1)
+        outputs = self.adaptivesoftmax.log_prob(outputs)
+
+        outputs = outputs.view(self.vocab_size)
         return outputs, hidden
 
 

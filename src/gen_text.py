@@ -210,12 +210,12 @@ if __name__ == '__main__':
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
     print('Loading model weights...')
-    model = load_model('../model/pretrain_ae_55.pt', device, **model_params)
+    model = load_model('../model/adaptive_softmax_30.pt', device, **model_params)
     print('Done')
 
     #greedy_search(model, txt_vocab, phoneme_vocab, corpus, device, seed_words=seed_words, max_length=50)
 
-    #beam_search(model, txt_vocab, phoneme_vocab, corpus, device, seed_words=seed_words, max_length=50, k=5)
+    #print(beam_search(model, txt_vocab, phoneme_vocab, corpus, device, seed_words=seed_words, max_length=50, k=5))
 
     seed_phrases = [
         '<sos> we got',

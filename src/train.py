@@ -8,7 +8,7 @@ from torch.optim import lr_scheduler
 
 from text_generation_model import *
 from dataloader import get_dataloader
-from text_gen import load_model
+from gen_text import load_model
 import utils
 import config
 
@@ -67,25 +67,18 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
                 # forward
                 # track history if only in train
                 with torch.set_grad_enabled(phase == 'train'):
-                    outputs = model(text_inputs, phoneme_inputs, text_lengths, phoneme_lengths)
-                #    outputs = outputs.reshape(labels.shape[0] * labels.shape[1], -1)
+                    #outputs = model(text_inputs, phoneme_inputs, text_lengths, phoneme_lengths)
+                    #outputs = outputs.reshape(labels.shape[0] * labels.shape[1], -1)
+                    outputs, loss = model(text_inputs, phoneme_inputs,
+                                          text_lengths, phoneme_lengths,
+                                          labels)
 
-                _, preds = torch.max(outputs, 2)
-
-                # gather only outputs for non padded sections.
-                mask = torch.zeros(labels.shape)
-                for n in range(mask.shape[0]):
-                    length = text_lengths[n]
-                    mask[n, :length] = 1.0
-
-                outputs = outputs[mask.unsqueeze(2).expand_as(outputs).byte()].view(mask.sum().long(), -1)
-                labels = labels[mask.byte()]
-                preds = preds[mask.byte()]
+                    preds = outputs.argmax(dim=-1)
 
 
                 # backward + optimize only if in training phase
                 if phase == 'train':
-                    loss = criterion(outputs, labels)
+                    #loss = criterion(outputs, labels)
 
                     try:
                         # Free cached gpu mem
@@ -154,15 +147,12 @@ def main():
     #print('Loading vectors...')
     #txt_vocab.load_vectors('glove.6B.100d')
     #model.embedding.weight.data.copy_(txt_vocab.vectors)
-
-
-
     #model = model.to(device)
     ##############
 
 
     ############## Load saved model
-    model = load_model('../model/pretrain_ae_45.pt', device, **model_params)
+    model = load_model('../model/adaptive_softmax_10.pt', device, **model_params)
     ##############
 
 
@@ -184,11 +174,11 @@ def main():
 
 
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.Adam(model.parameters(), lr=0.003)
-    exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=1, gamma=0.8)
+    optimizer = optim.Adam(model.parameters(), lr=0.002)
+    exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=5, gamma=0.1)
 
-    model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=10)
-    torch.save(model.state_dict(), '../model/pretrain_ae_55.pt')
+    model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=30)
+    torch.save(model.state_dict(), '../model/adaptive_softmax_30.pt')
 
 
 if __name__ == '__main__':
