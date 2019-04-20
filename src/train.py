@@ -1,4 +1,6 @@
 import copy
+import os
+import sys
 import time
 
 import torch
@@ -13,7 +15,7 @@ import utils
 import config
 
 
-def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, scheduler, num_epochs=25):
+def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, scheduler, num_epochs=25, weights_dir='../model'):
     since = time.time()
     best_model_wts = copy.deepcopy(model.state_dict())
     best_acc = 0.0
@@ -64,6 +66,7 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
                 # zero the parameter gradients
                 optimizer.zero_grad()
 
+
                 # forward
                 # track history if only in train
                 with torch.set_grad_enabled(phase == 'train'):
@@ -103,9 +106,11 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
                 phase, epoch_loss, epoch_acc))
 
             # deep copy the model
-            if phase == 'val' and epoch_acc > best_acc:
+            if phase == 'val':
                 best_acc = epoch_acc
                 best_model_wts = copy.deepcopy(model.state_dict())
+                if epoch % 5 == 0:
+                    torch.save(model.state_dict(), os.path.join(weights_dir, '{}.pt'.format(epoch)))
 
     time_elapsed = time.time() - since
     print('Training complete in {:.0f}m {:.0f}s'.format(
@@ -126,8 +131,13 @@ def main():
 #    phoneme_embed_size = 30
 #    phoneme_hidden_size = 40
 
+    if len(sys.argv) > 1:
+        model_weights_path = sys.argv[1]
+    else:
+        model_weights_path = None
 
-    artist_dir = '../data/lyrics/combined_trunc'
+
+    artist_dir = '../data/lyrics/combined'
 
     # Get dataloaders
     dataloaders, txt_vocab, phoneme_vocab, _ = get_dataloader(
@@ -140,19 +150,22 @@ def main():
     # Model
     model_params = config.get_model_params(txt_vocab, phoneme_vocab)
 
-    ############### Load model from scratch
-    #model = TextGenerationModel(**model_params)
 
-    ## Load pretrained embeddings for text vocab
-    #print('Loading vectors...')
-    #txt_vocab.load_vectors('glove.6B.100d')
-    #model.embedding.weight.data.copy_(txt_vocab.vectors)
-    #model = model.to(device)
+    ############### Load model from scratch
+    if model_weights_path is None:
+        model = TextGenerationModel(**model_params)
+
+        # Load pretrained embeddings for text vocab
+        print('Loading vectors...')
+        txt_vocab.load_vectors('glove.6B.100d')
+        model.embedding.weight.data.copy_(txt_vocab.vectors)
+        model = model.to(device)
     ##############
 
 
     ############## Load saved model
-    model = load_model('../model/adaptive_softmax_10.pt', device, **model_params)
+    else:
+        model = load_model(model_weights_path, device, **model_params)
     ##############
 
 
@@ -175,10 +188,10 @@ def main():
 
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=0.002)
-    exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=5, gamma=0.1)
+    exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=10, gamma=0.3)
 
-    model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=30)
-    torch.save(model.state_dict(), '../model/adaptive_softmax_30.pt')
+    model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=50, weights_dir='../model/combined_adaptive_softmax/')
+    torch.save(model.state_dict(), '../model/combined_adaptive_softmax_50.pt')
 
 
 if __name__ == '__main__':

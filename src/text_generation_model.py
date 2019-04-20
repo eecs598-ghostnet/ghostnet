@@ -234,15 +234,26 @@ class TextGenerationModel(nn.Module):
         packed_outputs, hiddens = self.lstm(packed_inputs)
         outputs, _ = pad_packed_sequence(packed_outputs, batch_first=True)
 
-        #print(hn.size())
 
-        #outputs = self.fc(outputs.contiguous().view(B * T, -1))
-        #outputs = outputs.view(B, T, self.vocab_size)
+        # Mask outputs because we are doing loss here
+        mask = torch.zeros_like(targets)
+        for n in range(mask.shape[0]):
+            length = lengths[n]
+            mask[n, :length] = 1.0
+
         outputs = outputs.contiguous().view(B*T, -1)
         targets = targets.contiguous().view(B*T).squeeze()
+        mask = mask.contiguous().view(B*T).squeeze()
+
+        targets = targets[mask.byte()]
+        outputs = outputs[mask.byte()]
+
+        # Get loss and scores from adaptive softmax
         outputs, loss = self.adaptivesoftmax(outputs, targets)
 
-        outputs = outputs.view(B, T, -1)
+        #outputs = outputs.view(B, T, -1)
+
+
         return outputs, loss
 
     def gen_word(self, txt, phonemes, hidden=None):

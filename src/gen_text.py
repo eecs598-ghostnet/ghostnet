@@ -197,12 +197,13 @@ def gen_samples(seed_phrases, *args, **kwargs):
 
 if __name__ == '__main__':
     # vocab must be shared with trained modeljkk
-    artist_dir = '../data/lyrics/combined_trunc'
+    artist_dir = '../data/lyrics/combined'
     _, txt_vocab, phoneme_vocab, corpus = get_dataloader(artist_dir, min_vocab_freq=3)
 
-    seed_words = '<sos>'
     if len(sys.argv) > 1:
         seed_words = '<sos> ' + sys.argv[1]
+    else:
+        seed_words = None
 
     # TODO shared config for these
     model_params = config.get_model_params(txt_vocab, phoneme_vocab)
@@ -210,21 +211,23 @@ if __name__ == '__main__':
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
     print('Loading model weights...')
-    model = load_model('../model/adaptive_softmax_30.pt', device, **model_params)
+    model = load_model('../model/combined_adaptive_softmax_50.pt', device, **model_params)
     print('Done')
 
-    #greedy_search(model, txt_vocab, phoneme_vocab, corpus, device, seed_words=seed_words, max_length=50)
+    if seed_words is not None:
+        #greedy_search(model, txt_vocab, phoneme_vocab, corpus, device, seed_words=seed_words, max_length=50)
+        print(beam_search(model, txt_vocab, phoneme_vocab, corpus, device, seed_words=seed_words, max_length=50, k=5))
 
-    #print(beam_search(model, txt_vocab, phoneme_vocab, corpus, device, seed_words=seed_words, max_length=50, k=5))
-
-    seed_phrases = [
-        '<sos> we got',
-        '<sos> test this',
-        '<sos> all money aint good money',
-        '<sos> what is it',
-        '<sos> ugh yea',
-        '<sos> words embedded',
-        '<sos> i love the',
-        '<sos> yo yo',
-    ]
-    gen_samples(seed_phrases, model, txt_vocab, phoneme_vocab, corpus, device, max_length=40, k=5)
+    else:
+        seed_phrases = [
+            '<sos>',
+            '<sos> we got',
+            '<sos> test this',
+            '<sos> all money aint good money',
+            '<sos> what is it',
+            '<sos> ugh yea',
+            '<sos> words embedded',
+            '<sos> i love the',
+            '<sos> yo yo',
+        ]
+        gen_samples(seed_phrases, model, txt_vocab, phoneme_vocab, corpus, device, max_length=40, k=5)
