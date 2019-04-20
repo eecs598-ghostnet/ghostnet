@@ -1,0 +1,117 @@
+Building corpus...
+Building dataset...
+Building text vocab...
+Building phoneme vocab...
+Creating iterators...
+Done
+Loading model weights...
+Done
+-------------------------
+Seed: "<sos>"
+Generated:
+<sos> yeah 
+ in the case 
+ all of my mind 
+ 
+ 
+ shit and shit 
+ 
+ 
+ nigga <eos>
+
+-------------------------
+Seed: "<sos> we got"
+Generated:
+<sos> we got that bitches that you dont know 
+ 
+ be 
+ 
+ <eos>
+
+-------------------------
+Seed: "<sos> test this"
+Generated:
+<sos> test this motherfucker 
+ like a real motherfucker 
+ 
+ 
+ 
+ and niggas know im on fire nigga 
+ 
+ 
+ 
+ imma fuck nigga what i do this shit for 
+ 
+ nigga nigga get it 
+ bitch <eos>
+
+-------------------------
+Seed: "<sos> all money aint good money"
+Generated:
+<sos> all money aint good money 
+ hoes 
+ 
+ 
+ 
+ <eos>
+
+-------------------------
+Seed: "<sos> what is it"
+Generated:
+<sos> what is it with you come through 
+ 
+ oh what ive came from you 
+ <eos>
+
+-------------------------
+Seed: "<sos> ugh yea"
+Generated:
+<sos> ugh yea check it out hoo 
+ where it is yo 
+ at night 
+ 
+ 
+ 
+ 
+ 
+ nigga lets start <eos>
+
+-------------------------
+Seed: "<sos> words embedded"
+Generated:
+<sos> words embedded in the palms 
+ 
+ 
+ 
+ 
+ shit 
+ and all that 
+ and she were around in this world 
+ all day i fight 
+ so a classic 
+ a threat that 
+ 
+ and so i dare the
+
+-------------------------
+Seed: "<sos> i love the"
+Generated:
+<sos> i love the way with the right here bitch lets make a move 
+ 
+ 
+ 
+ shit 
+ 
+ 
+ <eos>
+
+All paths finished
+-------------------------
+Seed: "<sos> yo yo"
+Generated:
+<sos> yo yo yo 
+ yall some bitches 
+ yall 
+ 
+ <eos>
+
