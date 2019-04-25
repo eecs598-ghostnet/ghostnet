@@ -1,3 +1,5 @@
+import torch
+
 model_params = {
     'embed_size': 100,
     'hidden_size': 1024,
@@ -30,3 +32,13 @@ def get_model_params(txt_vocab, phoneme_vocab):
     params['phoneme_vocab_size'] = len(phoneme_vocab)
 
     return params
+
+
+def load_model(ModelType, state_dict_path, device, **kwargs):
+    model = ModelType(**kwargs).to(device)
+    state_dict = torch.load(state_dict_path, map_location=device)
+    model.load_state_dict(state_dict)
+
+    return model
+
+

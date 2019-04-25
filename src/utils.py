@@ -2,5 +2,6 @@
 import matplotlib.pyplot as plt
 
 def show_plot(iteration,loss):
+    fig = plt.figure()
     plt.plot(iteration,loss)
-    plt.show()
+    fig.savefig('loss.png')

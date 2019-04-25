@@ -62,7 +62,7 @@ def stanza_reader(f):
             stanza += line
 
 
-def stanza_phoneme_reader(f, corpus, skip_onelines=False):
+def stanza_phoneme_reader(f, corpus, skip_onelines=False, max_len=None):
     d = corpus.dictionary
 
     stanza = ''
@@ -73,7 +73,8 @@ def stanza_phoneme_reader(f, corpus, skip_onelines=False):
                 # TODO why is there an extra newline? does this match anything in the words?
                 phonemes = [' '.join(d.word2phonemes[word]) for word in re.findall(r'\S+|\n', stanza)[:-1]]
                 if not skip_onelines or '\n' in stanza[:-1]:
-                    yield [stanza, phonemes]
+                    if max_len and len(stanza.split()) <= max_len:
+                        yield [stanza, phonemes]
                 stanza = ''
         else:
             stanza += line
@@ -144,7 +145,7 @@ def split_songs(artist_dir, train_pct=80, val_pct=15, test_pct=5):
             return
 
 
-def get_lyrics_iterators(artist_dir, batch_sizes=(5, 5, 5), min_vocab_freq=1):
+def get_lyrics_iterators(artist_dir, batch_sizes=(5, 5, 5), min_vocab_freq=1, max_len=None):
     split_songs(artist_dir)
     print('Building corpus...')
     corpus = data.Corpus(artist_dir, gen_tokens=False)
@@ -175,6 +176,7 @@ def get_lyrics_iterators(artist_dir, batch_sizes=(5, 5, 5), min_vocab_freq=1):
             format='tsv', fields=fields, corpus=corpus,
             csv_reader_params={
                 'skip_onelines': True,
+                'max_len': max_len,
             }
     )
 

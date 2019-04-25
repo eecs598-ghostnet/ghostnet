@@ -176,14 +176,6 @@ def greedy_search(model, txt_vocab, phoneme_vocab, corpus, device,
     print(' '.join(words))
 
 
-def load_model(state_dict_path, device, **kwargs):
-    model = TextGenerationModel(**kwargs).to(device)
-    state_dict = torch.load(state_dict_path, map_location=device)
-    model.load_state_dict(state_dict)
-
-    return model
-
-
 def gen_samples(seed_phrases, *args, **kwargs):
     for seed_words in seed_phrases:
         words = beam_search(*args, **kwargs, seed_words=seed_words)

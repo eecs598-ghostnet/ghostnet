@@ -1,6 +1,7 @@
 import numpy as np
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 import torch.optim as optim
 from torch.autograd import Variable
 from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
@@ -20,6 +21,9 @@ class PhonemeEncoder(nn.Module):
         Inputs:
         - phonemes_embeddings, size (B, T, T_phoneme, phoneme_embed_size)
         - phoneme_lengths, size (B, T)
+
+        Outputs:
+        - phoneme_summaries, size (B, T, phoneme_hidden_size)
         """
         B, T, T_phoneme, _ = phoneme_embeddings.size()
 
@@ -158,6 +162,161 @@ class PhonemeAutoencoder(nn.Module):
         return phoneme_scores
 
 
+class EncoderRNN(nn.Module):
+    def __init__(self, input_size, hidden_size):
+        super().__init__()
+        self.hidden_size = hidden_size
+        self.lstm = nn.LSTM(input_size, hidden_size, num_layers=2, batch_first=True)
+
+    def forward(self, inputs, lengths):
+        """
+        Return the hidden states for each timestep of inputs.
+        Inputs:
+        - inputs: size (B, T, input_size)
+
+        Outputs:
+        - outputs: size (B, T, hidden_size)
+        """
+        packed_inputs = pack_padded_sequence(inputs, lengths, batch_first=True)
+
+        packed_outputs, hiddens = self.lstm(packed_inputs)
+        outputs, _ = pad_packed_sequence(packed_outputs, batch_first=True)
+        return outputs
+
+class Decoder(nn.Module):
+    """
+    Decoder in this case is just doing one word prediction from a sequence of
+    encoder weights. Prediction is done in next layer, this outputs same
+    hidden_size which will then be transformed at final prediction layer.
+    """
+    def __init__(self, input_size, hidden_size, max_length):
+        super().__init__()
+        self.hidden_size = hidden_size
+        self.max_length = max_length
+
+        self.attn = nn.Linear(hidden_size+input_size, max_length)
+        self.attn_combine = nn.Linear(hidden_size+input_size, hidden_size)
+
+        self.lstm = nn.LSTM(hidden_size, hidden_size, batch_first=True)
+
+    def forward(self, input, hidden, encodings):
+        prev_h = hidden[0].squeeze()
+
+        # Get attn weights from input (embedding+phoneme_embedding of last word), hidden
+        attn_weights = self.attn(torch.cat((input, prev_h), dim=1))
+        attn_weights = F.softmax(attn_weights, dim=1)
+
+        # Get weighted sum of encoder outputs of size (B, 1, hidden_size)
+        attn_applied = torch.bmm(
+            attn_weights.unsqueeze(1),
+            encodings
+        )
+
+        # Combine applied attention with embeddings (ctx + phnm) of prev word
+        combined = torch.cat((attn_applied.squeeze(1), input), dim=1)
+        attn_combined = F.relu(self.attn_combine(combined)) # (B, hidden_size)
+
+        output, hidden = self.lstm(attn_combined.unsqueeze(1), hidden)
+
+        return output, hidden
+
+
+
+class AttentionEncoderDecoder(nn.Module):
+    def __init__(self, vocab_size, embed_size, hidden_size, phoneme_vocab_size,
+                 phoneme_embed_size, phoneme_hidden_size, max_length):
+        super().__init__()
+        self.vocab_size = vocab_size
+        self.embed_size = embed_size
+        self.hidden_size = hidden_size
+        self.phoneme_vocab_size = phoneme_vocab_size
+        self.phoneme_embed_size = phoneme_embed_size
+        self.phoneme_hidden_size = phoneme_hidden_size
+        self.max_length = max_length
+
+        self.phoneme_embedding = nn.Embedding(phoneme_vocab_size, phoneme_embed_size)
+        self.phoneme_encoder = PhonemeEncoder(phoneme_embed_size, phoneme_hidden_size)
+        self.embedding = nn.Embedding(vocab_size, embed_size)
+
+        self.encoder = EncoderRNN(embed_size+phoneme_hidden_size, hidden_size)
+        self.decoder = Decoder(embed_size+phoneme_hidden_size, hidden_size, max_length)
+
+        # Adaptive Softmax includes fc layers with size dependent on bucket
+        self.adaptivesoftmax = nn.AdaptiveLogSoftmaxWithLoss(
+            hidden_size, vocab_size, cutoffs=[
+                # First bucket is special tokens (unk, pad, sos, eos, \n)
+                5, 50, 500, 5000,
+            ], div_value=2.0,
+        )
+
+    def forward(self, x, x_phonemes, lengths, phoneme_lengths, targets):
+        device = x.device
+        B, T = x.shape
+        _, _, T_phoneme = x_phonemes.shape
+
+        # Get word embeddings -> (B, T, word_embed_size)
+        embeddings = self.embedding(x)
+
+        # Get phoneme embeddings -> (B, T, T_phoneme, phoneme_embed_size)
+        phoneme_embeddings = self.phoneme_embedding(x_phonemes.view(B, -1)).view(B, T, T_phoneme, -1)
+        last_phoneme_outputs = self.phoneme_encoder(phoneme_embeddings, phoneme_lengths)
+
+        inputs = torch.cat([embeddings, last_phoneme_outputs], dim=2)
+
+        # Get encodings for each timestep
+        encodings = self.encoder(inputs, lengths)
+
+        # Init (h, c), encodings for applying attention
+        decoder_hidden = (torch.zeros((1 ,B, self.hidden_size), device=device),
+                          torch.zeros((1 ,B, self.hidden_size), device=device))
+        attn_encodings = torch.zeros((B, self.max_length, self.hidden_size), device=device)
+        attn_encodings[:, :T, :] = encodings # TODO XXX
+
+        # Prediction at each timestep
+        outputs = []
+        for t in range(T):
+            decoder_input = inputs[:, t, :].view(B, -1)
+
+            # Get output of size (B, [1], hidden_size)
+            # XXX
+            attn_mask = torch.zeros_like(attn_encodings)
+            attn_mask[:, :t, :] = 1.0
+            partial_encodings = attn_encodings * attn_mask
+
+            output, decoder_hidden = self.decoder(decoder_input, decoder_hidden, partial_encodings)
+            outputs.append(output.squeeze(1))
+
+
+        outputs = torch.stack(outputs, dim=1)
+
+
+        # Mask outputs where padded because we are doing loss here
+        mask = torch.zeros_like(targets, device=device)
+        for n in range(mask.shape[0]):
+            length = lengths[n]
+            mask[n, :length] = 1.0    # offset for sos and eos
+
+
+
+        outputs = outputs.contiguous().view(B*T, -1)
+        targets = targets.contiguous().view(B*T).squeeze()
+
+        mask = mask.contiguous().view(B*T).squeeze()
+
+        targets = targets[mask.byte()].clone()
+        outputs = outputs[mask.byte()].clone()
+
+
+        # Get loss and scores from adaptive softmax
+        outputs, loss = self.adaptivesoftmax(outputs, targets)
+
+        # TODO need to 'repad' output for correct seqs? Right now unfolded to
+        # one long sequence and padding removed
+        #outputs = outputs.view(B, T)
+
+        return outputs, loss
+
+
 
 class TextGenerationModel(nn.Module):
     def __init__(self, vocab_size, embed_size, hidden_size, phoneme_vocab_size, phoneme_embed_size, phoneme_hidden_size):
@@ -227,7 +386,6 @@ class TextGenerationModel(nn.Module):
         # which we  will concatenate into the text generation LSTM for input.
         inputs = torch.cat([embeddings, last_phoneme_outputs], dim=2)
 
-        #TODO : Need to use pack padded here.
         # Pack combined inputs. Lengths are already sorted here
         packed_inputs = pack_padded_sequence(inputs, lengths, batch_first=True)
 

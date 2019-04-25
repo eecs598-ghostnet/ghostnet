@@ -10,7 +10,6 @@ from torch.optim import lr_scheduler
 
 from text_generation_model import *
 from dataloader import get_dataloader
-from gen_text import load_model
 import utils
 import config
 
@@ -19,6 +18,7 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
     since = time.time()
     best_model_wts = copy.deepcopy(model.state_dict())
     best_acc = 0.0
+    best_val_loss = 10000.0
 
     loss_history = []
     for epoch in range(num_epochs):
@@ -72,9 +72,14 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
                 with torch.set_grad_enabled(phase == 'train'):
                     #outputs = model(text_inputs, phoneme_inputs, text_lengths, phoneme_lengths)
                     #outputs = outputs.reshape(labels.shape[0] * labels.shape[1], -1)
-                    outputs, loss = model(text_inputs, phoneme_inputs,
-                                          text_lengths, phoneme_lengths,
-                                          labels)
+                    try:
+                        outputs, loss = model(text_inputs, phoneme_inputs,
+                                              text_lengths, phoneme_lengths,
+                                              labels)
+                    except RuntimeError as e:
+                        print('RUNTIME ERROR:')
+                        print(e)
+                        continue
 
                     preds = outputs.argmax(dim=-1)
 
@@ -106,8 +111,8 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
                 phase, epoch_loss, epoch_acc))
 
             # deep copy the model
-            if phase == 'val':
-                best_acc = epoch_acc
+            if phase == 'val' and epoch_loss < best_val_loss:
+                best_val_loss = epoch_loss
                 best_model_wts = copy.deepcopy(model.state_dict())
                 if epoch % 5 == 0:
                     torch.save(model.state_dict(), os.path.join(weights_dir, '{}.pt'.format(epoch)))
@@ -137,23 +142,31 @@ def main():
         model_weights_path = None
 
 
-    artist_dir = '../data/lyrics/combined'
+    artist_dir = '../data/lyrics/combined_trunc'
+    weights_dir = '../model/encdec'  # to save weights and checkpoints
+    ModelType = AttentionEncoderDecoder
 
     # Get dataloaders
     dataloaders, txt_vocab, phoneme_vocab, _ = get_dataloader(
-        artist_dir, batch_sizes=(12, 5, 5), min_vocab_freq=3
+        artist_dir, batch_sizes=(12, 12, 12), min_vocab_freq=1, max_len=256
     )
     dataset_sizes = {x: len(dataloaders[x].dataset) for x in ['train', 'val', 'test']}
+    print(f'train_dataset size: {dataset_sizes["train"]}')
+
+    # Max length needed for non-positional attention
+    max_length = max([len(example.text) for x in ['train', 'val', 'test']
+                      for example in dataloaders[x].dataset.examples])
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
     # Model
     model_params = config.get_model_params(txt_vocab, phoneme_vocab)
+    model_params['max_length'] = max_length
 
 
     ############### Load model from scratch
     if model_weights_path is None:
-        model = TextGenerationModel(**model_params)
+        model = ModelType(**model_params)
 
         # Load pretrained embeddings for text vocab
         print('Loading vectors...')
@@ -165,7 +178,7 @@ def main():
 
     ############## Load saved model
     else:
-        model = load_model(model_weights_path, device, **model_params)
+        model = config.load_model(ModelType, model_weights_path, device, **model_params)
     ##############
 
 
@@ -188,10 +201,11 @@ def main():
 
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=0.002)
-    exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=10, gamma=0.3)
+    exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=2, gamma=0.1)
 
-    model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=50, weights_dir='../model/combined_adaptive_softmax/')
-    torch.save(model.state_dict(), '../model/combined_adaptive_softmax_50.pt')
+    model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=10, weights_dir=weights_dir)
+
+    torch.save(model.state_dict(), os.path.join(weights_dir, 'final.pt'))
 
 
 if __name__ == '__main__':
