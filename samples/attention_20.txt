@@ -1,0 +1,1520 @@
+Building corpus...
+Building dataset...
+Building text vocab...
+Building phoneme vocab...
+Creating iterators...
+Done
+train_dataset size: 3512
+
+<sos> rinsin up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up <eos>
+
+<sos> adventures it 
+ juke it pump it 
+ chi town lets go <eos>
+
+<sos> caramelito 
+ cmon <eos>
+
+<sos> decathetar check it out 
+ word niggas smoke too fuckin much man 
+ yo yo yo yo yo yo yo yo 
+ yo yo yo yo yo yo yo yo 
+ yo yo yo yo yo yo yo yo yo yo 
+
+
+<sos> buckled me in the game like this 
+ where the fuck you know 
+ you dont know what to do 
+ i dont even know what it is 
+ you know what it is 
+ you know what i do 
+ i
+
+<sos> technique of baking soda <eos>
+
+<sos> cm 
+ mm <eos>
+
+<sos> tighter than voodoo its bigger than me 
+ i dont know what it is 
+ you know what i do <eos>
+
+<sos> coastal california come and see what my city like 
+ rosecrans niggas tryin to murk me <eos>
+
+<sos> attire i got a lot of talent 
+ i dont know what to do 
+ i dont know what to do 
+ i dont even know what it is 
+ i dont even know what to do 
+ i dont even know
+
+<sos> erytime i got a lot of talent 
+ but i dont know what to do 
+ cause i dont even know what it is 
+ i dont even know what it is 
+ i dont even know what it is 
+ i
+
+<sos> kitchen check it out 
+ word niggas smoke too fuckin much man 
+ yo yo yo yo yo yo yo yo 
+ yo yo yo yo yo yo yo yo yo 
+ yo yo yo yo yo yo yo yo yo 
+
+
+<sos> deserved to get the main course <eos>
+
+<sos> swear i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ i cant believe it <eos>
+
+<sos> adolescent is a problem 
+ a dollar bill 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall a dollar bill 
+
+
+<sos> voletta hoo 
+ ta ha <eos>
+
+<sos> pocahontas got it 
+ juke it pump it 
+ juke it pump it 
+ chi town lets go <eos>
+
+<sos> olde ass nigga 
+ you know what i do 
+ you know what i do 
+ you know what i do 
+ i dont know what to do 
+ i dont know what to do 
+ i cant believe it <eos>
+
+<sos> jamie did this shit that make you know what i do 
+ i dont know what to do 
+ i dont even know what it is 
+ i dont even know what to do 
+ i dont even know what it is
+
+<sos> roofs full of baking soda <eos>
+
+<sos> attacks come and see what the fuck you know 
+ you know what it is 
+ you know what i do 
+ you know what i do 
+ i dont know what to do 
+ i dont know what to do 
+
+
+<sos> singer i know the weedman weedman hes my friend <eos>
+
+<sos> starsky hoo 
+ ta ha 
+ ta ha <eos>
+
+<sos> thom pha 
+ e e e e e e e e e e e e e e e e e e e e 
+ e e e e e e e e e e e e e e e e e e
+
+<sos> tombstoned 
+ you know what i do <eos>
+
+<sos> innocent look out here 
+ welcome 
+ hey hey <eos>
+
+<sos> celebratory 
+ bendin that block <eos>
+
+<sos> tha money come fast when pushin them grams 
+ you know what i do <eos>
+
+<sos> nighter 
+ bendin that block <eos>
+
+<sos> dapple box of baking soda 
+ countless uses for pennies a day <eos>
+
+<sos> gupe hoo 
+ ta ha <eos>
+
+<sos> allowing all the big head niggas 
+ and all them big head niggas 
+ and all them big head bitches 
+ you know what i do <eos>
+
+<sos> hoggs out of town 
+ where the fuck is it 
+ you know what i do 
+ you know what i do 
+ i dont know what to do 
+ i dont know what to do 
+ i cant believe it 
+
+
+<sos> tizznelevision ass nigga 
+ you know what i do 
+ you know what i do 
+ you know what i do 
+ i dont want no help 
+ i dont know what to do 
+ i dont know what to do 
+
+
+<sos> locomotive lot of shit that make you feel like this 
+ what i do 
+ i dont know what to do 
+ i dont even know what it is 
+ i dont even know what to do 
+ i dont even know
+
+<sos> matresses 
+ bendin that block <eos>
+
+<sos> transmission check mic check mic check mic check 
+ mic check mic check mic check 
+ mic check mic check mic check 
+ mic check mic check mic check mic check 
+ mic check mic check mic check mic check <eos>
+
+<sos> stores on my mind now 
+ welcome 
+ hey hey <eos>
+
+<sos> kitchens in the air 
+ where the fuck you know what it is 
+ that is that that that that that that that that 
+ that that that that that that that that 
+ that that that that that that that that
+
+<sos> cuties got to hear this <eos>
+
+<sos> leased a lot of shit that make you know what i do 
+ i dont know what to do 
+ i dont even know what it is 
+ i dont even know what to do 
+ i dont even know what it
+
+<sos> jamming up in this bitch 
+ bitch <eos>
+
+<sos> syllable 
+ cmon <eos>
+
+<sos> liked got a lot of shit that make you know what i do 
+ i dont know what to do 
+ i dont even know what it is 
+ i dont even know what to do 
+ i dont even know what
+
+<sos> lodge 
+ ooh ooh <eos>
+
+<sos> into all the big head niggas 
+ and all them big head bitches 
+ you know what i do <eos>
+
+<sos> image is finicky 
+ you know what i do <eos>
+
+<sos> labels is a problem 
+ i dont know what to do 
+ cause i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ i
+
+<sos> index higher than voodoo its bigger than me 
+ i dont even know what it is 
+ i dont know what to do 
+ i dont even know what it is 
+ i dont even know what it is 
+ i dont
+
+<sos> stuffed in the back of the day 
+ everybody know what it do 
+ you know what it is 
+ you know what it is 
+ you know what it is 
+ you know what it is 
+ you know what i
+
+<sos> bakery 
+ skee skert 
+ bendin that block <eos>
+
+<sos> slaughter money and sex 
+ i dont know what to do 
+ cause i dont even know what it is 
+ i dont even know what it is 
+ i dont even know what it is 
+ i dont even know what
+
+<sos> xxplosive me from the bottom to the top of the top 
+ now im in the back of the day 
+ i got a lot of shit that i do 
+ i dont know what it is 
+ i dont even know
+
+<sos> mortgage game from the bottom to the top of the top 
+ now im in the back of the street 
+ now im in the back of the street 
+ i dont know what to do 
+ i dont even know what
+
+<sos> brand new era not a problem 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar plus a dollar bill yall 
+ a dollar
+
+<sos> popsicles and gentlemen 
+ you know what i do <eos>
+
+<sos> ugliness in my dreams now 
+ welcome 
+ hey hey <eos>
+
+<sos> olde ass nigga 
+ you know what i do 
+ you know what i do 
+ you know what i do 
+ i dont know what to do 
+ i dont know what to do 
+ i cant believe it <eos>
+
+<sos> fiftynine 
+ you know what i do <eos>
+
+<sos> watts check mic check mic check mic check 
+ mic check mic check mic check 
+ mic check mic check mic check 
+ mic check mic check mic check <eos>
+
+<sos> temperature hit the mic check it out 
+ word niggas smoke too fuckin much man 
+ yo yo yo yo yo yo yo yo 
+ yo yo yo yo yo yo yo yo 
+ yo yo yo yo yo yo yo yo
+
+<sos> wind down baby 
+ uhh 
+ yeah 
+ cain 
+ ask about me <eos>
+
+<sos> pillowcases know me 
+ i dont know what to do 
+ i dont know what to do 
+ i cant believe it <eos>
+
+<sos> pucker it pump it 
+ juke it pump it 
+ chi town lets go <eos>
+
+<sos> faceless 
+ bendin that block <eos>
+
+<sos> kragens ass rusty ass niggas 
+ one point zero three 
+ four point zero three point zero three 
+ four point zero three point zero three 
+ four point zero three point zero three 
+ four point zero three point zero three
+
+<sos> breezy 
+ yeah 
+ cain 
+ ask about me <eos>
+
+<sos> anomaly 
+ you know what i do <eos>
+
+<sos> bookin so hard they love it 
+ juke it 
+ chi town lets go <eos>
+
+<sos> appealed to the game 
+ i dont know what to do 
+ cause i dont know what to do 
+ i dont even know what it is 
+ i dont even know what to do 
+ i dont even know what it
+
+<sos> detock arm hammer baking soda 
+ countless uses for pennies a day <eos>
+
+<sos> parentsll look out pimp 
+ uhh <eos>
+
+<sos> underserved day to the end of the day 
+ everybody aint got the same makeup 
+ i dont know what to do 
+ i dont even know what it is 
+ i dont even know what it is 
+ i dont know
+
+<sos> petro hoo 
+ ta ha 
+ ta ha <eos>
+
+<sos> jacobs got to hear this shit 
+ on the way to get the main course <eos>
+
+<sos> talib california come and see what my city like <eos>
+
+<sos> bryan ha 
+ ta ha <eos>
+
+<sos> anywho check mic check mic check mic check 
+ mic check mic check mic check 
+ mic check mic check mic check 
+ mic check mic check mic check mic check 
+ mic check mic check mic check mic check <eos>
+
+<sos> pa ha 
+ ta ha <eos>
+
+<sos> mossy people who be who they want 
+ who they want to do 
+ we dont know what to do 
+ we dont know what to do 
+ we dont know what it is 
+ you know what it is 
+ you
+
+<sos> forgotten in the days of the day 
+ everybody know what it do 
+ you know what it is 
+ you know what it is 
+ you know what it is 
+ you know what it is 
+ you know what i
+
+<sos> pervin out of town 
+ where the fuck is it 
+ juke it pump it 
+ chi town lets go <eos>
+
+<sos> underdog for the day to get the main course <eos>
+
+<sos> economics 
+ you know what i do <eos>
+
+<sos> singles and hammer in the air 
+ i aint got no divorce 
+ no respect no respect 
+ no respect no respect 
+ no respect no respect 
+ no respect no respect 
+ no respect no respect 
+ no respect no respect
+
+<sos> sink em up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up <eos>
+
+<sos> oxymorons and gentlemen 
+ i dont know what to do 
+ cause i dont know what to do 
+ i dont even know what it is 
+ i dont know what to do 
+ i dont even know what it is 
+
+
+<sos> breath from the bottom to the top of the top 
+ now im in the back of the top 
+ now im in the back of the day 
+ i dont know what to do 
+ i dont know what to do
+
+<sos> cydal all the big head niggas 
+ and all them big head bitches 
+ you know what i do <eos>
+
+<sos> fishscale yeah 
+ cain 
+ ask about me <eos>
+
+<sos> origami 
+ bendin that block <eos>
+
+<sos> automatic uses for pennies a day <eos>
+
+<sos> owes is a problem 
+ i dont know what to do 
+ cause i dont know what to do 
+ i cant believe it <eos>
+
+<sos> eventually i got a lot of love 
+ i dont know what to do 
+ cause i dont know what to do 
+ i dont even know what it is 
+ i dont even know what it is 
+ you know i
+
+<sos> aye ha 
+ ta ha 
+ ta ha <eos>
+
+<sos> striker come and see what my city like 
+ rosecrans niggas tryin to murk me <eos>
+
+<sos> grandma i know the weedman weedman hes my friend <eos>
+
+<sos> fulton on the top of the top 
+ now im in the back of the top 
+ now im in the back of the city 
+ im in the back of the top of my mind 
+ i dont know what i
+
+<sos> thrust from the bottom to the top of the top 
+ now im on the way to the top 
+ now im in the back of the street 
+ im in the hood like this 
+ i dont need no help 
+
+
+<sos> telligent ass nigga 
+ you know what i do 
+ you know what i do 
+ you know what i do 
+ i dont want no help 
+ i dont know what to do 
+ i dont know what to do 
+
+
+<sos> railroad fire baking soda 
+ countless uses for pennies a day <eos>
+
+<sos> available 
+ you know what i do <eos>
+
+<sos> fede eww 
+ e forty fonzarelli 
+ you know what i do <eos>
+
+<sos> weigh your head back back back back back back 
+ back back back back back back back back 
+ back back back back back back back back back 
+ back back back back back back back back back back back back 
+
+
+<sos> bathtub skert 
+ bendin that block <eos>
+
+<sos> pain is a problem 
+ a dollar bill 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar plus a dollar bill yall 
+ a dollar plus a dollar
+
+<sos> queasy like i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ i dont even know what it is 
+ i dont even know what to do 
+ i
+
+<sos> bubs yeah 
+ cain 
+ ask about me <eos>
+
+<sos> melody is a problem 
+ a dollar man 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar plus a dollar bill yall 
+ a dollar plus a dollar bill yall 
+ a dollar
+
+<sos> turkish one point zero one point zero four 
+ four point zero three point zero three 
+ four point zero three point zero three 
+ four point zero three point zero three point zero three 
+ four point zero three point zero
+
+<sos> hablo ha 
+ ta ha <eos>
+
+<sos> splifted voodoo i dont know what to do 
+ cause i dont know what to do 
+ i cant believe it <eos>
+
+<sos> features and turmoil 
+ i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ i cant believe it <eos>
+
+<sos> winnings in my mind 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+
+
+<sos> trunk full of baking soda <eos>
+
+<sos> tranquilizes them after respect me 
+ you dont know what to do 
+ cause i dont know what to do 
+ i cant believe it <eos>
+
+<sos> shoulders in the air 
+ where the fuck you know what it do 
+ you know what it is 
+ you know what it is 
+ you know what it is 
+ you know what i do 
+ you know what i
+
+<sos> boobly eww 
+ ta ha 
+ ta ha <eos>
+
+<sos> films from the days of the days of the day 
+ now im on the way to the top of the day 
+ i dont know what to do 
+ i dont even know what it is 
+ i dont even know
+
+<sos> clot check it out 
+ word niggas smoke too fuckin much man 
+ yo yo yo yo yo yo yo yo 
+ yo yo yo yo yo yo yo yo 
+ yo yo yo yo yo yo yo yo yo yo 
+
+
+<sos> autographs on the way to the top of the top 
+ now im in the back of the top 
+ now im in the back of the hood 
+ i aint got no time to get it 
+ i dont even know
+
+<sos> datin 
+ cmon <eos>
+
+<sos> anyone believe it 
+ juke it 
+ chi town lets go <eos>
+
+<sos> trynna tell you what i do 
+ i know what i do 
+ i know what i do 
+ i dont want no help 
+ i dont know what to do 
+ i cant believe it <eos>
+
+<sos> dumbass pha 
+ ta ha <eos>
+
+<sos> wilt i got a million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar
+
+<sos> heartll help me <eos>
+
+<sos> cobain 
+ i know the weedman weedman hes my friend <eos>
+
+<sos> grade i know what i mean 
+ i dont want no help 
+ i dont know what to do 
+ i dont even know what it is 
+ i dont even know what it is 
+ i dont know what to do
+
+<sos> colleagues and gentlemen 
+ i dont know what to do 
+ cause i dont know what to do 
+ i dont even know what it is 
+ i dont even know what it is 
+ i dont know what to do 
+
+
+<sos> blapper pha <eos>
+
+<sos> bitchbetalkinaboutsuin in the city to the top of the top 
+ now im in the back of the city 
+ where the fuck is that simple 
+ this is all that i have this is all that i have 
+ i got
+
+<sos> ant check mic check mic check mic check 
+ mic check mic check mic check 
+ mic check mic check mic check 
+ mic check mic check mic check mic check 
+ mic check mic check mic check mic check <eos>
+
+<sos> ella arm hammer mane 
+ that orange box of baking soda <eos>
+
+<sos> timberlake hoo 
+ ta ha <eos>
+
+<sos> lookout like this for the day 
+ cause mama dont know what to do 
+ cause i dont know what to do 
+ i dont even know what it is 
+ i dont even know what to do 
+ i dont know
+
+<sos> dump water water water 
+ nine point zero seven 
+ four point zero three point zero three 
+ four point zero three point zero three 
+ four point zero three point zero three 
+ four point zero three point zero four 
+
+
+<sos> protector fik 
+ ta ha <eos>
+
+<sos> sneaky arm hammer baking soda 
+ countless uses for pennies a day <eos>
+
+<sos> wraps up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up <eos>
+
+<sos> nicotine is a problem 
+ i dont know what to do 
+ cause i dont know what to do 
+ i cant believe it <eos>
+
+<sos> biking on the top of the top 
+ now im in the back of the top 
+ now im in the back of the hood 
+ i aint got no time to get it 
+ i dont even know what it is
+
+<sos> properly this the last time 
+ everybody cares 
+ never know what it do 
+ you know what it do 
+ you know what it is 
+ you know what it is 
+ you know what it is 
+ you know what
+
+<sos> bulking up in this bitch 
+ bitch <eos>
+
+<sos> spin it up and bag it 
+ chi town lets go <eos>
+
+<sos> stratocaster box of baking soda <eos>
+
+<sos> joe rock rock rock rock rock rock the bells <eos>
+
+<sos> bleecker ha 
+ ta ha <eos>
+
+<sos> mama i know the weedman weedman hes my friend <eos>
+
+<sos> twin arm hammer mane 
+ that orange box of baking soda <eos>
+
+<sos> penal 
+ bendin that block <eos>
+
+<sos> pitfall 
+ you know what i do <eos>
+
+<sos> maxwells gangstas niggas tryin to murk me <eos>
+
+<sos> crackin ass up 
+ yo yo yo yo 
+ yo yo yo yo yo yo yo yo yo yo 
+ yo yo yo yo yo yo yo 
+ yo yo yo yo yo yo yo yo 
+ yo yo yo yo yo
+
+<sos> sprits 
+ you know what i do <eos>
+
+<sos> righteously i know the weedman weedman hes my friend <eos>
+
+<sos> pina pha <eos>
+
+<sos> tights look out here <eos>
+
+<sos> pads and hammer baking soda 
+ countless uses for pennies a day <eos>
+
+<sos> courts in the game of the day 
+ everybody know what it is 
+ you know what i do 
+ i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ i
+
+<sos> rooting for the real life 
+ everybody know what it do 
+ you know what it is 
+ you know what it is 
+ you know what it is 
+ you know what it is 
+ you know what i do 
+
+
+<sos> gall check mic check mic check mic check 
+ mic check mic check mic check 
+ mic check mic check mic check 
+ mic check mic check mic check mic check 
+ mic check mic check mic check mic check <eos>
+
+<sos> bryant told me what it do what it is 
+ uh huh 
+ uh huh 
+ uh huh 
+ uh huh <eos>
+
+<sos> dames check it out 
+ word niggas smoke too fuckin much man 
+ yo yo yo yo yo yo yo yo yo 
+ yo yo yo yo yo yo yo yo 
+ yo yo yo yo yo yo yo yo yo 
+
+
+<sos> recitin pha <eos>
+
+<sos> rope and hammer baking soda 
+ countless uses for pennies a day <eos>
+
+<sos> pippens if you do what i do 
+ i cant believe it <eos>
+
+<sos> iont tell me that this isnt real 
+ this is all that i have 
+ i dont know what to do 
+ i cant believe it <eos>
+
+<sos> stoners yeah 
+ cain 
+ ask about me <eos>
+
+<sos> socialite 
+ cmon <eos>
+
+<sos> dusters on the block 
+ you can get it in the air 
+ i aint got no time to get it 
+ i dont need no help for you 
+ i dont know what it is 
+ i dont know what i
+
+<sos> kissin in my dreams now 
+ welcome 
+ hey hey <eos>
+
+<sos> dents check it out 
+ word niggas smoke too fuckin much man 
+ yo yo yo yo yo yo yo yo 
+ yo yo yo yo yo yo yo yo 
+ yo yo yo yo yo yo yo yo yo yo 
+
+
+<sos> cutthroat 
+ bendin that block <eos>
+
+<sos> grief 
+ hey hey <eos>
+
+<sos> choo jones scott scott scott scott 
+ thats good you alright <eos>
+
+<sos> shatter the party at the top of the top 
+ now im in the back of the top 
+ now im in the back of the street 
+ im in the hood like im in the hood 
+ im in the hood
+
+<sos> archives got a lot of shit that make you feel like 
+ i dont know what to do 
+ i dont even know what it is 
+ i dont even know what it is 
+ i dont know what to do 
+
+
+<sos> wishes got to hear this shit 
+ on the end of the day 
+ cause mama dont know what to do 
+ cause i dont know what to do 
+ i dont even know what it is 
+ you know what i
+
+<sos> buzzballz 
+ bendin that block <eos>
+
+<sos> risin on the block 
+ you can get it in the air 
+ i aint got no time to get it 
+ i dont know what it is 
+ i dont know what to do 
+ i dont even know what it
+
+<sos> compactor yeah 
+ cain 
+ ask about me <eos>
+
+<sos> cowardly course 
+ never know what it is 
+ uh huh 
+ uh huh 
+ uh huh 
+ uh huh 
+ motherfucker <eos>
+
+<sos> uuhh 
+ bendin that block <eos>
+
+<sos> scorchers tryin to get the main course <eos>
+
+<sos> faith is finicky 
+ you know what i do <eos>
+
+<sos> doublecross 
+ cmon <eos>
+
+<sos> cypress check mic check mic check mic check 
+ mic check mic check mic check 
+ mic check mic check mic check 
+ mic check mic check mic check mic check 
+ mic check mic check mic check mic check <eos>
+
+<sos> underestimated me 
+ i dont know what to do 
+ i cant believe it <eos>
+
+<sos> fallopian uses for pennies a day <eos>
+
+<sos> tellin em 
+ i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ i cant believe it <eos>
+
+<sos> vocalists 
+ scott scott scott scott scott 
+ thats good you know 
+ you know what it do 
+ that you know what it is 
+ you know what i do <eos>
+
+<sos> these niggas got to hear this shit 
+ on the way to get the main course <eos>
+
+<sos> numb in the mirror 
+ i got a lot of talent 
+ i dont know what to do 
+ i dont even know what it is 
+ i dont even know what it is 
+ i dont know what to do 
+
+
+<sos> tristan california come and see what my city like <eos>
+
+<sos> ally yeah 
+ cain 
+ ask about me <eos>
+
+<sos> ickies from the days of the day 
+ everybody know what it do 
+ you know what it is 
+ you know what i do <eos>
+
+<sos> belize all the big head niggas 
+ and all them big head bitches 
+ you know what i do <eos>
+
+<sos> fordham get the main course <eos>
+
+<sos> bingo niggas tryin to murk me <eos>
+
+<sos> darted me up in my room 
+ i dont want no love 
+ i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ i
+
+<sos> retreated in the city to the top of the top 
+ now im in the back of the street 
+ now im in the back of the street 
+ now im in the back of the hood 
+ i aint got no
+
+<sos> includes what i do what i do 
+ i cant believe it <eos>
+
+<sos> conceive 
+ you know what i do <eos>
+
+<sos> birthplace for the last day 
+ every day that i can see 
+ i dont know what to do 
+ i dont even know what it is 
+ i dont even know what to do 
+ i dont even know what it
+
+<sos> laura uhh 
+ ta ha <eos>
+
+<sos> plidnay jazze pha <eos>
+
+<sos> snoozing in the back of the day 
+ everybody know what it do 
+ you know what it is 
+ you know what it is 
+ you know what i do 
+ you know what i do 
+ you know what i
+
+<sos> reputable intellectual 
+ i dont know what to do 
+ cause i dont even know what it is 
+ i dont even know what it is 
+ i dont even know what it is 
+ i dont know what to do 
+
+
+<sos> teachers got to hear this shit 
+ on the way to get the main course <eos>
+
+<sos> contagious like its my last day 
+ i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+
+
+<sos> testicles 
+ ooh ooh <eos>
+
+<sos> obvious is a problem 
+ a dollar man 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar plus a dollar bill yall 
+ a dollar plus a dollar bill yall 
+ a dollar plus a dollar bill 
+
+
+<sos> soror got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> regiment in the city to the west coast 
+ where they say they got it 
+ but i dont know what it is 
+ you know what it is 
+ you know what it is 
+ you know what i do 
+
+
+<sos> finest 
+ never mind when you get the main course <eos>
+
+<sos> warriors and gentlemen 
+ you know what i do <eos>
+
+<sos> afoul on the top of the top 
+ now im on the way to the top 
+ now im in the back of the street 
+ i dont know what i do 
+ i dont even know what it is 
+ i
+
+<sos> nyc projects high school niggas 
+ one point zero three 
+ four point zero three point zero three 
+ four point zero three point zero three 
+ four point zero three point zero three 
+ four point zero three point zero three
+
+<sos> heller and turmoil <eos>
+
+<sos> playas got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> cloud arm hammer mane 
+ that orange box of baking soda <eos>
+
+<sos> lolly ty 
+ ta ha 
+ ta ha <eos>
+
+<sos> material 
+ i dont need no love 
+ i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ i cant believe it <eos>
+
+<sos> skee skert 
+ bendin that block <eos>
+
+<sos> plus i got a million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar
+
+<sos> spearmint niks son 
+ before you get the main course <eos>
+
+<sos> supplyin them after respect me 
+ you dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ i
+
+<sos> swore to get the main course <eos>
+
+<sos> character is a problem 
+ a dollar bill 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar plus a dollar bill yall 
+ a dollar bill yall a
+
+<sos> needs a problem 
+ i dont know what to do 
+ cause i dont know what to do 
+ i dont even know what it is 
+ i dont even know what it is 
+ i dont know what to do 
+
+
+<sos> weak arm hammer baking soda 
+ countless uses for pennies a day <eos>
+
+<sos> howzabout i got a million dollar bill yall 
+ a dollar plus a dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar plus a dollar
+
+<sos> kevin gates 
+ yeah 
+ cain 
+ ask about me <eos>
+
+<sos> fasho yeah 
+ cain 
+ ask about me <eos>
+
+<sos> sugar and hammer baking soda 
+ countless uses for pennies a day <eos>
+
+<sos> wam hoo 
+ ta ha 
+ ta ha <eos>
+
+<sos> blades and hammer baking soda 
+ countless uses for pennies a day <eos>
+
+<sos> stride from the bottom to the top of the top 
+ now im in the back of the top 
+ now im in the back of the top of the top 
+ i dont need no love for you 
+ i dont
+
+<sos> salon ha 
+ ta ha <eos>
+
+<sos> tend to get the main course <eos>
+
+<sos> pussyll hieroglyphics and gentlemen 
+ i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ i cant believe it <eos>
+
+<sos> duis look out here <eos>
+
+<sos> <sos> uhh 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> nightly gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh 
+
+
+<sos> pitch hard hard hard as hell 
+ battle battle anybody 
+ rock rock rock rock rock the bells <eos>
+
+<sos> valentines on my mind 
+ my mind is filled with this 
+ what the fuck is you 
+ i dont even know what to do 
+ i dont even know what it is 
+ i dont even know what to do 
+
+
+<sos> listenin to this thang 
+ bitch <eos>
+
+<sos> pumper in the air 
+ where the fuck you know what it is 
+ that is that that that that that that that that 
+ that that that that that that that that 
+ that that that that that that that that
+
+<sos> loans on my mind i dont know what to do 
+ cause i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ i dont
+
+<sos> chu yeah 
+ cain 
+ ask about me <eos>
+
+<sos> smidgen than a million dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar plus a dollar bill yall 
+ a dollar plus a dollar bill yall 
+ a dollar plus a dollar bill yall 
+
+
+<sos> minerals 
+ sheit sheit 
+ before you get the main course <eos>
+
+<sos> apron check it out 
+ word niggas smoke too fuckin much man 
+ yo yo yo yo yo yo yo yo 
+ yo yo yo yo yo yo yo yo yo 
+ yo yo yo yo yo yo yo yo yo 
+
+
+<sos> sumo i know the weedman weedman hes my friend <eos>
+
+<sos> japonais i got a million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar
+
+<sos> bama ha 
+ ta ha <eos>
+
+<sos> disguised me 
+ i dont know what to do 
+ cause i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ i cant believe it <eos>
+
+<sos> roster and gentlemen 
+ i dont know what to do 
+ cause i dont know what to do 
+ i dont even know what it is 
+ i dont know what to do 
+ i dont even know what it is 
+
+
+<sos> mondays i was born in the city 
+ i was born in the game 
+ i was born in the hood 
+ i was born in the hood 
+ i was born in the hood 
+ i was born in the hood
+
+<sos> experts on the way to get the main course <eos>
+
+<sos> hoping what i do what i do 
+ i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ i dont know what to do
+
+<sos> modest lot of shit that make you feel like 
+ i dont know what to do 
+ i dont even know what it is 
+ i dont even know what it is 
+ i dont even know what it is 
+ i
+
+<sos> sniffling the party at <eos>
+
+<sos> karma aint no respect 
+ no comp no comp 
+ no comp no comp no comp 
+ no comp no comp no competition <eos>
+
+<sos> carousel 
+ bendin that block <eos>
+
+<sos> momentarily from the bottom to the top of the top 
+ now im in the back of the top 
+ now im in the back of the hood 
+ i dont know what to do 
+ i dont even know what it
+
+<sos> searchin for me 
+ i dont know what to do 
+ cause i dont know what to do 
+ i dont know what to do 
+ i cant believe it <eos>
+
+<sos> title for the last day 
+ to all the big head niggas 
+ and all them big head bitches 
+ you know what i do <eos>
+
+<sos> rica know what i do 
+ i know what i mean 
+ i dont want no help 
+ i dont know what to do 
+ i dont even know what it is 
+ i dont know what to do 
+ i dont
+
+<sos> sneaky arm hammer baking soda 
+ countless uses for pennies a day <eos>
+
+<sos> stubby yea 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> fleshlight 
+ ooh <eos>
+
+<sos> socket i got a million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar
+
+<sos> sire 
+ you know what i do <eos>
+
+<sos> cromwell got to hear this shit 
+ on the way to get the main course <eos>
+
+<sos> reside 
+ you know what i do <eos>
+
+<sos> freakin in the hood like the rams secondary 
+ and he aint got no time to get it 
+ but i dont know what it is 
+ i dont know what to do 
+ i dont even know what it is 
+
+
+<sos> snatched me on my mind 
+ i dont want no love 
+ i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ i dont even know what to do 
+ i
+
+<sos> opera 
+ ta ha <eos>
+
+<sos> storage dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar plus a dollar bill yall 
+ a dollar plus a dollar bill yall 
+ a dollar plus a dollar bill
+
+<sos> tremblin yeah 
+ cain 
+ ask about me <eos>
+
+<sos> poppagos 
+ you know what i do <eos>
+
+<sos> fucka got to hear this shit 
+ on the way to get this <eos>
+
+<sos> unborn people love me 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+
+
+<sos> tiptoed in the club with the big head niggas 
+ and all them big head bitches 
+ you know what i do <eos>
+
+<sos> imam california come and see what my city like 
+ rosecrans niggas tryin to murk me <eos>
+
+<sos> jacore i got a lot of talent 
+ but i dont know what to do 
+ cause i dont even know what it is 
+ i dont even know what it is 
+ i dont even know what it is 
+ i
+
+<sos> kin is a problem 
+ a dollar bill 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar plus a dollar bill yall 
+ a dollar plus a dollar
+
+<sos> undo your last day 
+ to all the big head niggas 
+ and all them big head bitches 
+ you know what i do <eos>
+
+<sos> sheeit i got a million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar
+
+<sos> redd california come and see what my city like 
+ rosecrans niggas tryin to murk me <eos>
+
+<sos> lackin out the way to the top of the day 
+ everybody know what it do 
+ you know what it is 
+ you know what it is 
+ you know what it is 
+ you know what i do 
+ i
+
+<sos> kansas california come and see what my city like <eos>
+
+<sos> rehabilitation gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang guh 
+
+
+<sos> gassed me up in the club 
+ i got a lot of talent 
+ but i dont know what to do 
+ i dont even know what it is 
+ i dont even know what it is 
+ i dont even know
+
+<sos> paths in the hood like the rams secondary 
+ he aint got no time for the day 
+ cause he aint got a lot of shit 
+ he aint got a lot of shit 
+ he aint got no time for the
+
+<sos> india all the big head niggas 
+ and all them big head niggas 
+ and all them big head bitches 
+ you know what i do <eos>
+
+<sos> starstruck i got a million dollar spot 
+ i got a million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+
+
+<sos> groupie check it out 
+ word niggas smoke too fuckin much man 
+ yo yo yo yo yo yo yo yo 
+ yo yo yo yo yo yo yo yo 
+ yo yo yo yo yo yo yo yo yo yo 
+
+
+<sos> richies got to hear this shit 
+ on w balls <eos>
+
+<sos> uuh got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> popular niks son 
+ before you get the main course <eos>
+
+<sos> leper 
+ ooh <eos>
+
+<sos> shoestringsnthings hoo 
+ e forty mayne 
+ you know what i do <eos>
+
+<sos> assume what i do what i do 
+ i cant believe it <eos>
+
+<sos> taillight check it out 
+ word niggas smoke too fuckin much man 
+ yo yo yo yo yo yo yo yo 
+ yo yo yo yo yo yo yo yo 
+ yo yo yo yo yo yo yo yo yo yo 
+
+
+<sos> plain niggas in the hood like the rams secondary 
+ he aint got no time for the day 
+ cause he aint got a lot of shit 
+ he aint got a lot of shit 
+ he aint got a lot of
+
+<sos> mj not a problem 
+ a dollar 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar plus a dollar bill yall 
+ a
+
+<sos> rugers 
+ bendin that block <eos>
+
+<sos> although i was fifteen years old school i was born in the game 
+ i was born in the game of the day 
+ cause i aint got no time to get it 
+ but i dont know what it is 
+
