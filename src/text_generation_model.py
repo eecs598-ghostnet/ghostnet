@@ -235,8 +235,10 @@ class AttentionEncoderDecoder(nn.Module):
         self.max_length = max_length
 
         self.phoneme_embedding = nn.Embedding(phoneme_vocab_size, phoneme_embed_size)
+        self.phoneme_dropout = nn.Dropout()
         self.phoneme_encoder = PhonemeEncoder(phoneme_embed_size, phoneme_hidden_size)
         self.embedding = nn.Embedding(vocab_size, embed_size)
+        self.embed_dropout = nn.Dropout()
 
         self.encoder = EncoderRNN(embed_size+phoneme_hidden_size, hidden_size)
         self.decoder = Decoder(embed_size+phoneme_hidden_size, hidden_size, max_length)
@@ -256,9 +258,11 @@ class AttentionEncoderDecoder(nn.Module):
 
         # Get word embeddings -> (B, T, word_embed_size)
         embeddings = self.embedding(x)
+        embeddings = self.embed_dropout(embeddings)
 
         # Get phoneme embeddings -> (B, T, T_phoneme, phoneme_embed_size)
         phoneme_embeddings = self.phoneme_embedding(x_phonemes.view(B, -1)).view(B, T, T_phoneme, -1)
+        phoneme_embeddings = self.phoneme_dropout(phoneme_embeddings)
         last_phoneme_outputs = self.phoneme_encoder(phoneme_embeddings, phoneme_lengths)
 
         inputs = torch.cat([embeddings, last_phoneme_outputs], dim=2)

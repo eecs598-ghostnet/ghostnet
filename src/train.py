@@ -200,12 +200,12 @@ def main():
 
 
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.Adam(model.parameters(), lr=0.002)
-    exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=1, gamma=0.1)
+    optimizer = optim.Adam(model.parameters(), lr=0.003)
+    exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=1, gamma=0.5)
 
-    model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=5, weights_dir=weights_dir)
+    model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=20, weights_dir=weights_dir)
 
-    torch.save(model.state_dict(), os.path.join(weights_dir, 'final.pt'))
+    torch.save(model.state_dict(), os.path.join(weights_dir, 'final3.pt'))
 
 
 if __name__ == '__main__':

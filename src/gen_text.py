@@ -134,7 +134,8 @@ class AttnBeamPath(BeamPath):
         self.finished = finished
 
     def value(self):
-        return self.sum_logodds / len(self.words)
+        #return self.sum_logodds / len(self.words)
+        return self.sum_logodds
 
     def __repr__(self):
         return """Logodds: {}\n{}""".format(
@@ -302,12 +303,26 @@ def gen_random_samples(num_samples, txt_vocab, *args, **kwargs):
         print()
         print(words)
 
+def get_seed_phrases(num_phrases, dataloader, corpus):
+    d = corpus.dictionary
+    i = 0
+    seed_phrases = []
+
+    dataset = dataloader.dataset
+    for example in dataset.examples:
+        idx = example.text.index('\n')
+        text = example.text[:idx]
+        seed_phrases.append('<sos>' + ' '.join(text))
+        i += 1
+        if i == num_phrases:
+            return seed_phrases
+
 
 
 if __name__ == '__main__':
     # vocab must be shared with trained modeljkk
     artist_dir = '../data/lyrics/combined_trunc'
-    model_weights_path = '../model/attention/final.pt'
+    model_weights_path = '../model/attention/final2.pt'
     ModelType = AttentionEncoderDecoder
 
     if len(sys.argv) > 1:
@@ -337,19 +352,20 @@ if __name__ == '__main__':
 
     if seed_words is not None:
         #greedy_search(model, txt_vocab, phoneme_vocab, corpus, device, seed_words=seed_words, max_length=50)
-        attn_beam_search(model, txt_vocab, phoneme_vocab, corpus, device, seed_words=seed_words, max_length=50, k=5, show_options=True)
+        attn_beam_search(model, txt_vocab, phoneme_vocab, corpus, device, seed_words=seed_words, max_length=50, k=20, show_options=True)
 
     else:
-        seed_phrases = [
-            '<sos>',
-            '<sos> we got',
-            '<sos> test this',
-            '<sos> all money aint good money',
-            '<sos> what is it',
-            '<sos> ugh yea',
-            '<sos> words embedded',
-            '<sos> i love the',
-            '<sos> yo yo',
-        ]
+        #seed_phrases = [
+        #    '<sos>',
+        #    '<sos> we got',
+        #    '<sos> test this',
+        #    '<sos> all money aint good money',
+        #    '<sos> what is it',
+        #    '<sos> ugh yea',
+        #    '<sos> words embedded',
+        #    '<sos> i love the',
+        #    '<sos> yo yo',
+        #]
+        seed_phrases = get_seed_phrases(100, dataloaders['train'], corpus)
         #gen_samples(seed_phrases, model, txt_vocab, phoneme_vocab, corpus, device, max_length=40, k=5)
-        gen_random_samples(1000, txt_vocab, model, txt_vocab, phoneme_vocab, corpus, device, max_length=40, k=5)
+        gen_random_samples(1000, txt_vocab, model, txt_vocab, phoneme_vocab, corpus, device, max_length=40, k=3)

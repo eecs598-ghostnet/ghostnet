@@ -1,0 +1,5328 @@
+Building corpus...
+Building dataset...
+Building text vocab...
+Building phoneme vocab...
+Creating iterators...
+Done
+train_dataset size: 3512
+
+<sos> phoneys or proffesor chronic 
+ i dont need no help 
+ i dont know what to do 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+
+
+<sos> basketball got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> andale vamonos feelin like im in the hood 
+ got me in the back of the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the ground
+
+<sos> unit hammer mane 
+ that orange box of baking soda <eos>
+
+<sos> stated i was in the mirror 
+ told me that this isnt real 
+ this is all that i have this is all that i have <eos>
+
+<sos> goapele i got a lot of talent 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ i can do it for you 
+ i dont know what to
+
+<sos> yeahaye why you want me to say your name 
+ yo yo yo 
+ uhh 
+ yo yo yo 
+ uhh 
+ yo yo yo 
+ uhh 
+ yo yo yo 
+ word e dub uhh 
+ yo yo yo <eos>
+
+<sos> hoodtrue got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> decode niggas tryin to murk me <eos>
+
+<sos> donatella shoe tie 
+ who got that body 
+ fuck what they say 
+ you know what i do 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know i dont
+
+<sos> precious know me and i love it 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont
+
+<sos> fakery 
+ ooh ooh <eos>
+
+<sos> thoughtfulless 
+ zihzihzih zihzih zihzih zihzih zihzih zihzih zihzih zihzih zihzih <eos>
+
+<sos> champion riding with the sharks two 
+ three point zero three point zero three point zero 
+ fresh outta town 
+ two point zero four 
+ fresh outta town 
+ one point zero four point zero four 
+ fresh outta town 
+
+
+<sos> relaxation for the day 
+ cause mama couldnt raise no man 
+ and though she do the things she can 
+ every woman needs a helping hand <eos>
+
+<sos> sucks my dog doin life 
+ cause he aint got no safety like the rams secondary 
+ and he come back to the top of your gums 
+ i dont need no help 
+ i dont know what to do 
+ i
+
+<sos> scramble at the top of the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top
+
+<sos> dive in the club with the top of your gums 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i
+
+<sos> tic ty 
+ e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e forty 
+
+
+<sos> waitresswhat got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> mustang hoo 
+ e for ty 
+ e for <eos>
+
+<sos> affiliation and penitentiary chances 
+ never mind the way they say they got it 
+ but i got it man hey hey hey 
+ uhh hey hey <eos>
+
+<sos> cavity 
+ ooh ooh <eos>
+
+<sos> giggle 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> posse on the block 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> cosign niggas tryin to murk me <eos>
+
+<sos> spiel 
+ im in the mirror and the stars and the pimps 
+ i dont know what to do 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont need no
+
+<sos> jheri di di di di 
+ na na na na na na na na na 
+ na na na na na na na na na na na na na na na na na na na na 
+ na na na na na
+
+<sos> armstrong 
+ ask about me <eos>
+
+<sos> intervene me like i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ cause i
+
+<sos> effort to be the only one now 
+ cant be the first one to me 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ cause i can do
+
+<sos> aces fresh out the trunk of the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the ground up 
+
+
+<sos> nann them raps selling these hoes 
+ and all them big head bitches 
+ you know my name 
+ i got my dick in the air 
+ now im on the way to the top of your gums 
+ i dont need
+
+<sos> soaking up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+
+
+<sos> london and all them big head niggas 
+ and all them big head bitches 
+ you know my name 
+ i dont know what to do 
+ i dont even know what it is 
+ uh huh uh huh uh huh 
+
+
+<sos> author what you say what you want 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know what i
+
+<sos> lapsfore i was born to be the only one 
+ i got a lot of talent 
+ i dont know what i do 
+ i dont need no help 
+ i dont know what to do 
+ cause i dont know what
+
+<sos> bk and i got a lot of talent 
+ i dont know what to do 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont
+
+<sos> shaming 
+ zihzihzih 
+ zihzihzih zihzih zihzih zihzih zihzih zihzih zihzih <eos>
+
+<sos> tub 
+ i dont want no help 
+ i know what i mean 
+ i dont want no help 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont need no help 
+
+
+<sos> evil not a problem 
+ big up to all my people not a problem 
+ big up to all my people not a problem 
+ big up to all my people not a problem <eos>
+
+<sos> beginnin check it out 
+ word niggas smoke too fuckin much man <eos>
+
+<sos> inferno 
+ you can see me 
+ aw man that bitch she go hard <eos>
+
+<sos> thai check mic check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check one two one two <eos>
+
+<sos> paypals hoo 
+ e for ty 
+ e for <eos>
+
+<sos> hydrogen escapades 
+ tap that weed <eos>
+
+<sos> overreact 
+ you never know when its all about 
+ long as it gets dark 
+ ill be there for you 
+ you know what i mean 
+ you know you know what i mean 
+ you know you know what i
+
+<sos> strawberry cough 
+ i aint got no safety like the rams secondary 
+ and he come back to the top of the top 
+ from the ground up we never stop 
+ we all come from the ground up 
+ from the
+
+<sos> bleachers the corner like skee skert 
+ skee skert 
+ hit the corner like <eos>
+
+<sos> doubletree 
+ cmon <eos>
+
+<sos> heh 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> fridge yea 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> teaming up in the air 
+ i dont need no help 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont need no help 
+
+
+<sos> measurin the party at wheres the party at <eos>
+
+<sos> judgmental not a problem that i can see 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ i dont
+
+<sos> diffuse the party at wheres the party at <eos>
+
+<sos> motherfuckes got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> stakeholder 
+ bendin that block <eos>
+
+<sos> graduation look at me 
+ make me do what i do <eos>
+
+<sos> loosie 
+ ooh ooh <eos>
+
+<sos> rye 
+ e for ty 
+ e for <eos>
+
+<sos> incentives 
+ ask about me <eos>
+
+<sos> kevins in the game that you know what i mean 
+ you know my name 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont
+
+<sos> drumsticks on the floor 
+ got a lot of talent 
+ but i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont need no help 
+
+
+<sos> seventysix i got a lot of talent 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont
+
+<sos> chokes the party at wheres the party at <eos>
+
+<sos> cardiac arrest 
+ he like to do 
+ cause he dont know how to do 
+ cause he aint had no safety like the rams secondary 
+ and he come out the way to school today <eos>
+
+<sos> premises in the ghetto 
+ never in the hood 
+ we dont know what to do 
+ cause we can do it like this <eos>
+
+<sos> multiplyin jazze pha 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> filipinos all the big head niggas 
+ and all them big head bitches 
+ you know my name 
+ i dont know what to do 
+ i dont even know what it is 
+ uh huh uh huh 
+ uh huh uh
+
+<sos> astro check mic check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check one two one two <eos>
+
+<sos> service 
+ see what i do 
+ i know what i mean 
+ i know the weedman weedman hes my friend <eos>
+
+<sos> periods in the city 
+ where we be in the city 
+ everybody know what we do 
+ we do this shit 
+ we dont know what to do 
+ we dont know what it is 
+ uh huh 
+ uh huh
+
+<sos> chain hammer baking soda 
+ countless uses for pennies a day <eos>
+
+<sos> fleshlight 
+ ooh ooh <eos>
+
+<sos> de ha 
+ ta ha <eos>
+
+<sos> daniels 
+ ask about me <eos>
+
+<sos> cherry check mic check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check one two one two <eos>
+
+<sos> wordplay like a forest fire 
+ up in the air 
+ i got a lot of talent 
+ but i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+
+
+<sos> hoodrats look out there 
+ aw yeah <eos>
+
+<sos> fleein the party at wheres the party at <eos>
+
+<sos> bleu scoop 
+ whoop diddy scoop 
+ whoop diddy scoop 
+ whoop diddy scoop 
+ whoop di scoop 
+ whoop di scoop di scoop 
+ whoop di scoop di scoop 
+ whoop di scoop di scoop 
+ whoop di scoop di scoop
+
+<sos> fixture in the city to the west coast 
+ where we do this shit 
+ on the end of the day 
+ cause mama couldnt raise no man 
+ and though she do the things she can 
+ every woman needs a
+
+<sos> abusers 
+ sheit sheit 
+ sheit <eos>
+
+<sos> cams dums 
+ zihzihzih zihzih zihzih zihzih zihzih zihzih zihzih <eos>
+
+<sos> lade 
+ ooh ooh <eos>
+
+<sos> business on the street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> muslims is the only thing that i can see 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ im
+
+<sos> tray check it out 
+ word niggas smoke too fuckin much man <eos>
+
+<sos> dorados and you dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ im
+
+<sos> ass what the fuck you talkin bout 
+ bout bout bout bout bout 
+ bout bout bout bout bout 
+ bout bout bout bout bout bout bout bout bout bout 
+ bout bout bout bout bout bout bout bout bout bout bout
+
+<sos> fingaz so serious 
+ its recording <eos>
+
+<sos> french arm hammer baking soda 
+ countless uses for pennies a day <eos>
+
+<sos> dedication is finicky 
+ you never know when its all about 
+ long as it gets dark 
+ ill be there for you 
+ you know what i mean 
+ you know you know what i mean 
+ you know you know
+
+<sos> helpin em like this for the day 
+ cause mama couldnt raise no man 
+ and though she do the things she can 
+ every woman needs a helping hand <eos>
+
+<sos> assassin in the heart of the demon 
+ the ed hardy with the fine fit 
+ track for the evil not a problem 
+ big up to all my people not a problem 
+ big up to all my people not a
+
+<sos> ark in the mirror and the stars and the pimps 
+ them boys aint got no safety like the rams secondary 
+ and he come back to the top of your gums 
+ thats the way i like to do 
+ i
+
+<sos> dodged you from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the ground up 
+
+
+<sos> yawn down baby im way more than a million dollar 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall a dollar 
+ a dollar bill yall 
+ a dollar bill yall a dollar 
+ a dollar
+
+<sos> james cain 
+ ask about me <eos>
+
+<sos> slam you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know i dont know what to do 
+ cause i
+
+<sos> immaturity i know the weedman weedman hes my friend <eos>
+
+<sos> silver out here its a drought nigga 
+ you aint got no time for the future 
+ no respect no respect aint no respect 
+ no respect no respect aint no respect 
+ no respect no respect aint no respect 
+ no
+
+<sos> toppy the party at wheres the party at <eos>
+
+<sos> marbles in the trunk of the street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> dolla talkie 
+ e forty get breaded 
+ sauce money get breaded 
+ sauce money get breaded 
+ sauce money get breaded 
+ fat joe get breaded <eos>
+
+<sos> khalif got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> crate full of baking soda 
+ countless uses for pennies a day <eos>
+
+<sos> afghanis and sons of the girls they love me 
+ they say that i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know how to
+
+<sos> domestic years from the first time 
+ i got a lot of talent 
+ but i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know
+
+<sos> bait check it out 
+ word niggas smoke too fuckin much man <eos>
+
+<sos> look at all the big head niggas 
+ and all them big head bitches 
+ you know my name 
+ i dont know what to do 
+ i dont even know what it is 
+ uh huh uh huh uh huh 
+
+
+<sos> cafeteria we in the club 
+ them boys aint got no safety like the rams secondary 
+ and he come back to the top 
+ from the ground up we never stop 
+ we all come from the ground up 
+ we
+
+<sos> major collectors calling all day and night 
+ make me think you can theres no retirement plan <eos>
+
+<sos> loch california come and see what my city like 
+ rosecrans niggas tryin to murk me <eos>
+
+<sos> bound to the top 
+ from the ground up 
+ down down down down down down 
+ back down down down down down down down 
+ back down we all come from the ground up <eos>
+
+<sos> farmers come and see what my city like 
+ rosecrans niggas tryin to murk me <eos>
+
+<sos> grieving 
+ never go <eos>
+
+<sos> huuh 
+ ooh ooh <eos>
+
+<sos> togetha zihzihzih 
+ zihzihzih zihzih zihzih zihzih zihzih zihzih zihzih <eos>
+
+<sos> oughta be the only one only one 
+ that is so unfair 
+ but this is all that i have this is all that i have <eos>
+
+<sos> listenin to the day 
+ cause mama couldnt raise no man 
+ and though she do the things she can 
+ every woman needs a helping hand <eos>
+
+<sos> calculated way out there in the city 
+ where the fuck is you 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know you know what i mean 
+ you know
+
+<sos> beastin 
+ woah woah woah woah woah woah woah woah 
+ woaah <eos>
+
+<sos> march i was in the city of the streets 
+ i was born to be the only one now 
+ i got the game from the bottom to the top 
+ from the bottom to the top of the top 
+ from
+
+<sos> migo know what i mean 
+ so you can see me 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+
+
+<sos> panicking in my dreams now 
+ welcome 
+ hey hey <eos>
+
+<sos> superstitious 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know what i do <eos>
+
+<sos> expectin if the money come fast when pushin them grams 
+ you get what you can theres no retirement plan <eos>
+
+<sos> roles and unique people love the way i need to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know how to
+
+<sos> weedman round the corner like <eos>
+
+<sos> test the party at wheres the party at <eos>
+
+<sos> coins to be the only one not a problem 
+ big up to all my people not a problem 
+ big up to all my people not a problem 
+ big up to all my people not a problem <eos>
+
+<sos> arnold mary jane thats how you do 
+ that you know what im talkin bout <eos>
+
+<sos> mcs look out there 
+ aw yeah <eos>
+
+<sos> bobblehead talkie 
+ i got a million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot bigger
+
+<sos> ion so fly 
+ i can see it in the air 
+ i dont know what to do 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i can do it for you 
+
+
+<sos> gate in the ghetto 
+ never in the game 
+ we dont know what to do 
+ cause we can do it like this <eos>
+
+<sos> spitting that ass like that nigga 
+ that nigga stick you in the hood 
+ he a good dude 
+ he aint had no safety like the rams secondary 
+ and he come back to the club 
+ he said he got
+
+<sos> zeb 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> awesome 
+ yeah 
+ if i cant believe it <eos>
+
+<sos> freaked the same old school in the world 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i
+
+<sos> ta ha 
+ ta ha <eos>
+
+<sos> physics and gentlemen 
+ where we be the only one 
+ cant nothing come from the ground up 
+ now im on the way to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+
+
+<sos> psychologist got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> impaired from the next week 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont need no help 
+
+
+<sos> pitchin all the big head niggas 
+ and all them big head bitches 
+ you know my name 
+ i dont know what to do 
+ i dont even know what it is 
+ uh huh uh huh 
+ uh huh uh
+
+<sos> iced out the trunk of the top 
+ from the ground up 
+ down to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the ground
+
+<sos> brothas 
+ woah woah woah woah 
+ woaah <eos>
+
+<sos> fully in the mirror and the stars and the pimps 
+ them boys aint got no safety like the rams secondary 
+ and he come back to the top of your gums 
+ thats the way i like to do 
+ i
+
+<sos> shell be careful 
+ but embrace him 
+ give him some game 
+ lace him <eos>
+
+<sos> yorks r e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e forty 
+
+
+<sos> thrive in the ghetto 
+ never in the game 
+ we dont know what to do 
+ cause we can do it like this <eos>
+
+<sos> goddamn 
+ yeah 
+ if i cant believe it 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know you know what i mean 
+
+
+<sos> topic bout bout bout bout bout 
+ bout bout bout bout bout bout bout bout bout bout 
+ bout bout bout bout bout bout bout bout 
+ bout bout bout bout bout bout bout bout bout 
+ bout bout bout bout bout
+
+<sos> uppers in my pocket full of that dro 
+ i got my dick in the air 
+ now im on the way to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the
+
+<sos> eharmony 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> juices money on my mind 
+ my mind is filled with this shit 
+ im on my way to the top of your gums 
+ i dont need no help 
+ i dont need no help 
+ i dont know what to
+
+<sos> keanu sparks in the chip though 
+ used to be the only one now im the one to the top 
+ from the bottom to the top 
+ from the ground up we never stop 
+ we never stop <eos>
+
+<sos> stuntin at the top of the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top
+
+<sos> minister 
+ ask about me <eos>
+
+<sos> focus on the street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> solified jazze pha <eos>
+
+<sos> hablo ha 
+ ta ha 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> unrejected 
+ ooh ooh <eos>
+
+<sos> anne check it out 
+ word niggas smoke too fuckin much man <eos>
+
+<sos> outshine the party at wheres the party at <eos>
+
+<sos> kate mary mary quite got the game from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+
+
+<sos> niece love is love love love love is love love 
+ love is love love love love is love love 
+ love is love love love love love is love love 
+ love love love love love love love love is love
+
+<sos> chinks in my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot
+
+<sos> rap game is a mans game 
+ this a mans game 
+ this a mans game 
+ this a mans game 
+ this a mans game 
+ this a mans game 
+ this a mans game 
+ this a mans game 
+
+
+<sos> dickriders got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> doja hoo 
+ e for ty 
+ e for <eos>
+
+<sos> rounded in the trunk of the street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> bathtub full of baking soda 
+ countless uses for pennies a day <eos>
+
+<sos> slurpin hoo 
+ e feezy fonzarelli yeah please believe me 
+ ho town lets go <eos>
+
+<sos> peppy hustle hustle hustle hustle hustle 
+ you know my name 
+ i dont need no help 
+ i dont know what to do 
+ cause i dont know what to do 
+ im bout to be the only one now im
+
+<sos> teaspoonin 
+ ooh ooh <eos>
+
+<sos> lah skert 
+ hit the corner like <eos>
+
+<sos> snuggled up in the club with no shirts 
+ got the game from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the
+
+<sos> loc yeah 
+ cain 
+ ask about me <eos>
+
+<sos> nakamichi got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> cables me 
+ i dont need no help 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i can do it for you 
+ i dont need no help 
+ i dont know what
+
+<sos> here we go start <eos>
+
+<sos> descent in the dark seat 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what
+
+<sos> puddle through the corner like skee skert 
+ skee skert 
+ hit the corner like <eos>
+
+<sos> wih 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> hows the party at wheres the party at <eos>
+
+<sos> click with me baby yeah yeah 
+ yeah yeah 
+ hmm yeah yeah 
+ hmm yeah 
+ hmm yeah 
+ one time yo 
+ never liked son from day one bring you tool 
+ that nigga stick you and play dumb hate
+
+<sos> pastor mary mary mary mary quite 
+ uh huh uh huh uh huh uh huh 
+ uh huh uh huh uh huh 
+ uh huh uh huh 
+ motherfucker yeah yeah yeah 
+ yeah yeah 
+ yeah yeah 
+ yeah <eos>
+
+<sos> jason i got my swagger on the floor 
+ i dont need a million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot bigger than a
+
+<sos> focused on my mind i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont need no help 
+
+
+<sos> tired of feeling this is all that i have <eos>
+
+<sos> writin that ass 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont need no help 
+
+
+<sos> earthquakeless 
+ ooh ooh <eos>
+
+<sos> yac hoo 
+ e for ty 
+ e for <eos>
+
+<sos> tabloids 
+ ooh ooh <eos>
+
+<sos> finna help me 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont need no help 
+
+
+<sos> bubonic people who be who they want 
+ who they want to bee yea 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> sweet love no love to love to love it 
+ you know i need it 
+ i dont know what it is 
+ uh huh uh huh 
+ uh huh uh huh uh huh 
+ uh huh uh huh uh huh uh
+
+<sos> patties check mic check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check one two one two <eos>
+
+<sos> baker 
+ ask about me <eos>
+
+<sos> torched me and my niggas got it 
+ but i got it and i got it 
+ but i got it and done it 
+ you know what i mean 
+ you know my name 
+ i dont need no help 
+
+
+<sos> imitate 
+ you can tell me what i do 
+ i know what i mean 
+ i know the weedman weedman hes my friend <eos>
+
+<sos> jeeps in the trunk of the street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> red rag niggas 
+ all day 
+ it aint got no time for it 
+ they dont know what it is 
+ uh huh uh huh 
+ uh huh uh huh uh huh 
+ uh huh uh huh uh huh uh huh
+
+<sos> additional dollar man bionic or proffesor chronic 
+ still not a problem 
+ big up to all my people not a problem 
+ big up to all my people not a problem <eos>
+
+<sos> plumbing beat it up and bag it 
+ chi town lets go <eos>
+
+<sos> qualities 
+ you can be the only one 
+ you got to hear 
+ who they want 
+ who they want to bee yea 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> bio 
+ ooh ooh <eos>
+
+<sos> thirtyone 
+ ooh ooh <eos>
+
+<sos> hues like the rams secondary 
+ and he come out 
+ to all the big head niggas 
+ and all them big head bitches 
+ you know my name 
+ i dont know what to do 
+ i dont even know what
+
+<sos> wet hard hard as hell 
+ battle battle anybody 
+ rock rock rock rock rock the bells <eos>
+
+<sos> resume bout bout bout bout bout 
+ bout bout bout bout bout bout bout bout bout bout 
+ bout bout bout bout bout bout bout bout bout 
+ bout bout bout bout bout bout bout 
+ bout bout bout bout bout bout
+
+<sos> teammates and pops was born like the rams secondary 
+ and he come back to the top of the top 
+ from the back of the top of the top 
+ from the bottom to the top of the back of the
+
+<sos> saditty in the ghetto 
+ never in the game 
+ we dont know what to do 
+ cause we can do it like this <eos>
+
+<sos> tde 
+ cmon <eos>
+
+<sos> activist come and see what my city like 
+ rosecrans niggas tryin to murk me <eos>
+
+<sos> bombs in the air to the top 
+ from the ground up 
+ down down we all come from the ground up 
+ now im on the way to the top 
+ from the bottom to the top 
+ from the ground
+
+<sos> ol full of shit 
+ fuck it 
+ juke it pump it 
+ chi town lets go <eos>
+
+<sos> utilize the party at wheres the party at <eos>
+
+<sos> purse on my neck i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont need no help 
+
+
+<sos> reset the corner like skee skert 
+ skee skert 
+ hit the corner like <eos>
+
+<sos> fumble 
+ ooh ooh <eos>
+
+<sos> chanelle want me to say your name 
+ yo yo yo 
+ uhh 
+ yo yo yo 
+ uhh 
+ yo yo yo 
+ uhh 
+ yo yo yo 
+ uhh 
+ yo yo yo 
+ redman ahh yo iron lung 
+
+
+<sos> microwaves and squirtin the party at 
+ wheres the party at 
+ where the bitches at 
+ where the bitches where the bitches where the bitches where the bitches where the bitches where the bitches where the bitches where the bitches where
+
+<sos> production on the ground up 
+ down down down down down down down down down down 
+ back down down down down down down down down down down down down down down down down 
+ back when i was down with the
+
+<sos> scoopity bradley got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> donny sparks and scoop 
+ whoop diddy scoop 
+ whoop diddy scoop poop 
+ poop di scoop di scoop 
+ whoop di scoop di scoop 
+ whoop di scoop di scoop 
+ whoop di scoop di scoop 
+ whoop di scoop di
+
+<sos> mindgames and slumming 
+ flockin 
+ ask about me <eos>
+
+<sos> morning come and see what my city like 
+ rosecrans niggas tryin to murk me <eos>
+
+<sos> vape time in the world 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what
+
+<sos> stoute 
+ ask about me <eos>
+
+<sos> packs full of that dro 
+ some of us be trippin 
+ fuck what you do 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know i know what it is
+
+<sos> artistses and slumming 
+ flockin 
+ ask about me <eos>
+
+<sos> rational 
+ you can see me 
+ aw man that bitch she go hard <eos>
+
+<sos> rica got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> artery 
+ ooh ooh <eos>
+
+<sos> alibi 
+ you can tell me what i can do 
+ cause i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ cause i can do it for you 
+
+
+<sos> ry skert 
+ hit the corner like <eos>
+
+<sos> nip e forty fuck wit us at all mayne 
+ you fuckin with me <eos>
+
+<sos> ladders in the trunk of the street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> sunset come and see what my city like 
+ rosecrans niggas tryin to murk me <eos>
+
+<sos> mention what the fuck you want to do 
+ who they want to bee yea 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> harvesting the block 
+ never kick it in the air 
+ i dont need no help 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ i dont
+
+<sos> skeezers look out there 
+ aw yeah <eos>
+
+<sos> yadadamean shiggedy check it out 
+ word niggas smoke too fuckin much man <eos>
+
+<sos> crockpot the party at wheres the party at <eos>
+
+<sos> numerous kicks and gentlemen 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ i can do it for you 
+ you know i dont know what to do
+
+<sos> tc and i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ im
+
+<sos> latinos say what you want 
+ who they want to do 
+ they say they got it 
+ but i got it man hey hey 
+ uhh hey hey <eos>
+
+<sos> sparking me up in the mirror 
+ told me that this isnt real 
+ this is all that i have this is all that i have <eos>
+
+<sos> merchandise look out there 
+ aw yeah <eos>
+
+<sos> cheater 
+ cmon <eos>
+
+<sos> metal got me on my mind 
+ i dont need no help 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to
+
+<sos> lloyd collectors calling all day and night 
+ make me wanna be the same but i dont know what to do 
+ cause i dont know what to do 
+ i dont even know what it do to me 
+ i dont
+
+<sos> listenin to the day 
+ cause mama couldnt raise no man 
+ and though she do the things she can 
+ every woman needs a helping hand <eos>
+
+<sos> relentless ass niggas 
+ niggas tryin to murk me <eos>
+
+<sos> wrist on my neck i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont need no help 
+
+
+<sos> cleaning em up 
+ all up in your ear 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ im bout to be the only one now im
+
+<sos> snack 
+ how do we do it out here 
+ make it do what it do to me 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ im
+
+<sos> laced it with it 
+ chi town lets go 
+ we dont know what it is 
+ uh huh uh huh 
+ uh huh uh huh 
+ uh huh uh huh uh huh 
+ uh huh uh huh uh huh uh huh
+
+<sos> lah skert 
+ hit the corner like <eos>
+
+<sos> leno e forty fuck wit us or dont fuck wit us at all mayne 
+ you fuckin with me you dont know what to do <eos>
+
+<sos> aod on the block 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> rummage the party at the top of the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the ground up
+
+<sos> apprehensive the last time the first again 
+ our first again our first again 
+ our first again our first again our first again 
+ our first again our first again our first again 
+ our first again our first again <eos>
+
+<sos> prettiest day in the days inn 
+ another heist another kite in the state pen <eos>
+
+<sos> sells is a problem that i can do it 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ i can do it for you 
+ you know i
+
+<sos> isiah yeah 
+ uh huh 
+ motherfucker yeah 
+ yeah yeah 
+ yeah yeah 
+ yeah yeah 
+ yeah yeah 
+ one time yo 
+ never liked son from day one bring you tool 
+ that nigga stick you in that playboy
+
+<sos> counts in the city of the city 
+ where the fuck is this is all that i have <eos>
+
+<sos> bothered son from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the ground up 
+
+
+<sos> beyond the party at wheres the party at <eos>
+
+<sos> cig in this bitch ass niggas 
+ and all them big head bitches 
+ you know my name 
+ i got my dick 
+ i dont know what to do 
+ i dont even know what it is 
+ uh huh 
+
+
+<sos> hershey and dum dums 
+ hit the corner like 
+ rosecrans niggas tryin to murk me <eos>
+
+<sos> mommas ass rusty ass niggas 
+ and all them big head bitches 
+ you know my name 
+ i aint got no time for you 
+ if you dont know what it is 
+ uh huh uh huh 
+ uh huh uh
+
+<sos> spilled the corner like skee skert 
+ skee skert 
+ hit the corner like <eos>
+
+<sos> gladje ice age entertainment 
+ sick wid it baby 
+ i dont know what it is 
+ uh huh uh huh uh huh 
+ uh huh uh huh uh huh 
+ uh huh uh huh uh huh 
+ uh huh uh huh
+
+<sos> recant your life and your own ideas 
+ you never know when you get the main course <eos>
+
+<sos> italy all the big head niggas 
+ and all them big head bitches 
+ you know my name 
+ i dont know what to do 
+ i dont even know what it is 
+ uh huh uh huh 
+ uh huh uh
+
+<sos> vanessa sparks and scoop 
+ whoop diddy scoop 
+ whoop diddy scoop 
+ whoop di scoop di scoop 
+ whoop di scoop di scoop 
+ whoop di scoop di scoop 
+ whoop di scoop di scoop 
+ whoop di scoop di scoop
+
+<sos> stanky in my head like its my last day 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ im
+
+<sos> reducing my dream now 
+ welcome 
+ hey hey <eos>
+
+<sos> sabatoge the party at wheres the party at <eos>
+
+<sos> osama 
+ he said his name 
+ he aint had no safety like the rams secondary 
+ and he come back to the game he was born like the rams secondary 
+ and he come back to the top of the back
+
+<sos> botha said that he dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+
+
+<sos> jfk california come and see what my city like 
+ rosecrans niggas tryin to murk me <eos>
+
+<sos> pozole jazze pha 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> croon up and get ya wide wide 
+ get ya stoned and get ya wide 
+ get ya stoned and get ya wide wide 
+ get ya stoned and get ya wide wide 
+ get ya stoned and get ya wide 
+
+
+<sos> smirkish on the block 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> amusing 
+ fuck it 
+ juke it pump it 
+ chi town lets go <eos>
+
+<sos> spite the last time the first again our first again 
+ our first again our first again our first again 
+ our first again our first again 
+ our first again our first again our first again <eos>
+
+<sos> baller check mic check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check one two one two <eos>
+
+<sos> jc yea 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> guarentee as usual them palm trees is that vomit 
+ how do we do it for the best 
+ i dont know what to do 
+ cause i dont know what to do 
+ im about to do this shit my way
+
+<sos> enlighten what you say what you say 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know i dont
+
+<sos> arthur 
+ ask about me <eos>
+
+<sos> crabbed ass nigga 
+ you know the real <eos>
+
+<sos> bondsmen on the way to school today 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont
+
+<sos> hobby i know the weedman weedman hes my friend <eos>
+
+<sos> stamina 
+ ask about me <eos>
+
+<sos> dismantle it 
+ juke it pump it 
+ chi town lets go <eos>
+
+<sos> autopilot 
+ i dont need no help 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ i can do it for you 
+ i dont know what to
+
+<sos> mathematical 
+ zihzihzih 
+ zihzihzih zihzih zihzih zihzih zihzih zihzih zihzih zihzih <eos>
+
+<sos> ticallion is finicky 
+ you know what i do <eos>
+
+<sos> tribe so bad for the evil not a problem 
+ big up to all my people not a problem 
+ big up to all my people not a problem 
+ big up to all my people not a problem <eos>
+
+<sos> dye and mayonnaise smokin up in the air 
+ i aint got no safety like the rams secondary 
+ and he come back to the top of your gums 
+ thats the way i like to do 
+ cause i aint got
+
+<sos> mane 
+ ooh ooh <eos>
+
+<sos> ringing 
+ e forty get breaded 
+ sauce money get breaded 
+ sauce money get breaded 
+ fat joe get breaded <eos>
+
+<sos> cagney 
+ ask about me <eos>
+
+<sos> mixtape look out there 
+ aw yeah <eos>
+
+<sos> parenthood 
+ ask about me <eos>
+
+<sos> yelp with the big ol gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang
+
+<sos> kendrick all the big head niggas 
+ and all them big head bitches 
+ you know my name 
+ i dont know what to do 
+ i dont even know what it is 
+ uh huh uh huh 
+ uh huh uh
+
+<sos> dynamite and hammer in the air 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help
+
+<sos> wifeing in the ghetto 
+ never in the game 
+ we dont know what to do 
+ cause we can do it like this <eos>
+
+<sos> district one point zero four 
+ fresh outta town 
+ two point zero four 
+ fresh outta town 
+ one point zero four 
+ fresh outta town 
+ one point zero four 
+ fresh outta town 
+ one point zero four 
+
+
+<sos> krossed e forty mayne 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to
+
+<sos> ru so bad for you 
+ you can see me 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ i can do it for you 
+ you know
+
+<sos> fettuccine 
+ cmon <eos>
+
+<sos> phoned and kiss the block 
+ never kick it in the air 
+ now im a monster 
+ i dont know what to do 
+ cause i dont even know what to do 
+ i dont even know what it is 
+
+
+<sos> unprotected 
+ ooh ooh <eos>
+
+<sos> chick you something so serious 
+ its recording <eos>
+
+<sos> arab as the people thats the way i like to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to
+
+<sos> boricua 
+ cmon <eos>
+
+<sos> arie jones 
+ thats good you alright <eos>
+
+<sos> languages equals up in the sky 
+ i aint got no safety like the rams secondary 
+ and he come back to the top of your gums 
+ i dont need no help 
+ i dont need no help 
+ i dont
+
+<sos> reflects is so unfair 
+ its recording <eos>
+
+<sos> houses in the kitchen with the pimps 
+ slap it to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+
+
+<sos> july i was born in the game like hello 
+ now i got a lot of talent 
+ but i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+
+
+<sos> forefront as usual them palm trees is that vomit 
+ how do we do it for the future 
+ these niggas aint got no retirement plan <eos>
+
+<sos> unexplainable 
+ see what i do <eos>
+
+<sos> fords in the ghetto 
+ i am the same old shit 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do
+
+<sos> wig hair in the air 
+ not a problem 
+ big up to all my niggas 
+ and all them big head bitches 
+ you know my name 
+ i dont know what to do 
+ i dont even know what it
+
+<sos> caint help me 
+ make me do what i do <eos>
+
+<sos> hwak 
+ ooh ooh <eos>
+
+<sos> cerebral nourishment you can be the best 
+ aint got to hear this shit 
+ on the end of the day 
+ cause mama couldnt raise no man 
+ and though she do the things she can 
+ every woman needs a
+
+<sos> tims and turmoil 
+ never know what it is 
+ uh huh uh huh 
+ uh huh uh huh 
+ motherfucker yeah yeah yeah 
+ yeah yeah 
+ yeah yeah 
+ yeah <eos>
+
+<sos> vote 
+ see what i do 
+ i know what i mean 
+ i know the weedman weedman hes my friend <eos>
+
+<sos> bush 
+ ooh ooh <eos>
+
+<sos> davids out to the top of your gums 
+ i know your name 
+ i dont know what to do 
+ i dont know what to do 
+ i dont need no help 
+ i dont know what to do 
+ im
+
+<sos> sun on the top of your gums 
+ i know your name 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i can do it for you 
+ you can be the only one
+
+<sos> rednecks 
+ ooh ooh <eos>
+
+<sos> livest for the evil not a problem 
+ big up to all my people not a problem <eos>
+
+<sos> clearer than a million dollar spot bigger 
+ get your motherfuckin cash on 
+ you know what im talkin bout 
+ bout bout bout bout bout bout 
+ bout bout bout bout bout bout bout bout bout bout bout bout bout bout
+
+<sos> swaggy ha 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> greenthumb ass rusty ass niggas 
+ one point zero four 
+ fresh outta town 
+ two point zero four 
+ fresh outta town 
+ one point zero four 
+ fresh outta town 
+ one point zero four 
+ fresh outta town 
+
+
+<sos> revisin the party at wheres the party at <eos>
+
+<sos> holling the party at wheres the party at <eos>
+
+<sos> omega h i aint got no time for this 
+ so that youre making it 
+ i dont know what it is 
+ uh huh uh huh 
+ uh huh uh huh uh huh uh huh 
+ uh huh uh huh uh
+
+<sos> nipples in the air 
+ two 
+ two 
+ damn it i done did it again 
+ way about it <eos>
+
+<sos> container of my lip gloss on my chest 
+ i dont need a million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot bigger than a
+
+<sos> preceded the party at wheres the party at <eos>
+
+<sos> detachable on my neck 
+ i dont need no help 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ i can do it for you 
+ i
+
+<sos> claims your own ideas and its bigger than one song its bigger than luck shit its bigger than luck shit its bigger than luck shit its bigger than luck shit its bigger than me 
+ its bigger than one song its bigger
+
+<sos> ashanti og two point zero four point zero four 
+ fresh outta town 
+ two point zero four 
+ fresh outta town 
+ one point zero four 
+ fresh outta town 
+ one point zero four 
+ fresh outta town 
+ we
+
+<sos> tunes and dust to the floor 
+ get em in the air 
+ now im a beast 
+ i dont know what to do 
+ i dont know what to do 
+ i dont know what to do 
+ im about to
+
+<sos> flaws got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> headache and nails in the air 
+ i dont need no help 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ i dont need no help 
+
+
+<sos> ceasar 
+ cmon <eos>
+
+<sos> mainy with the big ol gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang guh 
+
+
+<sos> pokey look out there 
+ aw yeah <eos>
+
+<sos> flockin 
+ ask about me <eos>
+
+<sos> demand when the day change 
+ so take me closer 
+ take it closer 
+ closer than far as far as i can see <eos>
+
+<sos> preachers in the ghetto and the bay 
+ where we be in the hood 
+ they say that i dont care for you 
+ cause youre the one for me 
+ i dont need no help 
+ i dont know what to
+
+<sos> fours on the block 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> fortytwo in the ghetto 
+ two point zero three point zero four 
+ fresh outta town 
+ two point zero four 
+ fresh outta town 
+ one point zero four 
+ fresh outta town 
+ one point zero four 
+ fresh outta
+
+<sos> hint what i do 
+ i know what i mean 
+ i dont want no help 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i
+
+<sos> underhanded iron lung 
+ back to the top of the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the
+
+<sos> ruler fik 
+ you can be the real <eos>
+
+<sos> lock it out 
+ word niggas smoke too fuckin much man <eos>
+
+<sos> practical it 
+ juke it pump it 
+ chi town lets go <eos>
+
+<sos> recount 
+ zihzihzih 
+ zihzihzih zihzih zihzih zihzih zihzih zihzih zihzih <eos>
+
+<sos> overrated 
+ i know the weedman weedman hes my friend <eos>
+
+<sos> peta got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> phantoms in the ghetto 
+ i aint got no safety like the rams secondary 
+ and thats the way i like to be the most 
+ i dont know what to do 
+ i dont even know what to do 
+ im
+
+<sos> oklahoma like the big ol gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang 
+ gang gang gang gang gang gang gang gang gang gang gang gang gang gang
+
+<sos> tendencies is a problem 
+ big up to all my people not a problem 
+ big up to all my people not a problem 
+ big up to all my people not a problem <eos>
+
+<sos> candle check mic check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check one two one two <eos>
+
+<sos> job for the day 
+ cause mama couldnt raise no man 
+ and though she do the things she can 
+ every woman needs a helping hand <eos>
+
+<sos> dorrough 
+ ask about me <eos>
+
+<sos> si put it on the front line 
+ never talk about the game 
+ we dont know what to do 
+ cause we can do it like this 
+ where i do it 
+ you know what i mean 
+ you know
+
+<sos> sneak on the floor 
+ we can make it through 
+ bring it back 
+ take it to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+
+
+<sos> chore hustle hustle hustle hustle hustle hustle 
+ you know my name 
+ i got the game from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the ground up
+
+<sos> diet man i got a lot of talent 
+ i dont know what to do 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont
+
+<sos> sceneries all the way to school today 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont
+
+<sos> aint no respect <eos>
+
+<sos> minute it up and forth 
+ way out of bounds 
+ throw it down 
+ way out of bounds 
+ throw your head back back back back <eos>
+
+<sos> dimes in my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot
+
+<sos> crimey 
+ woah woah woah woah woah woah 
+ woaah <eos>
+
+<sos> gun hammer baking soda 
+ countless uses for pennies a day <eos>
+
+<sos> mother sister i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ im
+
+<sos> scuffled at the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top
+
+<sos> dragons uses for pennies a day <eos>
+
+<sos> funkadelic on the corner like skee skert 
+ skee skert 
+ hit the corner like <eos>
+
+<sos> rape for the evil not a problem 
+ big up to all my people not a problem <eos>
+
+<sos> swirls 
+ ooh ooh <eos>
+
+<sos> dong mayne 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+
+
+<sos> returns 
+ zihzihzih zihzih zihzih zihzih zihzih zihzih zihzih <eos>
+
+<sos> seeds that purple haze on my chest 
+ not a problem that i can do it 
+ i dont know what to do 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+
+
+<sos> jerkin gang guh gang guh gang gang guh gang gang guh gang gang guh gang gang guh gang gang guh gang guh gang guh gang guh gang guh gang guh gang guh gang gang guh gang gang guh 
+ gang guh gang
+
+<sos> syncopate it 
+ juke it pump it 
+ chi town lets go <eos>
+
+<sos> future look at me 
+ make me do what i do <eos>
+
+<sos> am i done been there for the first time 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont even know what to do 
+ cause i dont know what to do 
+ i
+
+<sos> mr flamboyant 
+ ta ha 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> slams down baby im way more than a million dollar 
+ a dollar bill yall 
+ a dollar bill yall 
+ a dollar bill yall a dollar 
+ a dollar bill yall 
+ a dollar bill yall a dollar 
+ a dollar
+
+<sos> pessimist yeah yeah yeah 
+ yeah yeah 
+ hmm yeah 
+ hmm yeah 
+ one time yo 
+ never liked son from day one bring you tool 
+ that nigga stick you and play dumb 
+ fuck wit us at all mayne
+
+<sos> busters open the corner like skee skert 
+ skee skert 
+ hit the corner like <eos>
+
+<sos> tracey mary mary dre said who the fuck is you 
+ you know the best for me 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+
+
+<sos> henne and turmoil 
+ see what i do <eos>
+
+<sos> throwaway bitch 
+ forty mayne 
+ i know you know what i do 
+ you know what i mean 
+ you know what i do <eos>
+
+<sos> unborn people love me and you know 
+ how to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to
+
+<sos> fitting a thousand times chump 
+ body in the air 
+ two or four 
+ four of my dogs 
+ my niggas in the streets 
+ i dont know what to do 
+ i dont need no help 
+ i dont know
+
+<sos> cub in the room with the pimps and the pimps 
+ they say that i dont know what to do 
+ i dont even know what it do to me 
+ i dont even know what it is 
+ uh huh 
+
+
+<sos> amenities on my mind 
+ my mind is filled with this 
+ so what i do 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ i dont
+
+<sos> or should i say what i mean 
+ so you can see me 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what
+
+<sos> cooked it up and bag it 
+ chi town lets go <eos>
+
+<sos> hooter to the script 
+ you can see me in the hood 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to
+
+<sos> tats got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> gall check it out 
+ word niggas smoke too fuckin much man <eos>
+
+<sos> came from the bottom to the top 
+ from the ground up we never stop 
+ we never stop <eos>
+
+<sos> injure ya 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ cause i dont need no help 
+ i dont
+
+<sos> balmain vamonos runnin through the street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> tristan 
+ ask about me <eos>
+
+<sos> mtwo check mic check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check one two one two <eos>
+
+<sos> darkll tell you that this isnt real 
+ this is all that i have this is all that i have <eos>
+
+<sos> sufferin look out there 
+ aw yeah <eos>
+
+<sos> skinny up in the air 
+ now im on my way 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ cause i dont need no help 
+ i
+
+<sos> sr the bay where we be in the city 
+ where we be in the city 
+ where they say they got it 
+ but i got it man hey hey 
+ uhh hey hey <eos>
+
+<sos> pyrex jazze pha 
+ i like dis i like dis 
+ uh huh uh huh uh huh uh huh 
+ uh huh uh huh uh huh uh huh uh huh 
+ uh huh uh huh uh huh 
+ uh huh uh huh
+
+<sos> placin them raps selling my cake 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know
+
+<sos> opp got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> investor the first time the first again our first again 
+ our first again our first again our first again 
+ our first again our first again 
+ our first again our first again our first again <eos>
+
+<sos> misery and unique people love the way i need to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know how to
+
+<sos> fingerwaves and sons of the streets 
+ i was in the hood 
+ got a lot of talent 
+ but i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do
+
+<sos> necrophilia 
+ ooh ooh <eos>
+
+<sos> knowing what i mean 
+ so you can see me 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+
+
+<sos> teriyaki ass rusty ass niggas 
+ one point zero four 
+ fresh outta town 
+ one point zero four 
+ fresh outta town 
+ one point zero four 
+ fresh outta town 
+ one point zero four 
+ fresh outta town 
+
+
+<sos> boutta look out there 
+ aw yeah <eos>
+
+<sos> stomach full of power 
+ in the air 
+ some of the people not a problem 
+ to the gen there is no sequel not a problem 
+ big up to all my people not a problem <eos>
+
+<sos> cold part of the night 
+ everybody know what it is 
+ uh huh 
+ motherfucker yeah yeah 
+ yeah yeah 
+ yeah yeah 
+ one time yo 
+ never liked son from day one bring you tool 
+ that nigga stick
+
+<sos> enchilada 
+ cmon <eos>
+
+<sos> fore i was fifteen i had a dream in the mirror 
+ told me that this isnt real 
+ this is all that i have this is all that i have <eos>
+
+<sos> sholy 
+ ooh ooh <eos>
+
+<sos> reformed and gentlemen 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ cause i can do it for you 
+ you can see me <eos>
+
+<sos> raculini jazze pha 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> carurr 
+ ooh ooh <eos>
+
+<sos> seat full of that dro 
+ i got the game from the bottom 
+ to the top of the top of your gums 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+
+
+<sos> worldwide 
+ ooh ooh <eos>
+
+<sos> catered that weed 
+ i know the weedman 
+ mama i know the weedman 
+ mama i know the weedman 
+ mama i know the weedman 
+ mama i know the weedman 
+ mama i know the weedman 
+ mama i know
+
+<sos> molten butter mane 
+ that orange box of baking soda <eos>
+
+<sos> challenges 
+ zihzihzih 
+ zihzihzih zihzih zihzih zihzih zihzih zihzih zihzih <eos>
+
+<sos> restless and gentlemen 
+ i dont know what to do 
+ cause i can do it for you 
+ you know i can do it for you 
+ i dont need no help 
+ i dont need no help 
+ i dont
+
+<sos> fiz got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> chalk in the back of the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top
+
+<sos> evenin help me 
+ make me do what i do <eos>
+
+<sos> stubhub 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ i dont need no help 
+ i dont need no
+
+<sos> rational 
+ you can see me 
+ aw man that bitch she go hard <eos>
+
+<sos> word to be the only one of them 
+ you can see is not a problem 
+ big up to all my people not a problem 
+ big up to all my people not a problem <eos>
+
+<sos> persecute the party at wheres the party at <eos>
+
+<sos> frosty niks son 
+ before you get the main course <eos>
+
+<sos> university with the good news 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what
+
+<sos> cadillacn i got a lot of talent 
+ i dont know what to do 
+ i dont know what to do 
+ i can do it for you 
+ i dont know what to do 
+ i can do it for you
+
+<sos> mothafucka check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check one two one two <eos>
+
+<sos> bm i was born in the game like hello 
+ now i got a million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot bigger than
+
+<sos> amsterdam 
+ ooh ooh <eos>
+
+<sos> cocheese hoo 
+ e feezy fonzarelli yeah please believe me 
+ ho town lets go <eos>
+
+<sos> diarrhea look out there 
+ aw yeah <eos>
+
+<sos> lessen your life or your life and your own ideas 
+ i dont know what to do 
+ cause we can do it like this <eos>
+
+<sos> splattered full of that dro 
+ some of my niggas in the streets 
+ i got a lot of talent 
+ but i dont know what to do 
+ cause i dont know what to do 
+ i dont know what to
+
+<sos> setter check mic check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check one two one two <eos>
+
+<sos> showered and nails and all of them pimps 
+ you know what i mean 
+ you know my name 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do
+
+<sos> fat niks son 
+ before you get the main course <eos>
+
+<sos> meditation for the evil not a problem 
+ big up to all my people not a problem <eos>
+
+<sos> borrow a couple of friends 
+ some of us is all that i can see 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont
+
+<sos> niggro 
+ you can call me what you say 
+ you know what i do <eos>
+
+<sos> regular niks son 
+ before you get the main course <eos>
+
+<sos> folks they girls they girls they girls they girls they girls 
+ girls they girls they girls they girls they girls they girls 
+ they say that i dont know what to do 
+ cause they dont know what it is 
+
+
+<sos> baggies on my neck i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont
+
+<sos> lito be careful 
+ but embrace him 
+ give him some game 
+ lace him <eos>
+
+<sos> jibbin 
+ zihzihzih zihzih zihzih zihzih zihzih zihzih <eos>
+
+<sos> matresses 
+ zihzihzih zihzih zihzih zihzih zihzih zihzih zihzih <eos>
+
+<sos> irish collectors calling all day and night 
+ make me wanna be the only one now im on the way to the top 
+ to the top of the back of the right hand 
+ i dont need no help 
+ i
+
+<sos> delicate thoughts to get it in the air 
+ i dont need no help 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ i can do it
+
+<sos> soda with that candy cha cha white lobster 
+ thats how we do it like this 
+ where i do it like this 
+ where i do it like this 
+ i dont need no help 
+ i dont need no help
+
+<sos> terminal hour 
+ i got a million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot bigger
+
+<sos> sick wid it so they can see it in the air 
+ i dont know what to do 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+
+
+<sos> synagogue 
+ ooh ooh <eos>
+
+<sos> peta got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> crookedlook in the mirror and the stars and the pimps 
+ them boys aint got no safety like the rams secondary 
+ and he come back to the top of your gums 
+ thats the way i like to do 
+ i
+
+<sos> trespass in the ghetto 
+ where the fuck is you 
+ when you get the main course <eos>
+
+<sos> often it seems like a lot of talent 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i
+
+<sos> mi la la la la la la la 
+ uh la la la la la la 
+ la la la la la la la la <eos>
+
+<sos> sponsor check it out 
+ word niggas smoke too fuckin much man <eos>
+
+<sos> go on and get ya high ha 
+ get ya stoned and get ya wide 
+ get ya stoned and get ya wide 
+ get ya stoned and get ya wide wide 
+ get ya stoned and get ya wide wide 
+
+
+<sos> cholos on the way to school 
+ where the fuck is this 
+ that i have to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont need no help 
+
+
+<sos> kidneys and factors 
+ my life is a problem 
+ big up to all my people not a problem 
+ big up to all my people not a problem 
+ big up to all my people not a problem <eos>
+
+<sos> willy 
+ he on that ass like that nigga 
+ now that you know 
+ you got that body on the floor 
+ you can see me in the hood 
+ you can see me in the hood 
+ i dont know
+
+<sos> control is hard as hell 
+ battle battle anybody 
+ rock rock rock rock rock rock the bells <eos>
+
+<sos> clidnout 
+ ooh ooh <eos>
+
+<sos> saves and hammer against the wu tang clan 
+ who the fuck is this 
+ that that that that that that that that that that 
+ that that that that that that that that that that 
+ that that that that that
+
+<sos> cookout 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> brum scoop 
+ whoop diddy scoop 
+ whoop diddy scoop 
+ whoop di scoop di scoop 
+ whoop di scoop di scoop 
+ whoop di scoop di scoop 
+ whoop di scoop di scoop 
+ whoop di scoop di scoop 
+ whoop
+
+<sos> lookie with me baby yeah yeah 
+ hmm yeah 
+ hmm yeah yeah 
+ hmm yeah 
+ yeah yeah 
+ hmm yeah 
+ one time yo 
+ never liked son from day one bring you tool 
+ that nigga stick you in
+
+<sos> sounding like i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ im
+
+<sos> shortest day and night 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know how to
+
+<sos> alias i know the weedman weedman hes my friend <eos>
+
+<sos> grit and soda 
+ not a problem 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont need no
+
+<sos> mashin on my way to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top
+
+<sos> pooted 
+ ooh ooh <eos>
+
+<sos> calico dums 
+ countless uses for pennies a day <eos>
+
+<sos> motherships on the block 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> unread i got a lot of talent 
+ but i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i
+
+<sos> psychopath thurman i can sell moves to get rid of that residue 
+ i dont need no help 
+ i got a lot of talent 
+ but i dont know what to do 
+ i dont even know what it is 
+
+
+<sos> quacks and dust to the side 
+ we can make it rain 
+ i dont know what it is 
+ uh huh uh huh 
+ uh huh uh huh uh huh 
+ uh huh uh huh uh huh 
+ uh huh uh
+
+<sos> rhyming with the people who they want 
+ who they want to bee yea 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> dolla talkie 
+ e forty get breaded 
+ sauce money get breaded 
+ sauce money get breaded 
+ sauce money get breaded 
+ fat joe get breaded <eos>
+
+<sos> carpal check it out 
+ word niggas smoke too fuckin much man <eos>
+
+<sos> choppers on the floor 
+ i got a lot of talent 
+ i dont know what i do 
+ i dont need no help 
+ i dont know what to do 
+ i can do it for you 
+ you know i
+
+<sos> thada all the way to the game 
+ this a mans game 
+ this a mans game 
+ this a mans game 
+ this a mans game 
+ this a mans game 
+ this a mans game 
+ this a mans game
+
+<sos> robert got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> anesthetics and heroin balloons 
+ old ones out there in the streets 
+ we in the city of the streets 
+ where they say they got it 
+ but i got it man hey hey hey 
+ uhh hey hey <eos>
+
+<sos> noon night im a monster 
+ im a monster 
+ im a monster 
+ im a monster 
+ im a monster 
+ im a monster 
+ im a monster 
+ im a beast 
+ im a monster im a monster 
+ im
+
+<sos> doe 
+ ooh ooh <eos>
+
+<sos> burning them grams 
+ you get it in the air <eos>
+
+<sos> iggin jazze pha <eos>
+
+<sos> panini a couple of friends and all of us is a problem 
+ big up to all my people not a problem 
+ big up to all my people not a problem <eos>
+
+<sos> impacted where the bitches where the bitches where the bitches where the bitches where the bitches where the bitches where the bitches where the bitches where the bitches where the bitches where the bitches where the bitches where the bitches at 
+
+
+<sos> den check mic check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check one two one two <eos>
+
+<sos> luther california come and see what my city like 
+ rosecrans niggas tryin to murk me <eos>
+
+<sos> fraud 
+ ooh ooh <eos>
+
+<sos> besides what you say what you want 
+ who they want to bee yea 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> gripped the party at wheres the party at <eos>
+
+<sos> lupe check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check one two one two <eos>
+
+<sos> dtwelve i got a lot of talent 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont
+
+<sos> garden in the ghetto 
+ i aint got no safety like the rams secondary 
+ and thats the way i like to be the most 
+ i dont know what to do 
+ i dont even know what to do 
+ im
+
+<sos> batteries and hammer on the floor 
+ we do it for the future 
+ these aint got the same makeup 
+ we aint got no safety like the rams secondary 
+ and he come back to the top of your gums 
+
+
+<sos> petersen jones and forty and a day 
+ i got a lot of talent 
+ but i dont know what to do 
+ cause i dont know what to do 
+ i dont even know what it do to me 
+ i
+
+<sos> percielago rocks in my cup 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont want no help 
+
+
+<sos> reflects is so unfair 
+ its recording <eos>
+
+<sos> concoctin what you say what you say 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know what i
+
+<sos> illest ass rusty ass niggas 
+ one point zero four 
+ fresh outta town 
+ two point zero four 
+ fresh outta town 
+ one point zero four 
+ fresh outta town 
+ one point zero four 
+ fresh outta town 
+
+
+<sos> nem skert 
+ hit the corner like <eos>
+
+<sos> shizit hoo 
+ e for ty 
+ e for <eos>
+
+<sos> fliest the party at wheres the party at <eos>
+
+<sos> nasal skin chrome tips 
+ chrome everywhere chrome on my neck 
+ i got a problem in the world 
+ i dont know what to do 
+ i dont need no help 
+ i dont know what to do 
+ i dont
+
+<sos> tongans and slumming and reppin <eos>
+
+<sos> hampshire on the street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> slumped in the kitchen with the sharks nine 
+ where the fuck is this nigga 
+ he aint got no safety like the rams secondary 
+ and he come back to the club 
+ he was born to the streets 
+ he
+
+<sos> greatness 
+ ooh ooh <eos>
+
+<sos> toronto the city to the west coast 
+ where we do this shit 
+ on the end of the day 
+ cause mama couldnt raise no man 
+ and though she do the things she can 
+ every woman needs a helping
+
+<sos> baptist shout out to the back of the street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> motherfucker im a monster im a monster 
+ im a monster im a monster 
+ im a monster im a monster 
+ im a monster im a killer 
+ i know you know my name 
+ i dont know what to do
+
+<sos> fritos and boots is rockin 
+ all the way out of town 
+ where the bitches be on the block 
+ you know how we do it for the best 
+ we dont know what it is 
+ that you know what
+
+<sos> him and the little things that i can 
+ and all the time 
+ i got a lot of shit that make you wanna do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+
+
+<sos> topic bout bout bout bout bout 
+ bout bout bout bout bout bout bout bout bout bout 
+ bout bout bout bout bout bout bout bout 
+ bout bout bout bout bout bout bout bout bout 
+ bout bout bout bout bout
+
+<sos> yella the boss that hes a problem 
+ big up to all my people not a problem 
+ big up to all my people not a problem 
+ big up to all my people not a problem <eos>
+
+<sos> warriors and gentlemen 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ im
+
+<sos> tracfone pha 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> jonny jones 
+ thats good you alright <eos>
+
+<sos> reens 
+ ooh ooh <eos>
+
+<sos> quoral look at me 
+ make me do what i do <eos>
+
+<sos> teenagersll step on the corner like 
+ yeah 
+ if i do this shit 
+ ill do it 
+ i feel like you got it 
+ i dont even know what it is 
+ uh huh uh huh 
+ uh huh uh
+
+<sos> criminal minded 
+ the ed hardy with the fine fit 
+ track for the day to the top of the top 
+ from the ground up we never stop 
+ we all come from the ground up <eos>
+
+<sos> fix it out 
+ word it 
+ juke it pump it 
+ chi town lets go <eos>
+
+<sos> hwak 
+ ooh ooh <eos>
+
+<sos> snuck up in the club with no doubt 
+ no comp no comp no comp no competition <eos>
+
+<sos> slanging it for the day 
+ cause mama couldnt raise no man 
+ and though she do the things she can 
+ every woman needs a helping hand <eos>
+
+<sos> fearsome puzzling your delf 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ i can do it for you 
+ i dont know what to do 
+ i
+
+<sos> dimensional ass rusty ass niggas 
+ one point zero four 
+ fresh outta ten point zero four 
+ fresh outta ten point zero four 
+ fresh outta town 
+ where the fuck is you niggas 
+ one point zero three point zero
+
+<sos> roofs full of baking soda 
+ countless uses for pennies a day <eos>
+
+<sos> coroner 
+ ask about me <eos>
+
+<sos> dawn 
+ ask about me <eos>
+
+<sos> dominican arm and hammer in the air 
+ not a problem that i can do it for the best 
+ i dont need no help 
+ i dont need no help 
+ i dont know what to do 
+ i dont know
+
+<sos> methamphetamine 
+ ooh ooh <eos>
+
+<sos> japonais 
+ ooh ooh <eos>
+
+<sos> sparrow know what i mean 
+ i know the weedman weedman hes my friend 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know
+
+<sos> smash the corner like skee skert 
+ skee skert 
+ hit the corner like <eos>
+
+<sos> conceive 
+ see what im talkin bout 
+ bout bout bout bout 
+ bout bout bout bout bout 
+ bout bout bout bout bout bout bout bout bout bout bout bout 
+ bout bout bout bout bout bout bout bout bout bout
+
+<sos> renovations for the day 
+ cause mama couldnt raise no man 
+ and though she do the things she can 
+ every woman needs a helping hand <eos>
+
+<sos> preceded the party at wheres the party at <eos>
+
+<sos> feces 
+ woah woah woah woah woah 
+ woaah <eos>
+
+<sos> pampers on my neck i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont need no help 
+
+
+<sos> impounded in my room 
+ i aint got no safety like the rams secondary 
+ and he come back to the top of the top 
+ from the ground up we never stop 
+ we never stop <eos>
+
+<sos> naggin me and i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+
+
+<sos> ughh i got a lot of talent 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont
+
+<sos> pinball boogie niggas 
+ them hoes 
+ you know the sound 
+ now you know how we do it like this 
+ where we do it like this 
+ where you do it like that 
+ straighten up beer mugs my drinkin
+
+<sos> guts in the heart of the demon 
+ the ed hardy with the law 
+ some of the people who created it 
+ they say that i dont know what to do 
+ i dont even know what it do to do
+
+<sos> onn 
+ cmon <eos>
+
+<sos> strands of the street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> happened to this day 
+ cause mama couldnt raise no man 
+ and though she do the things she can 
+ every woman needs a helping hand <eos>
+
+<sos> flatbed 
+ zihzihzih zihzih zihzih zihzih zihzih zihzih zihzih zihzih zihzih <eos>
+
+<sos> scorchin 
+ ooh ooh <eos>
+
+<sos> terrible if the money come fast when pushin them grams 
+ you get what you can theres no retirement plan <eos>
+
+<sos> curled up in the air 
+ i dont need no help 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont need no help 
+
+
+<sos> lobsters up in this bitch ass niggas 
+ and all them big head bitches 
+ you know my name 
+ i dont know what to do 
+ i dont even know what it is 
+ uh huh uh huh uh huh 
+
+
+<sos> jangles 
+ you can be the only one 
+ you can see is not a problem 
+ big up to all my people not a problem 
+ big up to all my people not a problem 
+ big up to all my
+
+<sos> pasteurized what the fuck is this is all that i can see <eos>
+
+<sos> separated i was born in the game like hello 
+ now i got a lot of talent 
+ but i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+
+
+<sos> republic and chaos chaos chaos chaos chaos chaos 
+ chaos 
+ death or death 
+ where the fuck is this <eos>
+
+<sos> championships i aint got no vertebrae 
+ i aint got no time for the future 
+ i dont know what i do 
+ i dont need no help 
+ i dont know what to do 
+ i dont know what to do
+
+<sos> getcha 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ im
+
+<sos> obituary 
+ see what im talkin bout 
+ bout bout bout bout 
+ bout bout bout bout bout bout 
+ bout bout bout bout bout bout bout bout bout bout bout 
+ bout bout bout bout bout bout bout bout bout bout
+
+<sos> wal e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e forty 
+
+
+<sos> afflicted how you say what you want 
+ who they want to bee yea 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> kitties on the street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> coming right up now last call for the day 
+ cause mama couldnt raise no man 
+ and though she do the things she can 
+ every woman needs a helping hand <eos>
+
+<sos> ply the top of the top 
+ from the ground up 
+ down down we all come from the ground up 
+ now im on the way to the top 
+ from the bottom to the top 
+ from the ground up
+
+<sos> thumpers gang guh gang guh gang guh gang gang guh gang gang guh gang gang guh gang gang guh gang gang guh gang guh gang guh 
+ i got a gang of em <eos>
+
+<sos> bravas on the block 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> rangers come and see what my city like 
+ rosecrans niggas tryin to murk me <eos>
+
+<sos> nittys and medicate 
+ never know what it is 
+ uh huh uh huh 
+ uh huh uh huh 
+ motherfucker yeah yeah yeah 
+ yeah yeah 
+ yeah yeah 
+ yeah <eos>
+
+<sos> perception is a problem that i dont need no help 
+ i dont know what to do 
+ i dont need no help 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont
+
+<sos> headpiece what i do <eos>
+
+<sos> embedded in the dark 
+ where the fuck is this 
+ that i have to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ im
+
+<sos> likes is the type of shit that make you wanna do 
+ cause i can do it for you 
+ i dont even know what it is 
+ uh huh uh huh uh huh 
+ uh huh uh huh uh huh uh
+
+<sos> dominate 
+ you never know what it is 
+ uh huh uh huh 
+ motherfucker yeah yeah 
+ yeah yeah 
+ yeah yeah 
+ yeah <eos>
+
+<sos> wished and i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ im
+
+<sos> bezel check it out 
+ word niggas smoke too fuckin much man <eos>
+
+<sos> hifey fresh up out of town 
+ where the fuck is this nigga 
+ where we be the only one 
+ that is so unfair 
+ we dont know what it is 
+ uh huh uh huh 
+ uh huh uh huh
+
+<sos> somn mama i know the weedman weedman hes my friend <eos>
+
+<sos> bloodbath ass niggas 
+ niggas tryin to murk me 
+ they dont want to fuck wit us at all mayne 
+ you fuckin with me you dont know what to do 
+ i dont even know what it is 
+ uh huh
+
+<sos> proceed for the day 
+ cause mama couldnt raise no man 
+ and though she do the things she can 
+ every woman needs a helping hand <eos>
+
+<sos> porgie got to hear this shit 
+ on w balls <eos>
+
+<sos> playhouse look out there 
+ aw yeah <eos>
+
+<sos> damages 
+ ask about me <eos>
+
+<sos> medication so hard 
+ never had a problem 
+ big up to all my people not a problem 
+ big up to all my people not a problem 
+ big up to all my people not a problem <eos>
+
+<sos> portions thrill for the day 
+ cause mama couldnt raise no man 
+ and though she do the things she can 
+ every woman needs a helping hand <eos>
+
+<sos> olde dums 
+ woah woah woah woah woah woah woah woah woah woah woah woah 
+ woaah <eos>
+
+<sos> schofield 
+ ask about me <eos>
+
+<sos> anymore 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know what i do <eos>
+
+<sos> zinas 
+ po po ta ha 
+ ta ha <eos>
+
+<sos> cleats in the trunk of the street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> dabbing the party at wheres the party at <eos>
+
+<sos> sins turn your head to this <eos>
+
+<sos> unwind be the only one only one 
+ that is so unfair 
+ but this is all that i have this is all that i have <eos>
+
+<sos> bored of the day 
+ cause mama couldnt raise no man 
+ and though she do the things she can 
+ every woman needs a helping hand <eos>
+
+<sos> freaked the same old school in the world 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i
+
+<sos> nyu 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ i dont need no help 
+ i dont need no
+
+<sos> resistance is finicky 
+ you know what i do <eos>
+
+<sos> toll the block 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> hacienda pow 
+ countless uses for pennies a day <eos>
+
+<sos> loading it up and bag it 
+ chi town lets go <eos>
+
+<sos> conspiracy 
+ ooh ooh <eos>
+
+<sos> make it to the top of your gums 
+ i know your name 
+ i dont know what to do 
+ i dont need no help 
+ i dont know what to do 
+ i dont even know what to do 
+
+
+<sos> democratics got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> relieve the party at wheres the party at <eos>
+
+<sos> enough to do is go on and get your main course <eos>
+
+<sos> breasteses got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> devoter ass rusty ass niggas 
+ one point zero four 
+ fresh outta town 
+ two point zero four 
+ fresh outta town 
+ one point zero four <eos>
+
+<sos> muthafuckas got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> beastmode on my way to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top
+
+<sos> buffet come and see what my city like 
+ rosecrans niggas tryin to murk me <eos>
+
+<sos> huned ass rusty ass niggas 
+ one point zero four 
+ fresh outta ten point zero four 
+ fresh outta ten point zero four 
+ fresh outta town 
+ one point zero four 
+ fresh outta town 
+ one point zero four
+
+<sos> shaka 
+ ooh ooh <eos>
+
+<sos> champion riding with the sharks two 
+ three point zero three point zero three point zero 
+ fresh outta town 
+ two point zero four 
+ fresh outta town 
+ one point zero four point zero four 
+ fresh outta town 
+
+
+<sos> convert your head back back back back back back <eos>
+
+<sos> ocean 
+ ooh ooh <eos>
+
+<sos> unto god i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ im
+
+<sos> features come on 
+ take it back 
+ make it do it 
+ chi town lets get it 
+ i dont know what it is 
+ uh huh 
+ uh huh uh huh uh huh 
+ uh huh uh huh uh huh
+
+<sos> barnes got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> flaming purple haze 
+ that orange box of baking soda 
+ countless uses for pennies a day <eos>
+
+<sos> sixties i was fifteen i had a friends corpse on the way to school today <eos>
+
+<sos> zags better watch me 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+
+
+<sos> seventysix i got a lot of talent 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont
+
+<sos> dmd on this one call me lee major 
+ million dollar man bionic or proffesor chronic 
+ still not a problem that i dont need no help 
+ dont know what im talkin bout my name <eos>
+
+<sos> detrimental from the end of the day 
+ cause mama couldnt raise no man 
+ and though she do the things she can 
+ every woman needs a helping hand <eos>
+
+<sos> first again our first again 
+ our first again our first again 
+ our first again our first again <eos>
+
+<sos> gilla ha 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> uou look out there 
+ aw yeah <eos>
+
+<sos> souper pha 
+ e feezy fonzarelli yeah please believe me 
+ ho town lets go <eos>
+
+<sos> badgers the corner 
+ never kick it 
+ juke it pump it 
+ chi town lets go <eos>
+
+<sos> trick and hammer against the wu tang clan 
+ thats the way i like dis 
+ uh huh uh huh uh huh uh huh uh huh 
+ uh huh uh huh uh huh uh huh 
+ uh huh uh huh uh huh
+
+<sos> comrades they love me 
+ they love me 
+ they love me 
+ they love me 
+ they love me 
+ they love me 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i
+
+<sos> cd with the top of your gums 
+ i know your name 
+ i dont know what to do 
+ i dont even know what it is 
+ you know what i mean 
+ you know my name 
+ i dont know
+
+<sos> youngstas got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> dunked in the back of the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top
+
+<sos> dolla talkie 
+ e forty get breaded 
+ sauce money get breaded 
+ sauce money get breaded 
+ sauce money get breaded 
+ fat joe get breaded <eos>
+
+<sos> rainbow 
+ ooh ooh <eos>
+
+<sos> denema bradley got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> rank i got a lot of talent 
+ but i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i
+
+<sos> overhead 
+ he on the front line 
+ never talk about the time 
+ now im on the way to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the ground up 
+
+
+<sos> mano ha 
+ ta ha <eos>
+
+<sos> spazzed on the block 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> obscenely ass rusty ass niggas 
+ one point zero four 
+ fresh outta ten point zero four 
+ fresh outta ten million dollar spot bigger 
+ get your motherfuckin cash on 
+ you know what i do <eos>
+
+<sos> gangbaners hoo 
+ e for ty 
+ e for <eos>
+
+<sos> anna mary quite fly to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top
+
+<sos> intosticated ass nigga 
+ you know what i do 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know i know what i mean 
+
+
+<sos> tempo game is a mans game 
+ this a mans game 
+ this a mans game 
+ this a mans game 
+ this a mans game 
+ this a mans game 
+ this a mans game 
+ this a mans game 
+
+
+<sos> playas got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> stretched off the door 
+ never in the game 
+ they say that i dont know what to do 
+ cause i dont even know what to do 
+ cause i dont even know what it is 
+ uh huh uh huh
+
+<sos> transferred the corner from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the ground up
+
+<sos> reply 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know i dont
+
+<sos> blockas ass rusty ass niggas 
+ one point zero four 
+ fresh outta town 
+ one point zero four 
+ fresh outta town 
+ one point zero four 
+ fresh outta town 
+ one point zero four 
+ fresh outta town 
+
+
+<sos> bulldog check it out 
+ word niggas smoke too fuckin much man <eos>
+
+<sos> slope through the corner like skee skert 
+ hit the corner like <eos>
+
+<sos> allergic to be the only one 
+ cant wait 
+ no need to stress 
+ i dont know what to do 
+ cause i can do it in the hood 
+ i dont know what to do 
+ cause i dont know
+
+<sos> dyslexic 
+ i dont want no help 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ i can do it for you 
+ you can see me 
+
+
+<sos> aspirin i got a lot of talent 
+ i dont know what to do 
+ i can do it for you 
+ i dont know what to do 
+ i can do it for you 
+ i dont know what to do
+
+<sos> childishly 
+ zihzihzih zihzih zihzih zihzih zihzih zihzih zihzih zihzih zihzih <eos>
+
+<sos> botherin the party at wheres the party at <eos>
+
+<sos> quiznos got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> butter niks son 
+ before you get the main course <eos>
+
+<sos> bathing bad bitches in the hood 
+ i dont know what to do 
+ cause i dont know what to do 
+ im about to do this shit 
+ on my way 
+ i dont know what to do 
+ cause im
+
+<sos> became the first time the first again 
+ our first again our first again 
+ our first again our first again our first again 
+ our first again our first again our first again <eos>
+
+<sos> coats on my neck i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont need no help 
+
+
+<sos> glycerin niggas tryin to murk me 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know
+
+<sos> guard and serve 
+ make it rain 
+ way out of bounds 
+ throw it down 
+ way out of bounds 
+ throw your head back back back back <eos>
+
+<sos> momll help me <eos>
+
+<sos> ironing the party at wheres the party at <eos>
+
+<sos> bailin i got my swagger on 
+ now im on the way to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the
+
+<sos> exercise 
+ see what im talkin bout 
+ bout bout bout bout 
+ bout bout bout bout bout bout 
+ bout bout bout bout bout bout bout bout bout bout bout bout 
+ bout bout bout bout bout bout bout bout bout
+
+<sos> lean it up and bag it 
+ chi town lets go <eos>
+
+<sos> juiced up in the air 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do
+
+<sos> cookies and pieces them palm trees 
+ you know the sound of the evil 
+ i dont know what to do 
+ i dont need no help 
+ i dont know what to do 
+ cause i dont know what to do
+
+<sos> ism hoo 
+ e for ty 
+ e for <eos>
+
+<sos> vineyard 
+ ooh ooh <eos>
+
+<sos> hormones 
+ ask about me <eos>
+
+<sos> fix it out 
+ word it 
+ juke it pump it 
+ chi town lets go <eos>
+
+<sos> anythings ass niggas in the hood 
+ they say that i dont know 
+ that that that that that that that that 
+ that that that that that that that that 
+ that that that that that that that that that that
+
+<sos> crutch to be the only one now 
+ cant be the only one now 
+ never got a lot of shit that make you wanna do 
+ cause i dont know what it is 
+ you know what i mean 
+ you
+
+<sos> texture might be the only one 
+ cant wait 
+ no need to stress 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ i can do it
+
+<sos> tweekin 
+ woah woah woah woah woah 
+ woaah <eos>
+
+<sos> tickle you like this no more 
+ cant believe it 
+ you know what it is 
+ uh huh 
+ uh huh 
+ motherfucker yeah 
+ yeah yeah 
+ yeah <eos>
+
+<sos> cheaney on the top of your gums 
+ i know your name huh 
+ karrueche <eos>
+
+<sos> routin 
+ ooh ooh <eos>
+
+<sos> acne is the best thing that i can see 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ im
+
+<sos> vulture ha 
+ ta ha <eos>
+
+<sos> screamed and kiss me like its my last day 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ im
+
+<sos> relapsed from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top
+
+<sos> days in the days inn 
+ another heist another kite in the state pen <eos>
+
+<sos> preference in the ghetto 
+ never in the game 
+ we dont know what to do 
+ cause we can do it like this <eos>
+
+<sos> daughters and pops turned out of jail 
+ i got a lot of talent 
+ but i dont know what to do 
+ cause i dont even know what it is 
+ uh huh uh huh uh huh 
+ uh huh uh
+
+<sos> polar stallion 
+ hit the corner like 
+ rosecrans niggas tryin to murk me <eos>
+
+<sos> reflexes so hard to be the only one 
+ that is so unfair 
+ its recording <eos>
+
+<sos> ignant look out there 
+ aw yeah <eos>
+
+<sos> overbiatch 
+ ooh ooh <eos>
+
+<sos> yessuh 
+ woah woah woah woah woah woah 
+ woaah <eos>
+
+<sos> geography all the people that aint got to hear 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+
+
+<sos> occupied by the first again 
+ our first again our first again 
+ our first again our first again 
+ our first again our first again 
+ our first again our first again <eos>
+
+<sos> win for the day 
+ cause mama couldnt raise no man 
+ and though she do the things she can 
+ every woman needs a helping hand <eos>
+
+<sos> anteater 
+ ooh ooh <eos>
+
+<sos> vietnam what the fuck peace who this <eos>
+
+<sos> tastebuds mad they love me 
+ they love me 
+ they love me 
+ they love me 
+ they love me 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont want to
+
+<sos> ghee 
+ countless uses for pennies a day <eos>
+
+<sos> barrow town lets go <eos>
+
+<sos> voletta jazze pha 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> sauer tinted 
+ black phantom and wood 
+ not a problem that i can do it 
+ i dont know what to do 
+ i can do it for you 
+ i dont need no help 
+ i dont need no help
+
+<sos> rattlin if the money come fast when pushin them grams 
+ you get what you can theres no retirement plan <eos>
+
+<sos> dino got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> tremble all the big head niggas 
+ and all them big head bitches 
+ you know my name 
+ i dont know what to do 
+ i dont even know what it is 
+ uh huh uh huh 
+ uh huh uh
+
+<sos> motorcycle in the back of the street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> painted that purple haze 
+ that orange box of baking soda 
+ countless uses for pennies a day <eos>
+
+<sos> pasta look at your neck 
+ have you ever seen a pimp 
+ i aint got time to get it in the air 
+ i aint got time to get it in the air 
+ i aint got no time for the
+
+<sos> dimensions in my veins listen to me 
+ my name is finicky 
+ you can see me in the hood 
+ got me on my mind 
+ i dont know what to do 
+ cause i dont know what to do 
+
+
+<sos> tickin ass rusty ass niggas 
+ one point zero four 
+ fresh outta town 
+ two point zero four 
+ fresh outta town 
+ one point zero four 
+ fresh outta town 
+ one point zero four 
+ fresh outta town 
+
+
+<sos> reading what the fuck peace who this <eos>
+
+<sos> verbs 
+ sheit 
+ ooh <eos>
+
+<sos> inim jazze pha 
+ its that on top muzik 
+ yea wait a minute 
+ this a mans game 
+ this a mans game 
+ this a mans game 
+ this a mans game 
+ this a mans game 
+ this a
+
+<sos> grabs the party at wheres the party at <eos>
+
+<sos> citation 
+ ask about me <eos>
+
+<sos> muddy lights up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up
+
+<sos> bobcat fresh out the trunk of the neck 
+ not a problem 
+ big up to all my people not a problem 
+ big up to all my people not a problem 
+ big up to all my people not a problem
+
+<sos> curtains full of patron 
+ i know what it is 
+ uh huh uh huh 
+ uh huh uh huh 
+ motherfucker yeah yeah yeah 
+ yeah yeah 
+ yeah yeah 
+ yeah yeah 
+ yeah <eos>
+
+<sos> sturb look out there 
+ aw yeah <eos>
+
+<sos> we all got ground to get the main course <eos>
+
+<sos> maxi jones 
+ thats good you alright <eos>
+
+<sos> formaldehyde in the air 
+ not a problem that i can do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i can do it for you 
+ i dont know what to
+
+<sos> kathie ha 
+ ta ha <eos>
+
+<sos> guarantee you know what i mean 
+ i know the weedman ayee 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to
+
+<sos> paper me and my whole team 
+ never in the game like its my last day 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i
+
+<sos> ants in the back of the top 
+ from the ground up 
+ down down we all come from the ground up 
+ now im on the way to the top 
+ from the bottom to the top 
+ from the ground
+
+<sos> whatchu got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> pedalin 
+ ooh ooh <eos>
+
+<sos> glove skin chrome tips 
+ chrome candy paint 
+ chrome on my cup 
+ smoking on my grind 
+ i dont need a million dollar spot 
+ i aint got a million dollar spot bigger 
+ get your money down 
+ i
+
+<sos> gangbangin wrong with me 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to
+
+<sos> frisbee in the kitchen with the pimps and the pimps 
+ they say that i dont know what to do 
+ i dont even know what it is 
+ uh huh uh huh uh huh 
+ uh huh uh huh uh huh
+
+<sos> sauce money get breaded 
+ fat joe get breaded 
+ sauce money get breaded 
+ fat joe get breaded <eos>
+
+<sos> miraculous vamonos mixed in my cup 
+ i aint got no vertebrae 
+ i aint got no time for this 
+ so that youre making it 
+ i dont even know what it is 
+ uh huh uh huh uh huh 
+
+
+<sos> rushing out of town 
+ where the fuck is you 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know i know what it is
+
+<sos> batmobile 
+ ooh ooh <eos>
+
+<sos> stunning the party at wheres the party at <eos>
+
+<sos> recon gang guh gang guh gang gang guh gang gang guh gang gang guh gang gang guh gang gang guh gang guh gang guh gang guh 
+ i got a gang of em <eos>
+
+<sos> bloodiest hour 
+ i got a million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot my million dollar spot 
+ my million dollar spot bigger
+
+<sos> sickness i got a lot of talent 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont
+
+<sos> withdraw to the top 
+ from the ground up 
+ down down we all come from the ground up 
+ now im on the way to the top 
+ from the bottom to the top 
+ from the bottom to the top
+
+<sos> trophies in my room 
+ i aint got no safety like the rams secondary 
+ and he come back to the top of the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the
+
+<sos> mourn 
+ hey hey <eos>
+
+<sos> oldest i know what it is 
+ uh huh 
+ uh huh uh huh uh huh 
+ motherfucker yeah yeah yeah 
+ yeah yeah 
+ yeah yeah 
+ yeah <eos>
+
+<sos> bartender pull up and get em 
+ aw man that bitch she go hard <eos>
+
+<sos> slice your hands up 
+ hands up 
+ hands up hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up
+
+<sos> sing up and get ya wide wide 
+ get ya high ha 
+ get ya high ha 
+ get ya high 
+ get ya high ha 
+ get ya high 
+ get ya stoned and get ya wide 
+ get ya high
+
+<sos> cubin skert 
+ hit the corner like <eos>
+
+<sos> chink my dick 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont need no help 
+
+
+<sos> dapper 
+ cmon <eos>
+
+<sos> devil built a dream 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+
+
+<sos> winery california come and see what my city like 
+ rosecrans niggas tryin to murk me <eos>
+
+<sos> caked up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+
+
+<sos> subs to get the main course <eos>
+
+<sos> ac on my mind my nigga 
+ let me tell you bout my name 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know
+
+<sos> peachfuzz zihzihzih 
+ zihzihzih zihzih zihzih zihzih zihzih zihzih <eos>
+
+<sos> offices on the street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> referees up in the club with the big ol gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang 
+
+
+<sos> cypress california come and see what my city like 
+ rosecrans niggas tryin to murk me <eos>
+
+<sos> fentanyl 
+ you can get it in the air <eos>
+
+<sos> avenger 
+ ooh ooh <eos>
+
+<sos> cracks me up in the air 
+ i dont need no help 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know how to
+
+<sos> growing up in the mirror and the stars and the pimps 
+ the girls they girls they girls they girls they girls 
+ they say that they got me 
+ they dont know what they want to do 
+ cause they dont
+
+<sos> twelvegauge got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> highest religion i was born to be the only one 
+ i got a lot of talent 
+ but i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+
+
+<sos> murders 
+ ooh ooh <eos>
+
+<sos> pokin out the corner like <eos>
+
+<sos> countin them grams up and get ya wide 
+ get ya stoned and get ya wide wide 
+ get ya stoned and get ya wide wide 
+ get ya stoned and get ya wide wide 
+ get ya stoned and get ya
+
+<sos> do what i do <eos>
+
+<sos> grey rag and bones in the trunk 
+ still in the hood like the rams secondary 
+ and he come back to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom
+
+<sos> higher than voodoo its bigger than luck shit its bigger than us <eos>
+
+<sos> donkey check mic check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check one two one two <eos>
+
+<sos> gimmicks 
+ ask about me <eos>
+
+<sos> lions on the block 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> attack me 
+ i dont want no help 
+ i know what i mean 
+ i know the weedman weedman hes my friend <eos>
+
+<sos> lockin the party at wheres the party at <eos>
+
+<sos> beany got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> psychologist got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> glide in the ghetto and the ground up 
+ where the sun is on 
+ ill fly away 
+ to all the big head niggas 
+ and all them big head bitches 
+ you know the sound of the town 
+ i
+
+<sos> farmers come and see what my city like 
+ rosecrans niggas tryin to murk me <eos>
+
+<sos> cambish 
+ ooh ooh <eos>
+
+<sos> grannies through the streets in the city 
+ where the fuck is you niggas 
+ you know what i mean 
+ you know my name 
+ i dont know what to do 
+ i dont even know what it is 
+ you
+
+<sos> extendo on the block 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> branch on the corner like skee skert 
+ hit the corner like <eos>
+
+<sos> tears in the mirror 
+ told me what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know i dont know what to do 
+ cause i dont know
+
+<sos> settin em up 
+ all up in your ear 
+ i dont know what to do 
+ cause we can do it like this <eos>
+
+<sos> haitians 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know what i do <eos>
+
+<sos> pearls in the trunk of the street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> duis look out there 
+ aw yeah <eos>
+
+<sos> bash yo shoes yeah 
+ want me to say your name 
+ yo yo yo 
+ uhh 
+ yo yo yo 
+ uhh 
+ yo yo yo 
+ uhh 
+ yo yo 
+ redman ahh yo iron lung 
+ yo yo yo
+
+<sos> wiz so bad for your man 
+ how you say what 
+ is what you say 
+ that you know what i do 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+
+
+<sos> whatchamacallit look out there 
+ aw yeah <eos>
+
+<sos> poparazzi hustlers gangstas all the pimps 
+ you know how we do it like this 
+ where i do it for the last time 
+ these niggas aint got no retirement plan <eos>
+
+<sos> hotlines and got em mad 
+ they say that i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i
+
+<sos> maurice jones scott scott scott 
+ thats good you alright <eos>
+
+<sos> helmet hammer mane 
+ that orange box of baking soda <eos>
+
+<sos> cuddly canary tennis bracelet necklace 
+ black phantom black mink 
+ black phantom black mink 
+ black phantom in the trunk 
+ not a problem that i can do it 
+ i dont need a million dollar spot 
+ i got a
+
+<sos> mcclain beotch 
+ see what i do <eos>
+
+<sos> jane god i dont want no help 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont
+
+<sos> industry aint no respect 
+ no comp no comp no competition <eos>
+
+<sos> ouch 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> tremblin if the money come fast when pushin them grams 
+ you get what you can theres no retirement plan <eos>
+
+<sos> neverland 
+ ooh ooh <eos>
+
+<sos> bitchness 
+ ooh ooh <eos>
+
+<sos> ignoring the party at wheres the party at <eos>
+
+<sos> mopped off the yola then you throw it in the air 
+ you can see me in the air 
+ you can see me in the hood 
+ i dont know what to do 
+ cause i dont know what to do
+
+<sos> emergencies 
+ you can tell me what i want 
+ who they want to do 
+ who they want to bee yea 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> gotta be the only one only one 
+ that is so unfair 
+ but this is all that i have this is all that i have <eos>
+
+<sos> confuse what i do 
+ i know the weedman weedman hes my friend 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what
+
+<sos> dayton chances by the day 
+ where the bitches where the bitches where the bitches where the bitches where the bitches where the bitches where the bitches where the bitches where the bitches where the bitches where the bitches where the bitches
+
+<sos> draulics in the air 
+ not a problem that i can see 
+ that i aint got no retirement plan <eos>
+
+<sos> monitor from the city 
+ where the fuck is you 
+ you can be the only one 
+ you got to hear 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont
+
+<sos> oompa dums 
+ zihzihzih 
+ zihzihzih zihzih zihzih zihzih zihzih zihzih zihzih <eos>
+
+<sos> blackman got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> retard you know my name 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what
+
+<sos> teenage fik 
+ you know i know what it is 
+ uh huh uh huh 
+ uh huh uh huh uh huh 
+ motherfucker yeah yeah yeah 
+ yeah yeah 
+ yeah yeah 
+ yeah yeah 
+ yeah <eos>
+
+<sos> ja ha 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> unlockin the party at wheres the party at <eos>
+
+<sos> ballroom check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check one two one two <eos>
+
+<sos> litigation come and see what my city like 
+ rosecrans niggas tryin to murk me <eos>
+
+<sos> blocka hoo 
+ e for ty 
+ e for <eos>
+
+<sos> leathers look out here 
+ aw man that bitch she go hard <eos>
+
+<sos> haha my million dollar spot bigger 
+ get ya high ha 
+ get ya stoned and get ya wide wide 
+ get ya stoned and get ya wide wide 
+ get ya stoned and get ya wide wide 
+ get ya high
+
+<sos> prison on the way to school today 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont
+
+<sos> differencee ass nigga 
+ you know that im the best nigga 
+ he aint got no safety like the rams secondary 
+ and he come out the way to school like that 
+ nigga i dont know what to do 
+ that
+
+<sos> releventing em up in the club 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ i can do it for you 
+ i dont know what to
+
+<sos> erasers look out here 
+ aw man that bitch she go hard <eos>
+
+<sos> rhyming with the people who they want 
+ who they want to bee yea 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> toné 
+ cmon <eos>
+
+<sos> unheld 
+ ooh ooh <eos>
+
+<sos> sprained check it out 
+ word niggas smoke too fuckin much man <eos>
+
+<sos> ged 
+ he dont know what to do 
+ cause i know what it is 
+ uh huh 
+ motherfucker yeah 
+ yeah 
+ if i cant get it 
+ oh oh oh oh oh oh oh oh oh oh oh oh
+
+<sos> mouths in the air 
+ where the fuck you got me 
+ i dont know what to do 
+ im about to do this shit 
+ im on my way to get my money right 
+ im on my way to the
+
+<sos> centimeters me and my niggas get it 
+ i dont know what to do 
+ cause i dont know what to do 
+ im about to do this shit 
+ on my way to the hood shit 
+ i aint got no
+
+<sos> back from the bottom to the top 
+ from the ground up we never stop 
+ we never stop <eos>
+
+<sos> incentives 
+ ask about me <eos>
+
+<sos> elbows on my neck i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont know what to do 
+ i
+
+<sos> disgusting 
+ see what im talkin bout 
+ bout bout bout bout 
+ bout bout bout bout bout 
+ bout bout bout bout bout bout bout bout bout bout bout bout 
+ bout bout bout bout bout bout bout bout bout bout
+
+<sos> lurking in the ghetto 
+ never in the game 
+ we dont know what to do 
+ cause we can do it like this <eos>
+
+<sos> musically than a problem 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to
+
+<sos> slogan you know the real 
+ speak the real 
+ speak the real 
+ speak the real 
+ speak the real 
+ speak the real 
+ speak the real 
+ speak the real 
+ speak the real 
+ speak the real <eos>
+
+<sos> ulcer 
+ ooh ooh <eos>
+
+<sos> smells like they love me 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what
+
+<sos> credits on the way to school today 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont
+
+<sos> by any means necessary so in my eyes 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ i dont
+
+<sos> croaker hoo 
+ e for ty 
+ e for <eos>
+
+<sos> emblems on the floor 
+ we both wakin up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up 
+ hands up
+
+<sos> chillun come and see what my city like 
+ rosecrans niggas tryin to murk me <eos>
+
+<sos> hovall help me 
+ make me feel you feel me 
+ i dont want no help 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i
+
+<sos> heated in the room 
+ got me trapped in the club 
+ now im in the club with no cash 
+ im in the hood like im in the hood 
+ got me in the back of the top 
+ from the
+
+<sos> porky e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e forty 
+
+
+<sos> vouges in the ghetto 
+ two point zero four 
+ fresh outta town 
+ two point zero four 
+ fresh outta town 
+ one point zero four 
+ fresh outta town 
+ one point zero four 
+ fresh out of town 
+
+
+<sos> impeached at the top of the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top
+
+<sos> calculated way out there in the city 
+ where the fuck is you 
+ you know what i mean 
+ you know what i mean 
+ you know what i mean 
+ you know you know what i mean 
+ you know
+
+<sos> signing dope in my mind 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what
+
+<sos> raincoat to the top of your gums 
+ i know your name 
+ i dont know what to do 
+ i dont need no help 
+ i dont know what to do 
+ i dont even know what to do 
+ im
+
+<sos> pile in the club with no doubt 
+ no comp no comp no comp no comp 
+ no comp no comp no comp no comp no competition <eos>
+
+<sos> collared check mic check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check one two one two <eos>
+
+<sos> dependable part of the night 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what
+
+<sos> imsabout to be the only one now 
+ so used to be the only one 
+ so what 
+ is what you say 
+ that you know what we do 
+ that you know what i do <eos>
+
+<sos> owin him for the day 
+ cause mama couldnt raise no man 
+ and though she do the things she can 
+ every woman needs a helping hand <eos>
+
+<sos> truth is a problem 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i can do it for you 
+ i dont need no help 
+
+
+<sos> converted to the top of your gums 
+ i know your name 
+ i dont know what to do 
+ i dont even know what it is 
+ you can be the same 
+ i dont know what to do 
+ i
+
+<sos> milhouse got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> owned all the big head niggas 
+ and all them big head bitches 
+ you know my name 
+ i dont know what to do 
+ i dont even know what it is 
+ uh huh uh huh 
+ uh huh uh
+
+<sos> permit your last day 
+ make me feel like i can 
+ every woman needs a problem 
+ big up to all my people not a problem <eos>
+
+<sos> stuff it was just me and i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what
+
+<sos> institutions got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> blinding them palm trees is that vomit 
+ how do we do it for the future 
+ these niggas aint got no retirement plan <eos>
+
+<sos> warp the party at wheres the party at wheres the party at <eos>
+
+<sos> musket in the air 
+ i aint got no safety like the rams secondary 
+ and he come back to the top of the top 
+ from the ground up we never stop 
+ we never stop <eos>
+
+<sos> kingpin 
+ ask about me <eos>
+
+<sos> wardance 
+ ask about me <eos>
+
+<sos> confrontation 
+ ask about me <eos>
+
+<sos> frost come and see what my city like 
+ rosecrans niggas tryin to murk me <eos>
+
+<sos> cashed me a little bit of shit that make you wanna do 
+ cause i dont know what to do 
+ cause i dont even know what it is 
+ uh huh uh huh uh huh 
+ uh huh uh huh uh
+
+<sos> pedro california come and see what my city like 
+ rosecrans niggas tryin to murk me <eos>
+
+<sos> nori i got a lot of talent 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ i can do
+
+<sos> flashbacks to the real life 
+ everybody know what it is 
+ uh huh 
+ motherfucker <eos>
+
+<sos> stolen niggas in the streets 
+ i got a lot of talent 
+ but i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ i can do it for
+
+<sos> jiggle it up and bag it 
+ chi town lets go <eos>
+
+<sos> lurcher better than me 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ i can do it for you 
+ i dont know what to do 
+ i
+
+<sos> stunting clumsy 
+ never leave the same place 
+ everybody aint got no safety like the rams secondary 
+ and he come back to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from
+
+<sos> writtin ass nigga i know the weedman weedman hes my friend <eos>
+
+<sos> freak shit 
+ ill fly away 
+ ooh <eos>
+
+<sos> ugh 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> coochy got to hear this shit 
+ on w balls w balls <eos>
+
+<sos> confidence me 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ i dont
+
+<sos> wanksta 
+ ooh ooh <eos>
+
+<sos> blackball for the bad bitches in the game 
+ they say that i dont know what to do 
+ cause i dont know what it is 
+ uh huh uh huh uh huh 
+ uh huh uh huh uh huh uh huh
+
+<sos> antifreeze on the floor 
+ we both wakin up in the air 
+ we in the traffic 
+ we do it for the future 
+ these niggas aint got no retirement plan <eos>
+
+<sos> oshea 
+ ooh ooh <eos>
+
+<sos> ally look out here 
+ aw man that bitch she go hard <eos>
+
+<sos> works when the sun comes down 
+ go on and get your main course <eos>
+
+<sos> conspiracy 
+ ooh ooh <eos>
+
+<sos> niminal ass rusty ass niggas 
+ one point zero four 
+ fresh outta ten point zero four 
+ fresh outta ten point zero four 
+ fresh outta town 
+ where the fuck is you niggas 
+ one point zero three point zero
+
+<sos> dodge all day and night 
+ make me think you can theres no retirement plan <eos>
+
+<sos> holmes 
+ ooh ooh <eos>
+
+<sos> catchers jones 
+ yeah 
+ if i dont know what to do 
+ cause i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ i can do it for you
+
+<sos> rly check mic check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check one two one two <eos>
+
+<sos> chugging the one at the top 
+ from the ground up we never stop 
+ we never stop <eos>
+
+<sos> taller than voodoo its bigger than luck shit its bigger than us <eos>
+
+<sos> polaroid 
+ see what i do <eos>
+
+<sos> thug ass niggas aint shit 
+ fuck wit us at all mayne 
+ you know what im talkin bout <eos>
+
+<sos> productll kill me 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ i
+
+<sos> display me 
+ i dont know what to do 
+ cause i can do it for you 
+ i dont know what to do 
+ i can do it for you 
+ i dont know what to do 
+ cause i dont
+
+<sos> rover yea 
+ its that on top muzik 
+ yea wait a minute <eos>
+
+<sos> dusted off the corner like skee skert 
+ skee skert 
+ hit the corner like <eos>
+
+<sos> drew that orange box of baking soda 
+ countless uses for pennies a day <eos>
+
+<sos> blackboard got the best friend 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i can do it for you 
+ you know i dont know what to do 
+ cause i can do
+
+<sos> target at the top of the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top
+
+<sos> red rag niggas 
+ all day 
+ it aint got no time for it 
+ they dont know what it is 
+ uh huh uh huh 
+ uh huh uh huh uh huh 
+ uh huh uh huh uh huh uh huh
+
+<sos> dames scoop 
+ whoop diddy scoop 
+ whoop diddy scoop 
+ whoop diddy scoop 
+ whoop diddy scoop 
+ whoop di scoop di scoop 
+ whoop di scoop di scoop 
+ whoop di scoop di scoop 
+ whoop di scoop di scoop
+
+<sos> scooping up in the air 
+ i dont need no help 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont need no help 
+
+
+<sos> enemy is hard as hell 
+ battle battle anybody 
+ rock rock rock rock rock the bells <eos>
+
+<sos> eye check mic check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check mic check mic check mic check mic check 
+ mic check one two one two <eos>
+
+<sos> patrons to be the only one only one 
+ that is so unfair 
+ that is so unfair so what 
+ is what you say 
+ that you know what we do 
+ that we be the only one only one 
+
+
+<sos> hennesey 
+ ii <eos>
+
+<sos> scorchin 
+ ooh ooh <eos>
+
+<sos> drommers zihzihzih 
+ zihzihzih zihzih zihzih zihzih zihzih zihzih zihzih <eos>
+
+<sos> glitter the game at the top of the top 
+ from the ground up 
+ down down we all come from the ground up 
+ now im on the way to the top 
+ from the bottom to the top 
+ from
+
+<sos> packaged in my hand 
+ i dont need no help 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+
+
+<sos> concentrate for the day 
+ cause mama couldnt raise no man 
+ and though she do the things she can 
+ every woman needs a helping hand <eos>
+
+<sos> burp em up and get em 
+ aw man that bitch she go hard <eos>
+
+<sos> ecstasy on my mind my nigga 
+ let me tell you bout my name 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know
+
+<sos> jezebels and slumming and reppin <eos>
+
+<sos> stations on the street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> cbd animal 
+ we do this shit 
+ on w balls w balls <eos>
+
+<sos> roni hoo 
+ e feezy fonzarelli yeah please believe me 
+ ho town lets go <eos>
+
+<sos> spitter yeah 
+ uh huh uh huh 
+ motherfucker yeah yeah 
+ yeah yeah 
+ yeah 
+ yeah <eos>
+
+<sos> inhaling it on the way to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the bottom to the top 
+ from the ground up 
+
+
+<sos> baptized in the middle of the demon 
+ my lethal injection destroyin evil 
+ never know when its time to get the main course <eos>
+
+<sos> lungster mama i know the weedman 
+ mama i know the weedman 
+ mama i know the weedman 
+ mama i know the weedman 
+ mama i know the weedman 
+ mama i know the weedman 
+ mama i know the weedman
+
+<sos> mccormicks i got a lot of talent 
+ i dont know what to do 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know
+
+<sos> phoney 
+ zihzihzih 
+ zihzihzih zihzih zihzih zihzih zihzih zihzih zihzih <eos>
+
+<sos> repeats thrill for the day 
+ cause mama couldnt raise no man 
+ and though she do the things she can 
+ every woman needs a helping hand <eos>
+
+<sos> madis 
+ you can see me 
+ aw man that bitch she go hard <eos>
+
+<sos> committees on my mind i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+ cause i dont need no help 
+
+
+<sos> winnings full of that dro 
+ some of us is a problem 
+ big up to all my people not a problem 
+ big up to all my people not a problem 
+ big up to all my people not a problem
+
+<sos> continental thrill for the day 
+ cause mama couldnt raise no man 
+ and though she do the things she can 
+ every woman needs a helping hand <eos>
+
+<sos> malls on the street street 
+ magazine street 
+ magazine street 
+ magazine street 
+ magazine <eos>
+
+<sos> fucker i know the weedman weedman hes my friend <eos>
+
+<sos> orbit four am and i cant sleep 
+ her love is all that i can see <eos>
+
+<sos> plastered and hammer against the wu tang clan 
+ thats the way i like it like that 
+ straighten up in the club 
+ i got a lot of shit that make you wanna do 
+ cause i aint got time to
+
+<sos> inflicted thoughts in the heart of the demon 
+ the ed hardy with the law 
+ some of the people who created it 
+ they say that i dont need no help 
+ they say that i dont need no help 
+
+
+<sos> lineup 
+ ooh ooh <eos>
+
+<sos> direct that soda with that candy cha cha 
+ thats how we do it like this 
+ where i do it like this 
+ where i do it like this 
+ i dont even know what it is 
+ uh huh uh
+
+<sos> reflect in the mirror and the stars 
+ the ed hardy with the law 
+ some of the people thats the way i like to do 
+ cause i dont know what to do 
+ cause i dont know what to do
+
+<sos> hunds 
+ ooh ooh <eos>
+
+<sos> minority 
+ theres no curing <eos>
+
+<sos> goods on my neck look at my face 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont need no help 
+ i dont know what to do 
+ i dont
+
+<sos> stretchin them raps selling these tracks 
+ up in the streets 
+ we do it for the first 
+ i dont know what to do 
+ cause i dont know what to do 
+ cause i dont know what to do 
+
+
+<sos> essentials calling me my nigga 
+ let me tell you bout 
+ bout bout bout bout 
+ bout bout bout bout bout bout 
+ bout bout bout bout bout bout bout bout bout bout 
+ bout bout bout bout bout bout bout
+
+<sos> album come and see what my city like 
+ rosecrans niggas tryin to murk me <eos>
+
+<sos> carolina man bionic or proffesor chronic 
+ not not a problem 
+ i got a lot of talent 
+ but i dont know what to do 
+ cause i dont need no help 
+ i dont know what to do 
+ im
