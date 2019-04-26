@@ -200,7 +200,7 @@ class Decoder(nn.Module):
         self.lstm = nn.LSTM(hidden_size, hidden_size, batch_first=True)
 
     def forward(self, input, hidden, encodings):
-        prev_h = hidden[0].squeeze()
+        prev_h = hidden[0].squeeze(0)
 
         # Get attn weights from input (embedding+phoneme_embedding of last word), hidden
         attn_weights = self.attn(torch.cat((input, prev_h), dim=1))
@@ -316,6 +316,53 @@ class AttentionEncoderDecoder(nn.Module):
 
         return outputs, loss
 
+
+    def gen_word(self, txt, phonemes, encodings, encoder_hidden=None, decoder_hidden=None):
+        """
+        Predict the next word. Similar to forward but runs on single inputs
+        rather than batches and has word sequence length 1.
+
+        Inputs:
+        - txt, Last word generated so far with size (1)
+        - phonemes, Pytorch Tensor with size (1, 1, T_phoneme)
+        - encodings, list of h0 outputs from encoder on sentence generated so far
+        - encoder_hidden, hidden state (h, c) of encoder
+        - decoder_hidden, hidden state (h, c) of decoder
+        """
+        device = txt.device
+        T_phoneme = phonemes.size(2)
+
+        txt_embedding = self.embedding(txt)
+        phoneme_embeddings = self.phoneme_embedding(phonemes.view(1,-1)).view(1, T_phoneme, -1)
+
+        # Phoneme summarization
+        phoneme_summ, _ = self.phoneme_encoder.phoneme_lstm_encoder(phoneme_embeddings)
+        phoneme_summ = phoneme_summ.view(1, 1, T_phoneme, -1)[:,:,-1,:]   # unnecessary but consistent
+
+        inputs = torch.cat((txt_embedding, phoneme_summ), dim=2)
+
+        # Take one step of encoderRNN -> (1, 1, hidden_size)
+        encoding, encoder_hidden = self.encoder.lstm(inputs, encoder_hidden)
+        encodings.append(encoding)
+
+
+        # Construct decoder inputs
+        if decoder_hidden is None:
+            decoder_hidden = (torch.zeros((1 ,1, self.hidden_size), device=device),
+                              torch.zeros((1 ,1, self.hidden_size), device=device))
+        decoder_input = inputs[:, -1, :].view(1, -1)
+        attn_encodings = torch.zeros((1, self.max_length, self.hidden_size), device=device)
+        for t, encoding in enumerate(encodings):
+            attn_encodings[:, t, :] = encodings[t]
+
+        outputs, decoder_hidden = self.decoder(decoder_input, decoder_hidden, attn_encodings)
+
+        #####
+        outputs = outputs.contiguous().view(1, -1)
+        outputs = self.adaptivesoftmax.log_prob(outputs)
+
+        outputs = outputs.view(self.vocab_size)
+        return outputs, encodings, encoder_hidden, decoder_hidden
 
 
 class TextGenerationModel(nn.Module):

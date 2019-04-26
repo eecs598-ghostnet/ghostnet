@@ -111,7 +111,7 @@ def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer,
                 phase, epoch_loss, epoch_acc))
 
             # deep copy the model
-            if phase == 'val' and epoch_loss < best_val_loss:
+            if phase == 'val':
                 best_val_loss = epoch_loss
                 best_model_wts = copy.deepcopy(model.state_dict())
                 if epoch % 5 == 0:
@@ -137,13 +137,13 @@ def main():
 #    phoneme_hidden_size = 40
 
     if len(sys.argv) > 1:
-        model_weights_path = sys.argv[1]
+        model_weights_path = sys.argv[1]    # to load checkpoint from
     else:
         model_weights_path = None
 
 
     artist_dir = '../data/lyrics/combined_trunc'
-    weights_dir = '../model/encdec'  # to save weights and checkpoints
+    weights_dir = '../model/attention'  # to save weights and checkpoints
     ModelType = AttentionEncoderDecoder
 
     # Get dataloaders
@@ -201,9 +201,9 @@ def main():
 
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=0.002)
-    exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=2, gamma=0.1)
+    exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=1, gamma=0.1)
 
-    model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=10, weights_dir=weights_dir)
+    model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=5, weights_dir=weights_dir)
 
     torch.save(model.state_dict(), os.path.join(weights_dir, 'final.pt'))
 
