@@ -1,0 +1,538 @@
+Building corpus...
+Building dataset...
+Building text vocab...
+Building phoneme vocab...
+Creating iterators...
+Done
+train_dataset size: 3512
+<sos> honestly im afraid to give love the truth 
+ cause i can do anything 
+ all the people thats poor dont ever stress <eos>
+
+<sos> dear diary i dont wanna keep shit inside of me 
+ id rather just speak to you will be anything for you 
+ cause youre the only one to blame me 
+ and you know the only one to blame it 
+ but
+
+<sos> hush baby wanna let ya know ya feel me 
+ oh girl go <eos>
+
+<sos> to show you i changed shawty about 
+ baby you know the crazy 
+ naw i know the weedman 
+ mama i know the weedman ayee mama i know the weedman 
+ ayee mama i know the weedman weedman hes my friend <eos>
+
+<sos> i dont care if the cops got me surrounded up 
+ i got a gang of em <eos>
+
+<sos> loving life front row seats at d fights move only one 
+ pass the hat down we never stop 
+ we never stop 
+ we never stop 
+ we can never stop 
+ we will never stop 
+ we will never stop 
+ we will never stop 
+ we
+
+<sos> show you d otha side a d game that dont stop yea 
+ give a hater a hug 
+ cause even haters get love 
+ tell a hater cheer up cheer up <eos>
+
+<sos> if you tryna find a good one they out theremayne you just aint looking at 
+ or even if you didnt understand it 
+ but you get it at the end of it <eos>
+
+<sos> tryin to have a stable full of gregarious clear bitches 
+ some of us be trippin off some killers on the streets 
+ some of my dudes be off that stuff 
+ some of my dudes be off that stuff 
+ some of my dudes be off that stuff 
+ nigga
+
+<sos> she was a baby she was lame 
+ i had a problem with 
+ i got a problem with 
+ i got a problem with 
+ i got a problem with 
+ i got a problem with 
+ and i can tell you aint from the way that
+
+<sos> wait a minute wait hey hold up ba ba bump bump car horn gang bang bang 
+ bang bang bang bang bang bang 
+ bang bang bang bang 
+ bang bang bang bang bang <eos>
+
+<sos> she said just take me out to the pimp pic nic 
+ i dont need no help 
+ that got me thinking they got me thinking they got me 
+ i dont know what you believe in you 
+ and i dont know how you believe in it 
+ i know you
+
+<sos> freal freal nigga i bet you that be the kid 
+ pull up in this bitch 
+ like the homie apple pie goodness johnny blaze me 
+ on the block like a homicidal 
+ niggas know me and i know my best friend <eos>
+
+<sos> to get in this bitch it was hectic 
+ im far from greedy <eos>
+
+<sos> uh yes yes yall feel the beat yall 
+ freak freak yall 
+ yo <eos>
+
+<sos> lookin back at the times when we had to grind 
+ death is in the dark 
+ some people bore me and im fucking dozing 
+ with that love my love 
+ i dont know what you believe in you 
+ and i dont need no help 
+ just because im
+
+<sos> i paved the way for indie labels for real 
+ long people out here in california beatch <eos>
+
+<sos> time for the payback backpay i can make it for you 
+ i got a lot of talent 
+ but all the girls in the world 
+ a lot of times is all its gonna be the end <eos>
+
+<sos> they say the youngsters run the penitentiary facility 
+ the ghetto is a cage its a cage 
+ and we stay in the hood of the ghetto and the hood 
+ and we stay in the hood of the bay 
+ they say the worlds coming to an
+
+<sos> thinkin tweakin sniffin hoppin plottin 
+ tell em whats happenin 
+ its goin on out of patience while you do the work of satan 
+ like an impulse edu leedz black historys an insult <eos>
+
+<sos> boom boom boom boom boom 
+ lets go 
+ uh huh uh huh 
+ uh huh uh huh 
+ uh huh uh huh uh huh 
+ uh huh uh huh uh huh 
+ uh huh uh huh uh huh uh huh 
+ uh huh uh huh
+
+<sos> she want a hood boy she dont want no mark 
+ she dont want no love 
+ cause she know my dick 
+ she love my love <eos>
+
+<sos> i got paper but i be on the under 
+ or was it on my knees and all my folks 
+ and all i want is love love love love love love love love <eos>
+
+<sos> put down a demonstration on the rival 
+ watch the skinny jeans on the wall 
+ on the road to the top 
+ from the ground up we never stop 
+ we will never stop 
+ we will never stop 
+ we will never stop 
+ we will
+
+<sos> mama with the shit move the pain pills above 
+ the same old tricks wont work no more 
+ hit the house in the house with 
+ and i dont want no one to blame it 
+ im in the shadows of the street 
+ i love the way
+
+<sos> im in the old school with the cocaine guts on the block 
+ in the back of the street 
+ magazine street bumpin bobby womack <eos>
+
+<sos> im riding clean as fuck with a phoenix slut 
+ or a powder puff 
+ on the lookout for a key 
+ to the snow to the snow not a problem 
+ its the riddler <eos>
+
+<sos> block nigga on the ave with a cannonball on the mic 
+ s i c k e a r e a r e a r e l 
+ about my money i aint fuckin wit it 
+ i dont need no mo shit 
+ i got a gang of
+
+<sos> champion hoodie and bean cap b boy attire 
+ every day a dollar a dollar man a dollar bill yall 
+ a dollar a dollar a getcha scrill yall 
+ a getcha scrill yall a getcha scrill yall 
+ a getcha scrill yall a getcha scrill yall 
+ a
+
+<sos> stores like a restaurant 
+ i can do it out 
+ to a land where im from 
+ where im from where im from where im from 
+ where im from where im from 
+ where im from where im from where im from 
+
+
+<sos> i throw the yola in the pot let it simmer and bathe 
+ i dont need no one to blame it 
+ i dont need no help 
+ im just trying to fit it out 
+ but what are you talkin bout <eos>
+
+<sos> well down in the dirty south to be exact 
+ up in the bay they rap they ghetto gold 
+ in and out of town with the homies and the task force 
+ i dont know if you get in the hood 
+ and when its all said and done
+
+<sos> i got the pyrex working with the white girl in it 
+ im in the club like a san jose bitch 
+ i got a gang of em <eos>
+
+<sos> fuck an invitation we pullin up unannounced 
+ im like sylvester stallone my flow <eos>
+
+<sos> they say we too litty no beans its just silly 
+ every day every day is a day 
+ no no no no need to stress keeps you down too much 
+ wake up i heard they found a solution <eos>
+
+<sos> get money get new stuff around 
+ and every night i hit it like its your last day 
+ hustle like its my last day 
+ fuck like its my last day 
+ fuck like its my last day 
+ fuck like its my last day
+
+<sos> only the strong can survive cali is where i reside 
+ every time i take a step back 
+ and every time i take a step back 
+ and every time i take a step back 
+ and every time i take a step back 
+ and every time i take
+
+<sos> i be on one my nigga ass niggas 
+ one point zero seven point zero four point four 
+ fresh outta impound fresh outta tow <eos>
+
+<sos> two point three four point five northern california where this hustla resides 
+ i was just tryin to get it out of the way for years 
+ cause i did no one to admit 
+ and people who be who they want to bee yea 
+ ii <eos>
+
+<sos> i got some gidname for the bridnain gas ninetyone octane 
+ up in the hood like the most school and the dope boys 
+ dont ask me where the bitches where the bitches where the bitches where the bitches where the bitches where the bitches where the bitches where the bitches
+
+<sos> from the kiddie walk to blackhawk in a guarded gated community 
+ my mentality my mentality my nigga my nigga 
+ im from the city of the bay to the bay 
+ to the east to the west to the west to the west to the west to the west to the
+
+<sos> tryin to put something together having my gouda and my cheddar 
+ i dont need no iron im just tryin to get it 
+ im the only one that want me to say 
+ im the only one only one 
+ that know me 
+ i love my love <eos>
+
+<sos> aight ay dude this all i wanna know 
+ you can do it if you love it 
+ but you know the real 
+ speak the real 
+ speak the real <eos>
+
+<sos> oh ohh i see i dont know and how the fuck you like 
+ i know your best friends stop pretendin me 
+ i know you can do it like you love me 
+ i love you and you know the real you 
+ and
+
+<sos> e forty uhh 
+ uh one question <eos>
+
+<sos> polo everything they should endorse me 
+ i dont want to fuck with 
+ i dont know what you believe in you 
+ to be the only one to blame me 
+ and you know the real 
+ speak the real 
+ speak the real <eos>
+
+<sos> the club yeah ayy grind ing 
+ on this one call me lee major 
+ million dollar man bionic or proffesor chronic 
+ still not a player i just fuck alot the panty raider 
+ get shortys mad they curse you wild on your sky pager 
+
+
+<sos> they went to kindergarten together lived round the corner from each other pop warner together played sports together 
+ now we go in the hood of the bay 
+ they say the nigga used to say they from vallel <eos>
+
+<sos> rule of thumb number one never leave the crib without packing you a gun cant be snoozing 
+ when it comes to the bottom and you wont have the longest grade <eos>
+
+<sos> as soon as i could walk id cooked up bout half a meal ticket 
+ i can make you get up in your chest and have an arm on me 
+ no matter the case ill find a way in your life 
+ a lot of these other people thats poor dont ever stress <eos>
+
+<sos> might not know how to read and write but i do know arm hammer 
+ pull out the house and pick up the phone in 
+ and should never run around 
+ and should never run 
+ i can never run 
+ i can never run 
+ i can never run 
+ i can never
+
+<sos> i got the turf on lock twentysix block 
+ i was on stuck she was on top 
+ pour me some more in my cup <eos>
+
+<sos> i be smokin like a broke down coupe deville 
+ i got a gang of em <eos>
+
+<sos> i fucks with everybody thats somebody major factors 
+ and i dont know how you act this way 
+ this is all that i have this is all that i have <eos>
+
+<sos> tiptoeing through the hood nigga is no good nigga 
+ only nigga he used to do it for it 
+ even if it aint for it 
+ thats why a real nigga though to do it out 
+ but he do this shit and he got a new gun 
+
+
+<sos> now the parties dont start until we walk in here 
+ and haters they smell cheese when we up in here 
+ too many of us be trippin off small stuff <eos>
+
+<sos> check it out 
+ to all the big head niggas 
+ and all them big head bitches 
+ you know my steez o <eos>
+
+<sos> my rubber bands is conceited my pistol dont like nobody else 
+ i dont need no harm 
+ im just taking my money out 
+ i dont know if i can sell grapes to the bank 
+ when i was twelve and a half a brick 
+ i can make it
+
+<sos> street sale spots all looking like the wire 
+ two to two gs with the k r k 
+ in this white man this is where the game came 
+ came from the bottom to the top 
+ from the ground up we never stop 
+ we never stop
+
+<sos> mm well alright yeah 
+ wicked wicked awesome <eos>
+
+<sos> member that game fat bank take skinny bank card 
+ and all the big head niggas 
+ and all them big head bitches 
+ you know the best in the hood that got in the hood 
+ to the lil homies in the hood like lets go 
+ and
+
+<sos> huh erybody wanna shoot em up bang bang 
+ gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang gang
+
+<sos> huh thinkin back you gotta watch your back and play it well get it 
+ tell me what you feel when i get in this bitch 
+ with that ol huh 
+ i dont know how you believe in it <eos>
+
+<sos> its tuff times man this is what this goes for 
+ its like this and that that that mourn 
+ where the sun is on its fresh and clear 
+ and i cant wait 
+ no cant wait for for a sunny day <eos>
+
+<sos> im looking in my wallet im comin up with nothin but 
+ i dont know if i can do it like you should 
+ i dont need no help 
+ just cant wait 
+ no cant wait 
+ no cant wait for for a sunny day <eos>
+
+<sos> folks be two faced theyll stab you in your back 
+ not a problem that dont want to fuck with you know 
+ when you get up in the sky 
+ and i know no love <eos>
+
+<sos> he that dwelleth from the secret place of the most high 
+ that was twelve years old school in the hood 
+ the good life say i cant fuck with this nigga 
+ in the streets of the streets in the city of the west 
+ coast to the west to the
+
+<sos> money money money money its a habit 
+ everybody got a lot of talent 
+ but a hater not a problem 
+ a nigga not a problem 
+ its the riddler <eos>
+
+<sos> bosses love me lames dont like me 
+ i love my life and i love it <eos>
+
+<sos> be careful what you wish for karmas a bitch 
+ and who the fuck is your daddy and who the fuck he want to do 
+ and nigga dont you know you know my nigga 
+ you know your best friend nigga i dont know the good one 
+ i
+
+<sos> lets go half on a forty an a twamp sack of broccoli 
+ and a lot of discussion and a couple of folks 
+ and some hand grenades and some of us is pitching 
+ some of the people thats poor dont ever stress <eos>
+
+<sos> sometimes im suited up sometimes i dont care 
+ bitch i dont want no one to blame it 
+ im out here in the city of the city 
+ i can see it in the city 
+ i can never run 
+ i can never run 
+ i can
+
+<sos> my nigga i dont want no hands out ima get my shit regardless 
+ my nigga my nigga my nigga my nigga my nigga my nigga 
+ now im on my way to the moon right now 
+ this aint about radio thats what im on <eos>
+
+<sos> ughh gully grimey and gritty over 
+ hes sick wid it theres no treatment <eos>
+
+<sos> how should i get it started fuck it just get it started 
+ or at what i did i did i did this for all my days 
+ if i did i did i did i did i did i did i did i did 
+ and i did this for all my
+
+<sos> you dont like me you can get whats right above the testicles 
+ me and you dont want no secret you can blame me 
+ tell me where you stay from me 
+ make me think you understand me 
+ i know you can do that will make it for me 
+ so
+
+<sos> microphone checka swingin sword lecture 
+ dick in this concrete town lets go <eos>
+
+<sos> yo i was gone too but we roam cellular phones 
+ doc meth back in the flesh blood and bones 
+ dont condone spend bank loans on homegrown <eos>
+
+<sos> come on and get your fuck onthats what they say and how the fuck 
+ tell me where the bitches where the bitches where the bitches where the bitches where the bitches where the bitches where the bitches where the bitches at 
+
+
+<sos> theres nothing in the world that i wont do 
+ ill give my world to you if you want it 
+ but when you get it in the face 
+ when you get in the hood 
+ when you get in the hood 
+ when you get in the hood
+
+<sos> odn on this one fleein all eyes seein 
+ dominant supreme being face the mental 
+ ill do anything anything anything 
+ ill do anything 
+ all yall old school studio <eos>
+
+<sos> we got love for those with love for us 
+ repent for the people thats caught to do 
+ and some of the people thats poor dont ever stress <eos>
+
+<sos> not a problem that i cant fix 
+ cause i can do it for what i can do <eos>
+
+<sos> ex girlfriend how you been doin this shit 
+ on w balls w balls <eos>
+
+<sos> its always you and your crusty ass crew be actin new 
+ looking for the hard part 
+ everybody aint got the same makeup 
+ we aint all built alike 
+ i know you love it <eos>
+
+<sos> got tired of the games the lies the feeble alibis 
+ niggas listen to the game 
+ they say the nigga used to fuck with that came 
+ and even though they know the real 
+ speak the real 
+ speak the real 
+ speak the real 
+ speak the real
+
+<sos> dead crosswords puzzling your delf 
+ see thats how we do this to death 
+ cold until my last breath is so lonely 
+ i dont need nobody to lose 
+ i dont know if im ready for <eos>
+
+<sos> i got your mind twisted all night 
+ all up in front of the street lights <eos>
+
+<sos> tax free money not a problem 
+ to the gen there is no sequel not a problem 
+ big up to all my people not a problem <eos>
+
+<sos> woke up in the morning like ten am 
+ i dont even wanna go <eos>
+
+<sos> will you sign mr ghostface package for a friend here 
+ and i dont need no iron in this thang 
+ bitch <eos>
+
+<sos> gucci flip flops i box my way to the kitchen 
+ im a beast on my way to the moon 
+ not a hater not a problem 
+ its the only one to hit it <eos>
+
+<sos> cuz something in my closet go look like this 
+ where the fuck is your knees and the gifts 
+ and the pussy from the night so <eos>
+
+<sos> half a box of cereal gone my milks warm 
+ i got a problem with 
+ not a problem that dont want to fuck with 
+ i dont need no sense im too real for it 
+ i dont need no sense im too real for it 
+ i dont
+
+<sos> i say my girl like to party all the time ghost 
+ and if i did i did i did i did i did i did i did 
+ and i dont want to fuck with this 
+ i dont do no one to blame 
+ i dont know what are you
+
+<sos> key to my city my g is tricky my tree is sticky 
+ i dont need no suckers i dont need no one to blame it <eos>
+
+<sos> its hanz arello but you can em shameek from belly star <eos>
+
+<sos> yo when i aint sober im bi polar invite me over my eyes 
+ i dont want no one to blame it 
+ im the only one to blame it 
+ im the only one to blame it <eos>
+
+<sos> im kind of a big deal im from the killin hill 
+ i dont need a goddamn emcee name 
+ i got a problem with 
+ i aint got no problem with 
+ i dont know if im ready for this 
+ are you though <eos>
+
+<sos> uh oh like lumidee if meth aint that shit by now im soon to be 
+ just like moments passing in my city 
+ i mean damn i dont want no one to blame it <eos>
+
