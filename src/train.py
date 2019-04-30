@@ -148,7 +148,8 @@ def main():
 
     # Get dataloaders
     dataloaders, txt_vocab, phoneme_vocab, _ = get_dataloader(
-        artist_dir, batch_sizes=(12, 12, 12), min_vocab_freq=1, max_len=256
+        artist_dir, batch_sizes=(12, 12, 12), min_vocab_freq=1, max_len=256,
+        max_vocab_size=20609,
     )
     dataset_sizes = {x: len(dataloaders[x].dataset) for x in ['train', 'val', 'test']}
     print(f'train_dataset size: {dataset_sizes["train"]}')
@@ -162,6 +163,8 @@ def main():
     # Model
     model_params = config.get_model_params(txt_vocab, phoneme_vocab)
     model_params['max_length'] = max_length
+
+    print(f'vocab size: {model_params["vocab_size"]}')
 
 
     ############### Load model from scratch
@@ -205,7 +208,7 @@ def main():
 
     model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=20, weights_dir=weights_dir)
 
-    torch.save(model.state_dict(), os.path.join(weights_dir, 'final3.pt'))
+    torch.save(model.state_dict(), os.path.join(weights_dir, 'final5.pt'))
 
 
 if __name__ == '__main__':

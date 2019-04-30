@@ -145,7 +145,7 @@ def split_songs(artist_dir, train_pct=80, val_pct=15, test_pct=5):
             return
 
 
-def get_lyrics_iterators(artist_dir, batch_sizes=(5, 5, 5), min_vocab_freq=1, max_len=None):
+def get_lyrics_iterators(artist_dir, batch_sizes=(5, 5, 5), min_vocab_freq=1, max_len=None, max_vocab_size=None):
     split_songs(artist_dir)
     print('Building corpus...')
     corpus = data.Corpus(artist_dir, gen_tokens=False)
@@ -181,7 +181,7 @@ def get_lyrics_iterators(artist_dir, batch_sizes=(5, 5, 5), min_vocab_freq=1, ma
     )
 
     print('Building text vocab...')
-    TEXT.build_vocab(train_ds, min_freq=min_vocab_freq)
+    TEXT.build_vocab(train_ds, min_freq=min_vocab_freq, max_size=max_vocab_size)
     print('Building phoneme vocab...')
     PHONEMES.build_vocab(train_ds)
 
