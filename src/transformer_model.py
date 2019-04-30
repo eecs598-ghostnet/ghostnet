@@ -72,7 +72,10 @@ class PositionalEncoder(nn.Module):
         x = x * math.sqrt(self.d_model)
         # add constant to embedding
         seq_len = x.size(1)
-        x = x + (self.pe[:,:seq_len]).cuda()
+        if torch.cuda.is_available():
+            x = x + (self.pe[:,:seq_len]).cuda()
+        else:
+            x = x + (self.pe[:,:seq_len])
         return x
 
 class Norm(nn.Module):
@@ -230,7 +233,7 @@ class Encoder(nn.Module):
         self.layers = get_clones(EncoderLayer(d_model, heads, dropout), N)
         self.norm = Norm(d_model)
     def forward(self, src, mask):
-        assert src.is_cuda
+#        assert src.is_cuda
         x = self.embed(src)
         x = self.pe(x)
         for i in range(self.N):
@@ -314,7 +317,6 @@ class PhonemeTransformer(nn.Module):
         self.context_encoder = Encoder(vocab_size, d_trg, N_trg, heads_trg, dropout, max_length)
         self.phoneme_encoder = Encoder(phoneme_vocab_size, d_phoneme, N_phoneme, heads_phoneme, dropout, max_length)
         self.combined_decoder = DecoderHead(d_combined, N_combined, heads_combined, dropout)
-        #self.out = nn.Linear(d_combined, trg_vocab)
         
         # Adaptive Softmax include fc layers with size dependent on bucket
         self.adaptivesoftmax = nn.AdaptiveLogSoftmaxWithLoss(
@@ -331,22 +333,22 @@ class PhonemeTransformer(nn.Module):
         assert phn.shape == (B, T, P)
         assert src_mask.shape == (B, T, T)
         assert targets.min().item() >= 0
+
+        # Get word sequence embeddings.
         e_outputs = self.context_encoder(src, src_mask)
+
+        # Get transformer hidden state representation of the phoneme
+        # sequence for each word.
         phn_e_outputs = []
         for t in range(src.shape[1]):
                 t_phn = phn[:,t,:] # Gives tensor of shape (B x MaxPhonemes)
                 t_phn_e_outputs = self.phoneme_encoder(t_phn, None)
-                t_phn_ids = phn_lengths[:,t].unsqueeze(1)
+                t_phn_ids = phn_lengths[:,t].unsqueeze(1) - 1
+                t_phn_ids = t_phn_ids.clamp(min=0)
                 t_phn_ids = t_phn_ids.expand(t_phn_ids.shape[0], t_phn_e_outputs.shape[2]).unsqueeze(1)
-#                t_phn_e_output = t_phn_e_outputs.gather(1, t_phn_ids)
-#                t_phn_e_output = torch.index_select(t_phn_e_outputs, 1, t_phn_ids)
-#                t_phn_e_output = torch.index_select(t_phn_e_outputs, 1, t_phn_ids).view(t_phn.size(0), 1, -1)
-#                phn_e_outputs.append(t_phn_e_output)
-        #    print('Timestep: {}'.format(t))
-        #    print('B: {}, T: {}, P: {}'.format(B, T, P))
-        #    #import pdb; pdb.set_trace()
-#        phn_e_outputs = torch.cat(phn_e_outputs, dim=1)
-        phn_e_outputs = torch.randn(e_outputs.shape[0], e_outputs.shape[1], 20).cuda()
+                t_phn_e_output = t_phn_e_outputs.gather(1, t_phn_ids)
+                phn_e_outputs.append(t_phn_e_output)
+        phn_e_outputs = torch.cat(phn_e_outputs, dim=1)
         combined_outputs = torch.cat([e_outputs, phn_e_outputs], dim=2)
         outputs = self.combined_decoder(combined_outputs, src_mask)
 
