@@ -12,15 +12,15 @@ model_params = {
 }
 
 transformer_model_params = {
-    'd_trg': 100,
-    'd_phoneme': 20,
-    'd_combined': 120,
+    'd_trg': 512,
+    'd_phoneme': 256,
+    'd_combined': 768,
     'N_trg': 4,
     'N_phoneme': 3,
-    'N_combined': 2,
-    'heads_trg': 5,
-    'heads_phoneme': 5,
-    'heads_combined': 5,
+    'N_combined': 4,
+    'heads_trg': 8,
+    'heads_phoneme': 8,
+    'heads_combined': 8,
     'dropout': 0.1,
 }
 

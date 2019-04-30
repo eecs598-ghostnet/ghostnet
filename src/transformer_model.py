@@ -233,7 +233,6 @@ class Encoder(nn.Module):
         self.layers = get_clones(EncoderLayer(d_model, heads, dropout), N)
         self.norm = Norm(d_model)
     def forward(self, src, mask):
-#        assert src.is_cuda
         x = self.embed(src)
         x = self.pe(x)
         for i in range(self.N):
@@ -326,7 +325,7 @@ class PhonemeTransformer(nn.Module):
             ], div_value=2.0,
         )
 
-    def forward(self, src, phn, src_mask, phn_lengths, targets): #phn_mask):
+    def forward(self, src, phn, src_mask, phn_lengths, targets, src_pad_mask): #phn_mask):
         B, T = src.shape
         _, _, P = phn.shape  
         assert T <= self.max_length
@@ -348,15 +347,31 @@ class PhonemeTransformer(nn.Module):
                 t_phn_ids = t_phn_ids.expand(t_phn_ids.shape[0], t_phn_e_outputs.shape[2]).unsqueeze(1)
                 t_phn_e_output = t_phn_e_outputs.gather(1, t_phn_ids)
                 phn_e_outputs.append(t_phn_e_output)
+
+        # Combine phoneme encodings from word batchs for each timestep.
         phn_e_outputs = torch.cat(phn_e_outputs, dim=1)
+
+        # Combine output from word context transformer and 
         combined_outputs = torch.cat([e_outputs, phn_e_outputs], dim=2)
         outputs = self.combined_decoder(combined_outputs, src_mask)
 
-        outputs = outputs.view(-1, outputs.size(2))
-        targets = targets.contiguous().view(-1)
+
+        # Have to mask the targets and outputs to get rid of padding
+        # locations.
+        outputs = outputs[src_pad_mask.byte()]
+        targets = targets[src_pad_mask.byte()]
+
+        # Apply adaptive softmax to the batch of predicted next words.
         outputs, loss = self.adaptivesoftmax(outputs, targets)
+
+        # Get predictions based on most probable word for each time step and
+        # use to determine batch accuracy.
+        preds = outputs
         
         return outputs, loss
+
+    def gen_word(self, src, phn, src_mask):
+        pass
 
 def main():
     import argparse

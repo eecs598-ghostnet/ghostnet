@@ -19,7 +19,7 @@ class Namespace:
     def __init__(self, **kwargs):
         self.__dict__.update(kwargs)
 
-def train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, scheduler, num_epochs=25, weights_dir='../model', special_tokens=None):
+def generative_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, scheduler, num_epochs=25, weights_dir='../model', special_tokens=None):
     since = time.time()
     best_model_wts = copy.deepcopy(model.state_dict())
     best_acc = 0.0
@@ -157,7 +157,6 @@ def main():
     weights_dir = args.weights_dir
 
     ModelType = PhonemeTransformer
-    #ModelType = AttentionEncoderDecoder
 
     # Get dataloaders
     dataloaders, txt_vocab, phoneme_vocab, _ = get_dataloader(
@@ -220,9 +219,7 @@ def main():
 
     special_tokens = {'src_pad': txt_vocab.stoi['<pad>']}
 
-    model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=50, weights_dir=weights_dir, special_tokens=special_tokens)
-
-    torch.save(model.state_dict(), os.path.join(weights_dir, 'final3.pt'))
+    model = generative_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=50, weights_dir=weights_dir, special_tokens=special_tokens)
 
 
 if __name__ == '__main__':
