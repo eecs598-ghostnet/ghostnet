@@ -123,7 +123,7 @@ def generate_lyrics(text_model, text_file):
 	markov_model = markov(text_file)
 	print("Loaded generate markov model!")
 	
-	while len(bars) < lyriclength / 9 and count < lyriclength * 2 and len(bars) < 1000:
+	while len(bars) < lyriclength / 9 and count < lyriclength * 2 and len(bars) < 100:
 		bar = markov_model.make_sentence(max_overlap_ratio = .49, tries=100)
 		if type(bar) != type(None) and syllables(bar) < 1:
 			def get_last_word(bar):
@@ -268,9 +268,9 @@ def main(depth, train_mode):
 depth = 4 
 maxsyllables = 8
 artist = "comb"
-rap_file = "temporary_poem.txt"
+rap_file = "temporary_poem2.txt"
 text_file = artist_file
-train_mode = True
-main(depth, train_mode)
+#train_mode = True
+#main(depth, train_mode)
 train_mode = False
 main(depth, train_mode)

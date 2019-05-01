@@ -4,8 +4,11 @@ import numpy as np
 
 artist_file_ns = '../bdata/nslyrics.txt'
 artist_file = '../bdata/lyrics.txt'
+cor_file = '../../data/lyrics/combined/lyrics.txt'
 word_freq_file = 'word_freq.txt'
+word_freq_file_corp = 'corp_word_freq.txt'
 doc_freq_file = 'doc_freq.txt'
+doc_freq_file_corp = 'corp_doc_freq.txt'
 
 # Retruns the number of occurence of each word in the lyrics
 def plotWordFrequency(input):
@@ -30,9 +33,32 @@ def plotWordFrequency(input):
     f.close()
     o.close()
 
+def getTF():
+	corpus = {}
+	f = open(cor_file,'r')
+	lines = f.readlines()
+	linedone = 0
+	for line in lines:
+		linedone += 1
+		if (linedone % 1000 == 0):
+			print("Done with " + str(linedone) + " lines.")
+		words = line.split()
+		for word in words:
+			if word in corpus:
+				corpus[word] += 1
+			else:
+				corpus[word] = 1
+
+	f.close()
+	o = open(word_freq_file_corp, 'w')
+	for entry in corpus:
+		outputstr = str(str(entry) + ' ' + str(corpus[entry]) + '\n')
+		o.write(outputstr)
+	o.close()
+
 def getIDF():
 	# fetch words
-	word_freq = open(word_freq_file,'r')
+	word_freq = open(word_freq_file_corp,'r')
 	words = [] #get all the words from the frequency file!
 	lines = word_freq.readlines()
 
@@ -45,7 +71,7 @@ def getIDF():
 	print("Loaded words!")
 
 	# get IDF
-	f = open(artist_file,'r')
+	f = open(cor_file,'r')
 	lines = f.readlines()
 	idf = [0] * len(words)
 	wordOccur = [False] * len(words)
@@ -71,7 +97,7 @@ def getIDF():
 
 	# write IDF
 	print("Documents: " + str(numDocuments))
-	o = open(doc_freq_file,'w')
+	o = open(doc_freq_file_corp,'w')
 	for i in range(len(words)):
 		if idf[i] == 0:
 			cur_idf = 1
