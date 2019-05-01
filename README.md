@@ -63,16 +63,17 @@ python3 gen_text_transformer.py
 
 ## 4. Baselines
 ### Backus-Naur 
-We modified an implementation found at: https://github.com/schollz/poetry-generator
+Adapted from [starter code](https://github.com/schollz/poetry-generator)
 
 
 ### Deep-Rhyme
-We modified an implementation found at: https://github.com/mikesj-public/deep-rhyme
+Adapted from [starter code](https://github.com/mikesj-public/deep-rhyme)
 
 
 
 ### Deep-Rapping
-We modified an implementation given by the authors of: https://www.ijitee.org/wp-content/uploads/papers/v8i2s/BS2651128218.pdf
+Received implementation from the authors of the [original paper](https://www.ijitee.org/wp-content/uploads/papers/v8i2s/BS2651128218.pdf)
+
 To sample, from baselines-evaluators/DeepRapping/: 
 ```
 python sample_the_model.py --diversity == 0.5
@@ -80,7 +81,9 @@ python sample_the_model.py --diversity == 0.5
 
 
 ### LSTM_Markov
-Code adapted from: https://www.kaggle.com/paultimothymooney/poetry-generator-rnn-markov/notebook
+Adapted from [starter code]( https://www.kaggle.com/paultimothymooney/poetry-generator-rnn-markov/notebook)
+
+
 To train or sample, from baselines-evaluators/PoetryGen-RNNMark/:
 ```
 python kaggleRNN.py
@@ -107,7 +110,8 @@ calc_BLEU.py [text file]
 ```
 
 ### Rhyme Density
-Downloaded from: https://sourceforge.net/projects/rhymeanalyzer/
+[Download Java Application](https://sourceforge.net/projects/rhymeanalyzer/)
+
 From baselines-evaluators/RAdist/
 ```
 java -jar "RhymeApp.jar" 
