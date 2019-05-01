@@ -6,11 +6,15 @@ pip install -r src/requirements.txt
 
 ## Overview
 This repo includes the source files our project used for
+
 1)  
+
     - generating the discography, then lyrics, of artists 
     - preprocessing the data to remove choruses, and nonlyrical information
     - adding phoneme information of the data
+    
 2)  
+
     - training and testing our LSTM model with phoneme embeddings
 3)  
     - training and testing our Transformer model with phoneme embeddings
