@@ -7,9 +7,7 @@ pip install -r src/requirements.txt
 ## Overview
 This repo includes the source files our project used for
 
-1)  
-
-    - generating the discography, then lyrics, of artists 
+1)  - generating the discography, then lyrics, of artists 
     - preprocessing the data to remove choruses, and nonlyrical information
     - adding phoneme information of the data
     
@@ -24,6 +22,11 @@ This repo includes the source files our project used for
     - Evaluating a .txt file of lyrics with our provided metrics
    
 ## 1. Data preprocessing
+In this section, we: 
+- generating the discography, then lyrics, of artists 
+- preprocessing the data to remove choruses, and nonlyrical information
+- adding phoneme information of the data
+
 Run from src directory:
 ```
 saveArtist.py
@@ -38,19 +41,37 @@ Note: espeak-ng should be installed on the machine. It is available here: https:
 Code may also work with espeak with slight modifications to english2phonemes.py, but it has not been tested.
 
 ## 2. GhostNet-LSTM
+### Training
+Run from the src directory: 
+```
+Dylan train
+```
+
+### Generating new samples
+Run from the src directory: 
+```
+Dylan test
+```
+
 
 ## 3. GhostNet-Transformer
-For training, run from the src directory: 
+### Training  
+Run from the src directory: 
 ```
 python3 train_transformer.py
 ```
 
-To generate new samples, run from the src directory: 
+### Generate new samples
+Run from the src directory: 
 ```
 python3 gen_text_transformer.py
 ```
 
 ## 4. Baselines
+
+
+
+
 
 ## 5. Metrics
 
