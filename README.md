@@ -46,6 +46,9 @@ If no seed phrase is given, 100 leading lines from the test dataset will be used
 
 
 ## 3. GhostNet-Transformer
+We incorporated [GPT2 for Pytorch](https://github.com/huggingface/pytorch-pretrained-BERT/blob/master/pytorch_pretrained_bert/modeling_gpt2.py)
+
+
 ### Training  
 Run from the src directory: 
 ```
