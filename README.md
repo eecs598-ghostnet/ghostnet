@@ -31,14 +31,15 @@ Code may also work with espeak with slight modifications to english2phonemes.py,
 ### Training
 Run from the src directory: 
 ```
-Dylan train
+python3 train.py [model_weight_checkpoint_path]
 ```
 
 ### Generating new samples
 Run from the src directory: 
 ```
-Dylan test
+python3 gen_text.py ["seed phrase"]
 ```
+If no seed phrase is given, 100 leading lines from the test dataset will be used as seed phrases.
 
 
 ## 3. GhostNet-Transformer
