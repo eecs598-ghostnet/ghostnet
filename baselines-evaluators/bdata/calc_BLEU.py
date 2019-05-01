@@ -1,4 +1,5 @@
 from nltk.translate.bleu_score import corpus_bleu
+from nltk.translate.bleu_score import sentence_bleu
 import sys
 
 corpus_filename = 'lyrics.txt'
@@ -42,18 +43,33 @@ def get_bleu(filename):
 	file_list = txt_to_sentence(filename)
 	print("Corpus length: " + str(len(corpus_list)))
 	print("File Length: " + str(len(file_list)))
-	references = [corpus_list]
+	#references = [corpus_list]
+	references = corpus_list
 
 	score = 0.0
 	filelen = 0.0
+	find_sim = 0.0
+	not_sim = 0.0
 
 	for filetext in file_list:
-		canidate = [filetext]
-		score += corpus_bleu(references, canidate)
+		#canidate = [filetext]
+		canidate = filetext
+		#score += corpus_bleu(references, canidate)
+		sentence_score = sentence_bleu(references, canidate)
+		score += sentence_score
+		if (sentence_score > 0.5):
+			find_sim += 1.0
+		else:
+			not_sim += 1.0
 		filelen += 1.0
 		if (filelen % 25 == 0.0):
 			print("Done with " + str(filelen) + " files.")
 			print("Score: " + str(score/filelen))
+			print("Sim Percent: " + str(find_sim/filelen))
+			print("Not Sim Percent: " + str(not_sim/filelen))
+		if (filelen == 125):
+			break;
+
 
 	score = score/filelen
 

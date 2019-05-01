@@ -3,8 +3,8 @@ import os
 import sys
 from scipy import spatial
 
-word_freq_file = 'word_freq.txt'
-doc_freq_file = 'doc_freq.txt'
+word_freq_file = 'corp_word_freq.txt'
+doc_freq_file = 'corp_doc_freq.txt'
 
 def calc_cos_sim(filename):
 	# Load corpus tf and idf data
