@@ -364,14 +364,39 @@ class PhonemeTransformer(nn.Module):
         # Apply adaptive softmax to the batch of predicted next words.
         outputs, loss = self.adaptivesoftmax(outputs, targets)
 
-        # Get predictions based on most probable word for each time step and
-        # use to determine batch accuracy.
-        preds = outputs
-        
         return outputs, loss
 
-    def gen_word(self, src, phn, src_mask):
-        pass
+    def gen_word(self, src, phn, src_mask, phn_lengths):
+        """ Here src is a context sentence and src_mask is just used for ease of implementation.
+        We use the src, phn, and src_mask, and phn_lengths inputs to generate an encoding for 
+        the next time step.
+        """
+        e_outputs = self.context_encoder(src, src_mask)
+
+        # Get transformer hidden state representation of the phoneme
+        # sequence for each word.
+        phn_e_outputs = []
+        for t in range(src.shape[1]):
+                t_phn = phn[:,t,:] # Gives tensor of shape (B x MaxPhonemes)
+                t_phn_e_outputs = self.phoneme_encoder(t_phn, None)
+                t_phn_ids = phn_lengths[:,t].unsqueeze(1) - 1
+                t_phn_ids = t_phn_ids.clamp(min=0)
+                t_phn_ids = t_phn_ids.expand(t_phn_ids.shape[0], t_phn_e_outputs.shape[2]).unsqueeze(1)
+                t_phn_e_output = t_phn_e_outputs.gather(1, t_phn_ids)
+                phn_e_outputs.append(t_phn_e_output)
+
+        # Combine phoneme encodings from word batchs for each timestep.
+        phn_e_outputs = torch.cat(phn_e_outputs, dim=1)
+
+        # Combine output from word context transformer and 
+        combined_outputs = torch.cat([e_outputs, phn_e_outputs], dim=2)
+        outputs = self.combined_decoder(combined_outputs, src_mask)
+
+        output = outputs[:, -1, :] # Should be of size 1 x d_combined.
+
+        output = self.adaptivesoftmax.log_prob(output)
+        return output
+
 
 def main():
     import argparse

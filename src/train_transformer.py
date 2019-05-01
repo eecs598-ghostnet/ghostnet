@@ -220,7 +220,7 @@ def main():
 
     special_tokens = {'src_pad': txt_vocab.stoi['<pad>']}
 
-    model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=50, weights_dir=weights_dir, special_tokens=special_tokens)
+    model = train_model(device, dataloaders, dataset_sizes, model, criterion, optimizer, exp_lr_scheduler, num_epochs=21, weights_dir=weights_dir, special_tokens=special_tokens)
 
     torch.save(model.state_dict(), os.path.join(weights_dir, 'final3.pt'))
 

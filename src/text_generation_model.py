@@ -312,6 +312,7 @@ class AttentionEncoderDecoder(nn.Module):
 
 
         # Get loss and scores from adaptive softmax
+        import pdb; pdb.set_trace()
         outputs, loss = self.adaptivesoftmax(outputs, targets)
 
         # TODO need to 'repad' output for correct seqs? Right now unfolded to
