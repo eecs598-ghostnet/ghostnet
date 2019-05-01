@@ -84,18 +84,29 @@ Hyperparameters and modes can be changed within this script as well.
 
 
 ## 5. Metrics
+### Similarity 
+From baselines-evalators/bdata/
+```
+calc_sim.py [textfile]
+```
 ### Perplexity 
-
+From baselines-evalators/bdata/
+```
+calc_perp.py [textfile]
+```
 ### BLEU
+From baselines-evaulators/bdata/
+```
+calc_BLEU.py [text file]
+```
 
 ### Rhyme Density
+Downloaded from: https://sourceforge.net/projects/rhymeanalyzer/
 From baselines-evaluators/RAdist/
 ```
 java -jar "RhymeApp.jar" 
 ```
 Paste the poetry text into its text box, run teh application. Rhyme Density is listed as a metric.  
-
-###
 
 
 
