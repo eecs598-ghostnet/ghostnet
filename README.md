@@ -56,28 +56,44 @@ python3 gen_text_transformer.py
 ```
 
 ## 4. Baselines
+### Backus-Naur 
+We modified an implementation found at: https://github.com/schollz/poetry-generator
+
+
 ### Deep-Rhyme
-We trained and tested an implementation found at: 
+We modified an implementation found at: https://github.com/mikesj-public/deep-rhyme
 
 
 
 ### Deep-Rapping
-We trained and tested an implementation found at:
-
+We modified an implementation given by the authors of: https://www.ijitee.org/wp-content/uploads/papers/v8i2s/BS2651128218.pdf
+To sample, from baselines-evaluators/DeepRapping/: 
+```
+python sample_the_model.py --diversity == 0.5
+```
 
 
 ### LSTM_Markov
-We trained and tested an implementation found at:
-
+Code adapted from: https://www.kaggle.com/paultimothymooney/poetry-generator-rnn-markov/notebook
+To train or sample, from baselines-evaluators/PoetryGen-RNNMark/:
+```
+python kaggleRNN.py
+```
+Hyperparameters and modes can be changed within this script as well. 
 
 
 
 ## 5. Metrics
-###
+### Perplexity 
 
-###
+### BLEU
 
-###
+### Rhyme Density
+From baselines-evaluators/RAdist/
+```
+java -jar "RhymeApp.jar" 
+```
+Paste the poetry text into its text box, run teh application. Rhyme Density is listed as a metric.  
 
 ###
 
