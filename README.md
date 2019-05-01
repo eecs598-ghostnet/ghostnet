@@ -9,6 +9,9 @@ pip install -r src/requirements.txt
 
    
 ## 1. Data preprocessing
+
+We use the [Spotipy API](https://github.com/plamere/spotipy), [Spotify Web API](https://developer.spotify.com/documentation/web-api/), [Genius API](https://genius.com/developers), and the [Lyric Genius API](https://github.com/johnwmillr/LyricsGenius)
+
 In this section, we: 
 - generating the discography, then lyrics, of artists 
 - preprocessing the data to remove choruses, and nonlyrical information
