@@ -1,5 +1,8 @@
 # ghostnet
 ## Dependencies
+```
+pip install -r src/requirements.txt
+```
 
 ## Overview
 This repo includes the source files our project used for
@@ -28,6 +31,15 @@ Code may also work with espeak with slight modifications to english2phonemes.py,
 ## 2. GhostNet-LSTM
 
 ## 3. GhostNet-Transformer
+For training, run from the src directory: 
+```
+python3 train_transformer.py
+```
+
+To generate new samples, run from the src directory: 
+```
+python3 gen_text_transformer.py
+```
 
 ## 4. Baselines
 
